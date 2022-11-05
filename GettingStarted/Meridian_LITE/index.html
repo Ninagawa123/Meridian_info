@@ -1,117 +1,94 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="ja" >
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../../img/favicon.ico" />
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Meridian LITE - Meridian Documentation</title>
-    <link rel="stylesheet" href="../../css/theme.css" />
-    <link rel="stylesheet" href="../../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-    
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Meridian LITE";
-        var mkdocs_page_input_path = "GettingStarted\\Meridian_LITE.md";
-        var mkdocs_page_url = null;
-      </script>
-    
-    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="../../js/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Meridian_LITE \u30dc\u30fc\u30c9\u306b\u3064\u3044\u3066", url: "#_top", children: [
+              {title: "\u30d4\u30f3\u30a2\u30b5\u30a4\u30f3", url: "#_1" },
+              {title: "\u30de\u30a6\u30f3\u30c8\u3068\u6a5f\u80fd\u62e1\u5f35", url: "#_2" },
+              {title: "Meridian_LITE \u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u65b9\u6cd5", url: "#meridian_lite_1" },
+          ]},
+          {title: "define AP_SSID \"xxxxxx\"             // \u30a2\u30af\u30bb\u30b9\u30dd\u30a4\u30f3\u30c8\u306eAP_SSID", url: "#define-ap_ssid-xxxxxx-ap_ssid", children: [
+          ]},
+          {title: "define AP_PASS \"xxxxxx\"             // \u30a2\u30af\u30bb\u30b9\u30dd\u30a4\u30f3\u30c8\u306e\u30d1\u30b9\u30ef\u30fc\u30c9", url: "#define-ap_pass-xxxxxx", children: [
+          ]},
+          {title: "define SEND_IP \"192.168.1.xx\"       // \u9001\u308a\u5148\u306ePC\u306eIP\u30a2\u30c9\u30ec\u30b9\uff08PC\u306eIP\u30a2\u30c9\u30ec\u30b9\u3092\u8abf\u3079\u3066\u304a\u304f\uff09", url: "#define-send_ip-1921681xx-pcippcip", children: [
+              {title: "\u30e1\u30a4\u30f3\u30b3\u30fc\u30c9\u306e\u8a2d\u5b9a", url: "#_8" },
+          ]},
+          {title: "define SD_MOUNT 1 ", url: "#define-sd_mount-1", children: [
+          ]},
+          {title: "define IMU_MOUNT 1", url: "#define-imu_mount-1", children: [
+          ]},
+          {title: "define JOYPAD_MOUNT 2", url: "#define-joypad_mount-2", children: [
+              {title: "\u30d3\u30eb\u30c9\u3068\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9", url: "#_9" },
+              {title: "PC\u5074\u306e\u8a2d\u5b9a", url: "#pc" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Meridian Documentation
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Meridian_TWIN/">Meridian TWIN</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Meridian LITE</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_1">ピンアサイン</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">マウントと機能拡張</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#meridian_lite_1">Meridian_LITE インストール方法</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#platformio">PlatformIOのインストール</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">開発環境のインストール</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_4">新規プロジェクトを作成する</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_5">ライブラリのインストール</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#icshardserialclass">IcsHardSerialClassを導入する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#adafruit_bno055">Adafruit_BNO055を導入する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_6">メインコードの作成</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#esp32">ESP32のシリアル通信ピンの設定</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#platformioini">platformio.iniの設定</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_7">メインコードの修正</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="" href="https://note.com/ninagawa123/n/nb768563591be">Blog</a>
-                </li>
-              </ul>
-      </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../Meridian_TWIN/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../Meridian_TWIN/" class="btn btn-xs btn-link">
+        Meridian TWIN
+      </a>
     </div>
-    </nav>
+    
+  </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Meridian Documentation</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Getting Started &raquo;</li>
-      <li>Meridian LITE</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="meridian_lite">Meridian_LITE ボードについて<a class="headerlink" href="#meridian_lite" title="Permanent link">&para;</a></h1>
+    
+
+    <h1 id="meridian_lite">Meridian_LITE ボードについて<a class="headerlink" href="#meridian_lite" title="Permanent link">&para;</a></h1>
 <p><img width="400" src="https://user-images.githubusercontent.com/8329123/177022808-50ccf555-4afd-450c-a07e-3302771d45cf.jpg"></p>
 <p>"Meridian board -LITE-" は半二重通信回路2系統を搭載とSPI,I2Cなどの出力ピンを備えたボードです。<br>
 ESP32devkitCを搭載することで、半二重通信方式のコマンドサーボを扱えるロボット用ボードとして機能します。<br>
@@ -267,47 +244,37 @@ PCとESP32をUSBケーブルせ接続し、矢印ボタンを押すとESP32の�
 <p>以降のテキストは準備中ですが、下記を参考にPC側の設定をすることで、デモを動作できると思います。<br>
 https://github.com/Ninagawa123/Meridian_core<br>
 <br></p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Meridian_TWIN/" class="btn btn-neutral float-left" title="Meridian TWIN"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../Meridian_TWIN/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../Meridian_TWIN/" class="btn btn-xs btn-link">
+        Meridian TWIN
+      </a>
     </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
+    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../Meridian_TWIN/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-  </span>
+    <br>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme_extra.js" defer></script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/Ninagawa123/Meridian_info/edit/master/docs/GettingStarted/Meridian_LITE.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
 
 </body>
 </html>

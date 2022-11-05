@@ -1,177 +1,94 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="ja" >
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../../img/favicon.ico" />
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Meridian TWIN - Meridian Documentation</title>
-    <link rel="stylesheet" href="../../css/theme.css" />
-    <link rel="stylesheet" href="../../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-    
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Meridian TWIN";
-        var mkdocs_page_input_path = "GettingStarted\\Meridian_TWIN.md";
-        var mkdocs_page_url = null;
-      </script>
-    
-    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="../../js/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Meridian_TWIN", url: "#_top", children: [
+              {title: "\u958b\u767a\u8cc7\u6599", url: "#_1" },
+              {title: "System composition", url: "#system-composition" },
+              {title: "\u958b\u767a\u74b0\u5883", url: "#_2" },
+              {title: "Installation", url: "#installation" },
+              {title: "Meridian console\u3092\u5b9f\u884c\u3059\u308b", url: "#meridian-console" },
+              {title: "Unity\u7248\u30c7\u30e2\u3092\u5b9f\u884c\u3059\u308b", url: "#unity" },
+              {title: "ROS\u7248\u30c7\u30e2\u3092\u5b9f\u884c\u3059\u308b", url: "#ros" },
+              {title: "\u30c8\u30e9\u30d6\u30eb\u30b7\u30e5\u30fc\u30c6\u30a3\u30f3\u30b0", url: "#_10" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Meridian Documentation
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Meridian TWIN</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_1">開発資料</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#system-composition">System composition</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">開発環境</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#teensy40">Teensy4.0の準備</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#platformioteensy40">PlatformIOでTeensy4.0用のプロジェクトファイルを作成する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_3">ライブラリを導入する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_4">サーボのマウントを設定する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_5">ロボットの姿勢とサーボを設定する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_6">サーボを接続する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_7">センサーを接続する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#teensy40_1">Teensy4.0にソースコードを書き込む</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#esp32devkitc">ESP32DevkitCの準備</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#esp32">ESP32にライブラリを導入し、修正する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_8">ソースコードを修正する</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#esp32_1">ESP32にソースコードを書き込む</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#esp32ip">ESP32のIPアドレスを調べる</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#esp32_2">ESP32にソースコードを書き込む</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#platformioini">platformio.ini</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_9">各種設定の確認</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#meridian-console">Meridian consoleを実行する</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#unity">Unity版デモを実行する</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#unityhub">UnityHubに登録して起動する</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unityip">UnityのソースコードのIPアドレスを書き換える</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#esp32ip_1">ESP32のIPアドレスを書き換える</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#windows">Windowsの場合はファイアーウォールを設定する</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unitymeridian">UnityとMeridianボードを起動する</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#ros">ROS版デモを実行する</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#ros-noetic">ROS noeticの導入</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#urdf">URDFの表示テスト</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#ros-rviz-meridian_demo">ROS, rviz, meridian_demoを実行する</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_10">トラブルシューティング</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#ros_1">ROS版デモ実行時のトラブルシューティング</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_11">ボードが動いていない時のトラブルシューティング</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_12">既知の課題</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#meridian-board20220721">Meridian Board(2022.07.21)</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#meridian-console20220504">Meridian console版(2022.05.04)</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#meridian-board-typek">Meridian Board Type.K のフリーピン結線時の注意</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Meridian_LITE/">Meridian LITE</a>
-                  </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="" href="https://note.com/ninagawa123/n/nb768563591be">Blog</a>
-                </li>
-              </ul>
-      </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../Meridian_LITE/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../Meridian_LITE/" class="btn btn-xs btn-link">
+        Meridian LITE
+      </a>
     </div>
-    </nav>
+    
+    <div class="wm-article-nav">
+      <a href="../.." class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../.." class="btn btn-xs btn-link">
+        Home
+      </a>
+    </div>
+    
+  </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Meridian Documentation</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Getting Started &raquo;</li>
-      <li>Meridian TWIN</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="meridian_twin">Meridian_TWIN<a class="headerlink" href="#meridian_twin" title="Permanent link">&para;</a></h1>
+    
+
+    <h1 id="meridian_twin">Meridian_TWIN<a class="headerlink" href="#meridian_twin" title="Permanent link">&para;</a></h1>
 <p>Meridian計画はヒューマノイドの制御システムについてのオープンソースプロジェクトです.<br />
 ホビーロボットのデジタルツイン化を簡単に実装することができ, PC上のシミュレーション空間とロボット実機をWIFI経由で10msの更新頻度でデータリンクします.  </p>
 <p>システムの中核はMeridim配列というロボットの状態データを格納できる軽量で汎用的なデータ配列です.<br />
@@ -392,50 +309,47 @@ Meridianボードの電源入力にバッテリーや安定化電源で電力を
 <p>Meridian Board Type.Kには未接続のピン穴を複数設けてあり, 背面からマイコンの入出力と半田付けするすることでIOポートとして利用可能です.その際の注意点を以下にメモします.<br />
 - ESP32のRX0, TX0はPCとのUSBシリアルで使用されています.<br />
 - ESP32のGPIO6-11は内部フラッシュとの接続されておりIOとしては使用できないようです.  </p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Meridian_LITE/" class="btn btn-neutral float-right" title="Meridian LITE">Next <span class="icon icon-circle-arrow-right"></span></a>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../Meridian_LITE/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../Meridian_LITE/" class="btn btn-xs btn-link">
+        Meridian LITE
+      </a>
     </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
+    
+    <div class="wm-article-nav">
+      <a href="../.." class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../.." class="btn btn-xs btn-link">
+        Home
+      </a>
+    </div>
+    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../Meridian_LITE/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+    <br>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme_extra.js" defer></script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/Ninagawa123/Meridian_info/edit/master/docs/GettingStarted/Meridian_TWIN.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
 
 </body>
 </html>
