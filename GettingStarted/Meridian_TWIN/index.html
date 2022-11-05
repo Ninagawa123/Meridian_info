@@ -1,94 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
-    <link rel="shortcut icon" href="../../img/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Meridian TWIN - Meridian Documentation</title>
-    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
-    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
-    <link href="../../css/base.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/highlight.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-    <script src="../../js/jquery-3.2.1.min.js"></script>
-    <script src="../../js/bootstrap-3.3.7.min.js"></script>
-    <script src="../../js/highlight.pack.js"></script>
-    
-    <base target="_top">
-    <script>
-      var base_url = '../..';
-      var is_top_frame = false;
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        var pageToc = [
-          {title: "Meridian_TWIN", url: "#_top", children: [
-              {title: "\u958b\u767a\u8cc7\u6599", url: "#_1" },
-              {title: "System composition", url: "#system-composition" },
-              {title: "\u958b\u767a\u74b0\u5883", url: "#_2" },
-              {title: "Installation", url: "#installation" },
-              {title: "Meridian console\u3092\u5b9f\u884c\u3059\u308b", url: "#meridian-console" },
-              {title: "Unity\u7248\u30c7\u30e2\u3092\u5b9f\u884c\u3059\u308b", url: "#unity" },
-              {title: "ROS\u7248\u30c7\u30e2\u3092\u5b9f\u884c\u3059\u308b", url: "#ros" },
-              {title: "\u30c8\u30e9\u30d6\u30eb\u30b7\u30e5\u30fc\u30c6\u30a3\u30f3\u30b0", url: "#_10" },
-          ]},
-        ];
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Meridian TWIN - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-    </script>
-    <script src="../../js/base.js"></script> 
-</head>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
 
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">GettingStarted <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Meridian_LITE/" class="dropdown-item">Meridian LITE</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Meridian TWIN</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
 
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Meridian_LITE/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-<div class="container-fluid wm-page-content">
-  <a name="_top"></a>
-    
-
-    
-    
-      
-    
-
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../Meridian_LITE/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../Meridian_LITE/" class="btn btn-xs btn-link">
-        Meridian LITE
-      </a>
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
     </div>
+
     
-    <div class="wm-article-nav">
-      <a href="../.." class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../.." class="btn btn-xs btn-link">
-        Home
-      </a>
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#meridian_twin" class="nav-link">Meridian_TWIN</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">開発資料</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#system-composition" class="nav-link">System composition</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">開発環境</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#meridian-console" class="nav-link">Meridian consoleを実行する</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#unity" class="nav-link">Unity版デモを実行する</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ros" class="nav-link">ROS版デモを実行する</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">トラブルシューティング</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
     </div>
-    
-  </div>
+</div></div>
+                    <div class="col-md-9" role="main">
 
-    
-
-    <h1 id="meridian_twin">Meridian_TWIN<a class="headerlink" href="#meridian_twin" title="Permanent link">&para;</a></h1>
+<h1 id="meridian_twin">Meridian_TWIN</h1>
 <p>Meridian計画はヒューマノイドの制御システムについてのオープンソースプロジェクトです.<br />
 ホビーロボットのデジタルツイン化を簡単に実装することができ, PC上のシミュレーション空間とロボット実機をWIFI経由で10msの更新頻度でデータリンクします.  </p>
 <p>システムの中核はMeridim配列というロボットの状態データを格納できる軽量で汎用的なデータ配列です.<br />
@@ -97,18 +135,18 @@ Meridim配列を中間プロトコルとして既存のシステムの間に挟�
 <p>当リポジトリで取り扱う ”Meridian_TWIN" はESP32とTeensy4.0を併用するタイプで, 対応ボードはMeridian Board Type.Kとなります.<br />
 また, ESP32DeckitC単体で動作する簡易バージョンのMeridian_LITE（対応ボードはMeridian Board -LITE-）も開発済みです.<br />
 Meridianは今後も用途に応じて様々なハードウェア, ソフトウェアに対応させていく予定です.  </p>
-<h2 id="_1">開発資料<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">開発資料</h2>
 <p>プログラムのフローや配列の定義, ボードのピンアサインについては「document」ディレクトリの中に資料としてまとめています.<br />
 専用ボードの回路図も公開しており, 自作したりブレットボードで再現することが可能です.<br />
 動作可能なサンプルプログラムも当リポジトリ内で公開しています.  </p>
 <p>全体の仕組みや概要は以下のnoteにまとめています.<br />
 https://note.com/ninagawa123/n/ncfde7a6fc835  </p>
-<h2 id="system-composition">System composition<a class="headerlink" href="#system-composition" title="Permanent link">&para;</a></h2>
+<h2 id="system-composition">System composition</h2>
 <p>Meridian_TWINは, ハードウェアとして通信用のESP32DevKitC, 制御用のTeensy4.0, それらを連結する専用ボードのMeiridian Boardで構成されます.<br />
 デモは近藤科学のKRSサーボ(通信速度1.25Mbps）に対応しており, Meiridian Board Type.KはKHR-3HV用に搭載することができます.<br />
 PC側はROS1のmelodic/noeticに対応しており, 現在Rvizでの表示が可能です. またUnity(Mac/Win版）でもヒューマノイドの姿勢をリアルタイムに反映させることができます.  </p>
 <p><img width="500" alt="TypeK" src="https://user-images.githubusercontent.com/8329123/180233435-4ed5fcb0-a2c6-4e73-94b1-b842ffb79af4.png">  </p>
-<h2 id="_2">開発環境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">開発環境</h2>
 <ul>
 <li>PlatformIO (Teensy4.0のプラットフォームバージョンは3.5.0対応)  </li>
 <li>Teensyduino(Teensy Loader 1.54, PlatformIOと併用)  </li>
@@ -117,15 +155,15 @@ PC側はROS1のmelodic/noeticに対応しており, 現在Rvizでの表示が可
 <li>MPU6050(GY-521)  </li>
 <li>Meridian Board Type.K</li>
 </ul>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h2 id="installation">Installation</h2>
 <p>Teensy4.0, ESP32DevKitCにそれぞれのファイルを書き込みます.<br />
 以下の説明の理解にはPlatformIOやTeensy4.0, ESP32の扱いについてのごく初歩的な知識が必要です.
 PlatformIOを初めて使うような方向けの導入手順については後日まとめる予定です.  </p>
-<h3 id="teensy40">Teensy4.0の準備<a class="headerlink" href="#teensy40" title="Permanent link">&para;</a></h3>
-<h5 id="platformioteensy40">PlatformIOでTeensy4.0用のプロジェクトファイルを作成する<a class="headerlink" href="#platformioteensy40" title="Permanent link">&para;</a></h5>
+<h3 id="teensy40">Teensy4.0の準備</h3>
+<h5 id="platformioteensy40">PlatformIOでTeensy4.0用のプロジェクトファイルを作成する</h5>
 <p>PlatformIOで"MeridianTWIN_Teensy40"等の名前で新規プロジェクトを作成し, BoardはTeensy4.0, FrameWorkにはArduinoを選択します.  </p>
 <p><img width="400" alt="SS 2373" src="https://user-images.githubusercontent.com/8329123/180238336-6cb5456f-cd9d-43a8-813c-5e792fdfd662.png">  </p>
-<h5 id="_3">ライブラリを導入する<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<h5 id="_3">ライブラリを導入する</h5>
 <ul>
 <li><strong>TsyDMASPI by hideakitai</strong> (PlatformIO上でインストール可)</li>
 <li><strong>MPU6050 by Electronic Cats</strong> (PlatformIO上でインストール可)</li>
@@ -133,31 +171,31 @@ PlatformIOを初めて使うような方向けの導入手順については後�
 <li><strong>Adafruit Unified Sensor</strong> (PlatformIO上でインストール可)</li>
 <li><strong>IcsClass_V210</strong> (ICS_Library_for_Arduino_V2_1.zipをDL, 解凍してプロジェクトのLibディレクトリに配置)</li>
 </ul>
-<h5 id="_4">サーボのマウントを設定する<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<h5 id="_4">サーボのマウントを設定する</h5>
 <p>Teensy4.0ソースコードの サーボ設定 の項目で, 各サーボのマウントありなしを変更できます.<br />
 接続しているサーボIDは1に, 接続していないIDは0に設定します.<br />
 サーボのマウント設定により, KHR-3HVのフルセットがなくてもICSサーボが最低１つあればデモをテストすることができます.<br />
 サーボ設定に対し１箇所でも接続されていない箇所があると動作しません.  </p>
-<h5 id="_5">ロボットの姿勢とサーボを設定する<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<h5 id="_5">ロボットの姿勢とサーボを設定する</h5>
 <p>接続するKRSサーボの通信速度設定をすべて<strong>1.25Mbps</strong>に変更します.  </p>
 <p>また, サーボの0度状態を下記の姿勢に, サーボの＋回転方向も下図の矢印方向に合わせます.<br />
 左半身および体の中心は下図に順次つつ, 右半身については左半身のミラー方向に回転に合わせます.<br />
 サーボの回転方向は, サーボの内部の設定変更が望ましいですが, Teensy4.0ソースコードの サーボ設定 の項目でも変更できます.<br />
 <img width="600" alt="motorccw" src="https://user-images.githubusercontent.com/8329123/147812253-e6cbe388-f70a-445f-80c0-b4cd899aa15a.png"></p>
-<h5 id="_6">サーボを接続する<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<h5 id="_6">サーボを接続する</h5>
 <p><img width="600" src="https://github.com/Ninagawa123/Meridian_TWIN/blob/main/documents/TypeK_pinassign.png"><br />
 こちらのピンアサインを参考に, サーボを接続します.  </p>
-<h5 id="_7">センサーを接続する<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<h5 id="_7">センサーを接続する</h5>
 <p>MPU/AHRSセンサをMeridianボードのI2Cピンに接続します.<br />
 今のところキャリブレーション済みのMPU6050(GY-521)のみ対応しています.<br />
 センサーがない場合は, Teensy4.0のソースコード設定でセンサの接続をオフにすることができます.  </p>
-<h5 id="teensy40_1">Teensy4.0にソースコードを書き込む<a class="headerlink" href="#teensy40_1" title="Permanent link">&para;</a></h5>
+<h5 id="teensy40_1">Teensy4.0にソースコードを書き込む</h5>
 <p>https://github.com/Ninagawa123/Meridian_TWIN/tree/main/Meridian_TWIN_for_Teensy40<br />
 の<strong>src/main.cpp</strong>, <strong>platformio.ini</strong> をPlatformIOのプロジェクトファイルに上書きし, Teensy4.0に書き込みます.<br />
 詳細な設定についてはソースコード内のコメントに記しています.  </p>
-<h3 id="esp32devkitc">ESP32DevkitCの準備<a class="headerlink" href="#esp32devkitc" title="Permanent link">&para;</a></h3>
+<h3 id="esp32devkitc">ESP32DevkitCの準備</h3>
 <p>PlatformIOで"MeridianTWIN_ESP32"等の名前で新規プロジェクトを作成し, BoardはEspressif ESP32 Dev Module, FrameWorkにはArduinoを選択します.  </p>
-<h5 id="esp32">ESP32にライブラリを導入し、修正する<a class="headerlink" href="#esp32" title="Permanent link">&para;</a></h5>
+<h5 id="esp32">ESP32にライブラリを導入し、修正する</h5>
 <ul>
 <li>
 <p><strong>ESP32DMASPI by hideakitai バージョン0.1.2</strong><br />
@@ -180,24 +218,24 @@ ESP32Wiimote.cpp, ESP32Wiimote.h, TinyWiimote.cpp, TinyWiimote.h<br />
 を格納します.  </p>
 </li>
 </ul>
-<h5 id="_8">ソースコードを修正する<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<h5 id="_8">ソースコードを修正する</h5>
 <p>https://github.com/Ninagawa123/Meridian_TWIN/blob/main/Meridian_TWIN_for_ESP32/<br />
 の<strong>src/main.cpp</strong>, <strong>platformio.ini</strong> をPlatformIOのプロジェクトファイルに上書きします.<br />
 通信関係の設定を修正する必要があるので, 下記にて必要項目を調べ, 書き換えます.  </p>
-<h6 id="pcip">接続先のPCのIPアドレスを調べる<a class="headerlink" href="#pcip" title="Permanent link">&para;</a></h6>
+<h6 id="pcip">接続先のPCのIPアドレスを調べる</h6>
 <p>windowsのコマンドプロンプトを開き,<br />
 $ ipconfig （Ubuntuの場合は$ ip a もしくは $ ifconfig）<br />
 と入力しコマンド実行します.<br />
 IPv4アドレスが表示されます（192.168.1.xxなど)<br />
 Macの場合は画面右上のwifiマークから”ネットワーク”環境設定...で表示されます.  </p>
-<h6 id="wifi">WIFIを設定する<a class="headerlink" href="#wifi" title="Permanent link">&para;</a></h6>
+<h6 id="wifi">WIFIを設定する</h6>
 <p>main.cppの /* 頻繁に変更するであろう変数 #DEFINE */ のところで,<br />
 接続したいWIFIのアクセスポイントのSSIDとパスワードを入力します.<br />
 アクセスポイントは5GHzではなく<strong>2.4GHz</strong>に対応している必要があります.<br />
 また, 先ほど調べた接続先のPCのIPアドレスも記入します.  </p>
-<h5 id="esp32_1">ESP32にソースコードを書き込む<a class="headerlink" href="#esp32_1" title="Permanent link">&para;</a></h5>
+<h5 id="esp32_1">ESP32にソースコードを書き込む</h5>
 <p>ここで一度, 更新したファイルを<strong>セーブしESP32に書き込みます</strong>.  </p>
-<h5 id="esp32ip">ESP32のIPアドレスを調べる<a class="headerlink" href="#esp32ip" title="Permanent link">&para;</a></h5>
+<h5 id="esp32ip">ESP32のIPアドレスを調べる</h5>
 <p>PlatformIOで画面下のコンセントアイコンからシリアルモニタを開き, ESP32DevKitC本体のENボタンを押します.<br />
 wifi接続に成功すると  </p>
 <blockquote>
@@ -208,21 +246,21 @@ ESP32's IP address is  =&gt; 192.168.1.xxx<br />
 ESP32's Bluetooth Mac Address is =&gt; xx:xx:xx:xx:xx:xx  </p>
 </blockquote>
 <p>と表示され, ESP32本体のIPアドレスが表示されます.このxxの番号をメモしておきます.  </p>
-<h5 id="esp32_2">ESP32にソースコードを書き込む<a class="headerlink" href="#esp32_2" title="Permanent link">&para;</a></h5>
+<h5 id="esp32_2">ESP32にソースコードを書き込む</h5>
 <p>ソースコードにESP32のBluetooth Mac Addressを記入します.<br />
 更新したファイルをセーブし, ESP32に書き込みます.<br />
 </p>
-<h5 id="platformioini">platformio.ini<a class="headerlink" href="#platformioini" title="Permanent link">&para;</a></h5>
+<h5 id="platformioini">platformio.ini</h5>
 <p>上書きしたplatformio.iniでは以下の設定を行なっています.
 - platformのバージョン指定
 - PCとのSerial通信速度設定を50000に指定
 - ライブラリの指定
 - OTA（無線経由のプログラム書き込み機能）の無効化によるパーティション拡張</p>
-<h5 id="_9">各種設定の確認<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<h5 id="_9">各種設定の確認</h5>
 <p>他にも, 接続するリモコンやシリアルモニタなどについての設定が可能です.<br />
 各ソースコード内のコメントを参考に適宜変更してください.  </p>
 <p>これでMeridian Board側の設定は完了です.  </p>
-<h2 id="meridian-console">Meridian consoleを実行する<a class="headerlink" href="#meridian-console" title="Permanent link">&para;</a></h2>
+<h2 id="meridian-console">Meridian consoleを実行する</h2>
 <p>Meridianで受け取るデータを表示できるコンソールを用意しました.python3が使える環境で実行可能です.
 https://github.com/Ninagawa123/Meridian_TWIN/tree/main/Meridian_console</p>
 <p>$ pip3 install dearpygui など, 必要なライブラリをインストールしてください.<br />
@@ -240,22 +278,22 @@ $ python Meridian_console.py  </p>
 　　
 Teensy4.0側にはリモコンの左十字キーの左右の入力に応じて首を振る動作のサンプルを入れてあります。<br />
 リモコンが有効に接続され、なおかつMeridian consoleよりサーボのPowerをオンにすると動作します。  </p>
-<h2 id="unity">Unity版デモを実行する<a class="headerlink" href="#unity" title="Permanent link">&para;</a></h2>
+<h2 id="unity">Unity版デモを実行する</h2>
 <p>（※Mac/Winで動作を確認.Winではファイアーウォールの設定が必要です.）  </p>
-<h4 id="unityhub">UnityHubに登録して起動する<a class="headerlink" href="#unityhub" title="Permanent link">&para;</a></h4>
+<h4 id="unityhub">UnityHubに登録して起動する</h4>
 <p>https://github.com/Ninagawa123/Meridian_core/tree/main/Unity_demo<br />
 フォルダ「Unity_demo」の中のMeridian_unity_demo_win_20220210.zipをDLし解凍します.<br />
 UnityHubを開き, ProjectsのADDで解凍済みの「Meridian_unity_demo_win_20220210」フォルダを指定します.<br />
 UnityHubに登録されたらプロジェクトを起動します.（Unityのバージョンは<strong>2020.3.25f1(LTS)</strong> です.） </p>
-<h4 id="unityip">UnityのソースコードのIPアドレスを書き換える<a class="headerlink" href="#unityip" title="Permanent link">&para;</a></h4>
+<h4 id="unityip">UnityのソースコードのIPアドレスを書き換える</h4>
 <p>画面下の「Project」→「Assets」→「Script」よりUdp_handler_sendをダブルクリックして開きます（VScodeなどが立ち上がります）<br />
 ソースコード9行目のconst string HOST = "192.168.1.xx"; にESP32DevKitCのIPアドレスを記入し, セーブします.</p>
-<h4 id="esp32ip_1">ESP32のIPアドレスを書き換える<a class="headerlink" href="#esp32ip_1" title="Permanent link">&para;</a></h4>
+<h4 id="esp32ip_1">ESP32のIPアドレスを書き換える</h4>
 <p>これまでの手順で設定済みの場合はそのままでOKです.
 Meridian_core_for_ESP32_PathThrough.inoの93行目にUnityを使うPCのIPアドレスを入力します.</p>
-<h4 id="windows">Windowsの場合はファイアーウォールを設定する<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<h4 id="windows">Windowsの場合はファイアーウォールを設定する</h4>
 <p>Windowsスタートメニュー→「設定」→「更新とセキュリティ」→「Windowsセキュリティ」→「ファイアーウォールとネットワーク保護」→「詳細設定」→「受信の規則」の一覧から「Unity 2020.3.25f1 Editor」の「パブリック」となっているものを選択しダブルクリック.「接続を許可する」にチェックを入れOKする.</p>
-<h4 id="unitymeridian">UnityとMeridianボードを起動する<a class="headerlink" href="#unitymeridian" title="Permanent link">&para;</a></h4>
+<h4 id="unitymeridian">UnityとMeridianボードを起動する</h4>
 <p>Unityを起動した後, Meridianボードを起動します.
 通信が成立していればロボットの関節にシンクロして画面の中のモデルが動きます.</p>
 <p>画面の「Send」にチェックを入れるとUnityからロボットを操作することができます.
@@ -264,15 +302,15 @@ Meridian_core_for_ESP32_PathThrough.inoの93行目にUnityを使うPCのIPアド
 <p>「Action」にチェックを入れるとUnityからロボットにサンプルのモーションを送信します.
 左半身の各関節角度をsinカーブで増減させます.
 このモーションはParamMaster.csの160行目-167行目で設定しているので, 適宜書き換えてお試しください.</p>
-<h2 id="ros">ROS版デモを実行する<a class="headerlink" href="#ros" title="Permanent link">&para;</a></h2>
-<h4 id="ros-noetic">ROS noeticの導入<a class="headerlink" href="#ros-noetic" title="Permanent link">&para;</a></h4>
+<h2 id="ros">ROS版デモを実行する</h2>
+<h4 id="ros-noetic">ROS noeticの導入</h4>
 <p>お手持ちの環境にROSを導入してください.<br />
 Raspberry pi4でROS-noeticを導入する手順については下記にまとめました.
 https://qiita.com/Ninagawa_Izumi/items/e84e9841f7a048832fcc  </p>
-<h4 id="urdf">URDFの表示テスト<a class="headerlink" href="#urdf" title="Permanent link">&para;</a></h4>
+<h4 id="urdf">URDFの表示テスト</h4>
 <p>https://github.com/Ninagawa123/roid1_urdf<br />
 まず, こちらのREADMEにしたがってRvizでロボットを表示できるか確認します.  </p>
-<h4 id="ros-rviz-meridian_demo">ROS, rviz, meridian_demoを実行する<a class="headerlink" href="#ros-rviz-meridian_demo" title="Permanent link">&para;</a></h4>
+<h4 id="ros-rviz-meridian_demo">ROS, rviz, meridian_demoを実行する</h4>
 <p>１つ目のターミナルを開き,<br />
 $ roscore  </p>
 <p>２つ目のターミナルを開き,<br />
@@ -286,66 +324,103 @@ $ python Meridian_console.py  </p>
 さらに「-&gt;ESP32」にチェックを入れると, ロボットのサーボを手で動かした時にロボットにも反映されます.  </p>
 <p>また, 「-&gt;ROS1」「&lt;-DEMO」にチェックを入れると, 画面内のロボットがサインカーブで構成されたダンスのデモを行います.<br />
 ここでさらに「ESP32&lt;-」「Power」にもチェックを入れると, ロボットのサーボにパワーが入り, 画面と同じ動きを実機で再現します.  </p>
-<h2 id="_10">トラブルシューティング<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<h4 id="ros_1">ROS版デモ実行時のトラブルシューティング<a class="headerlink" href="#ros_1" title="Permanent link">&para;</a></h4>
+<h2 id="_10">トラブルシューティング</h2>
+<h4 id="ros_1">ROS版デモ実行時のトラブルシューティング</h4>
 <p>Error: Cannot assign requested address となる<br />
 <em>→ おそらくアドレス番号が「192.168.x.xx」などのまま書き変わっていません.「ESP32のIPアドレスを調べる」「PCやラズパイ自身のIPアドレスを調べる」の項目を参考に,<br />
 Meridian consoleのアドレスを更新してください.</em>  </p>
-<h4 id="_11">ボードが動いていない時のトラブルシューティング<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<h4 id="_11">ボードが動いていない時のトラブルシューティング</h4>
 <p>動作テストとしてUSB給電のみで使っている場合に動作しない場合があります.<br />
 その場合, ESP32側にUSB給電することで動く場合があります.<br />
 それでも動かない場合は電源供給付きのUSBハブを利用するか, Meridianボードに電源を接続することでアンペアを確保してください.<br />
 Meridianボードの電源入力にバッテリーや安定化電源で電力を供給することでも安定的に動きます.  </p>
-<h4 id="_12">既知の課題<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
-<h5 id="meridian-board20220721">Meridian Board(2022.07.21)<a class="headerlink" href="#meridian-board20220721" title="Permanent link">&para;</a></h5>
+<h4 id="_12">既知の課題</h4>
+<h5 id="meridian-board20220721">Meridian Board(2022.07.21)</h5>
 <ul>
 <li>各経路で, 0.1%以下の通信エラーが発生します.Meridianのシステムでは通信エラー時はすぐに次のデータを使用することでこのエラーをフォローしています.</li>
 <li>PS4コントローラの接続時, データスキップが5%~10%ほど生じます.</li>
 <li>Wiiコントローラの接続時はデータのスキップはほとんど発生しませんが, 初回の接続が確立しない場合が多いです.</li>
 </ul>
-<h5 id="meridian-console20220504">Meridian console版(2022.05.04)<a class="headerlink" href="#meridian-console20220504" title="Permanent link">&para;</a></h5>
+<h5 id="meridian-console20220504">Meridian console版(2022.05.04)</h5>
 <p>Meridian Consoleで読み取った関節データをROS1に出力し, rosbagでjointstateを記録することは可能のようですが, rosbug playとした場合にMeridian Console経由で再生しようとするとカクツキが生じています.改善すべく, 原因を探っています. </p>
-<h5 id="meridian-board-typek">Meridian Board Type.K のフリーピン結線時の注意<a class="headerlink" href="#meridian-board-typek" title="Permanent link">&para;</a></h5>
+<h5 id="meridian-board-typek">Meridian Board Type.K のフリーピン結線時の注意</h5>
 <p>Meridian Board Type.Kには未接続のピン穴を複数設けてあり, 背面からマイコンの入出力と半田付けするすることでIOポートとして利用可能です.その際の注意点を以下にメモします.<br />
 - ESP32のRX0, TX0はPCとのUSBシリアルで使用されています.<br />
-- ESP32のGPIO6-11は内部フラッシュとの接続されておりIOとしては使用できないようです.  </p>
+- ESP32のGPIO6-11は内部フラッシュとの接続されておりIOとしては使用できないようです.  </p></div>
+            </div>
+        </div>
 
-  <br>
-    
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
-    
-    
-      
-    
-
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../Meridian_LITE/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../Meridian_LITE/" class="btn btn-xs btn-link">
-        Meridian LITE
-      </a>
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
     </div>
-    
-    <div class="wm-article-nav">
-      <a href="../.." class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../.." class="btn btn-xs btn-link">
-        Home
-      </a>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
     </div>
-    
-  </div>
-
-    <br>
 </div>
 
-<footer class="container-fluid wm-page-content">
-  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
-</footer>
-
-</body>
+    </body>
 </html>
