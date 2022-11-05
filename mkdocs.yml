@@ -1,0 +1,19 @@
+site_name: Meridian Documentation
+# repo_url: https://github.com/example/repository/
+
+nav:
+    - Home: 'index.md'
+    - 'Getting Started':
+        - 'Meridian TWIN': 'GettingStarted/Meridian_TWIN.md'
+        - 'Meridian LITE': 'GettingStarted/Meridian_LITE.md'
+    - Blog: "https://note.com/ninagawa123/n/nb768563591be"
+
+theme:
+    name: readthedocs
+    locale: ja
+
+markdown_extensions:
+    - toc:
+        permalink: True
+
+plugins:
