@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>local value - Meridian Infomation</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../Library/cksm_rslt/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../Library/cksm_rslt/" class="btn btn-xs btn-link">
+        cksm_rslt
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../define_master/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../define_master/" class="btn btn-xs btn-link">
+        #define master
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <hr>
+<h3> ローカル変数名のリスト #1 </h3>
+<hr>
+<p><br></p>
+<h4><b>バージョン表示</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>バージョン書式</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#define</td>
+<td>VERSION</td>
+<td>"Meridian_xxx_for_xxx_20xx.xx.xx"</td>
+<td>バージョン表示</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>インスタンス</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>クラス名（引数）</th>
+<th>使用ライブラリ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MERIDIANFLOW::Meridian</td>
+<td>mrd</td>
+<td>Meridian.h</td>
+</tr>
+<tr>
+<td>WiFiUDP</td>
+<td>udp</td>
+<td>WiFiUdp.h</td>
+</tr>
+<tr>
+<td>ESP32DMASPI::Slave</td>
+<td>slave</td>
+<td>ESP32DMASPISlave.h</td>
+</tr>
+<tr>
+<td>ESP32Wiimote</td>
+<td>wiimote</td>
+<td>ESP32Wiimote.h</td>
+</tr>
+<tr>
+<td>IcsHardSerialClass</td>
+<td>krs_L(&amp;Serial2, PIN_EN_L, ICS_BAUDRATE, ICS_TIMEOUT)</td>
+<td>IcsHardSerialClass.h</td>
+</tr>
+<tr>
+<td>IcsHardSerialClass</td>
+<td>krs_R(&amp;Serial3, PIN_EN_R, ICS_BAUDRATE, ICS_TIMEOUT)</td>
+<td>IcsHardSerialClass.h</td>
+</tr>
+<tr>
+<td>IcsHardSerialClass</td>
+<td>krs_3(&amp;Serial1, PIN_EN_3, ICS_BAUDRATE, ICS_TIMEOUT)</td>
+<td>IcsHardSerialClass.h</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>Meridim配列用の共用体</b></h4>
+<p>※ DMA使用時に配列末尾のデータが欠損する仕様を回避するため、配列要素を多くすることで対策。</p>
+<table>
+<thead>
+<tr>
+<th>共用体設定</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>typedef union{<br>short sval[MSG_SIZE + 4];<br>unsigned short usval[MSG_SIZE + 2];<br>uint8_t bval[MSG_BUFF + 4];<br>} UnionData;</td>
+<td><br>.sval short型<br>.usval unsigned short型<br>.bval bite型 <br>UnionData この共用体の型名</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>共用体型名</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UnionData</td>
+<td>s_spi_meridim</td>
+<td>Meridim配列データ(short型,センサや角度は100倍値)</td>
+</tr>
+<tr>
+<td>UnionData</td>
+<td>r_spi_meridim</td>
+<td>Meridim配列データ(short型,センサや角度は100倍値)</td>
+</tr>
+<tr>
+<td>UnionData</td>
+<td>s_spi_meridim_dma</td>
+<td>SPI送信用</td>
+</tr>
+<tr>
+<td>UnionData</td>
+<td>r_spi_meridim_dma</td>
+<td>SPI受信用</td>
+</tr>
+<tr>
+<td>UnionData</td>
+<td>s_udp_meridim</td>
+<td>UDP送信用</td>
+</tr>
+<tr>
+<td>UnionData</td>
+<td>r_udp_meridim</td>
+<td>UDP受信用</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>システム用</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uint8_t</td>
+<td>*s_spi_meridim_dma</td>
+<td>DMA送信用</td>
+</tr>
+<tr>
+<td>uint8_t</td>
+<td>*r_spi_meridim_dma</td>
+<td>DMA受信用</td>
+</tr>
+<tr>
+<td>TaskHandle_t</td>
+<td>thp[4]</td>
+<td>マルチスレッドのタスクハンドル格納用</td>
+</tr>
+<tr>
+<td>File</td>
+<td>myFile</td>
+<td>SDカード用</td>
+</tr>
+<tr>
+<td>int</td>
+<td>servo_num_max<br>= max(MOUNT_SERVO_NUM_L, MOUNT_SERVO_NUM_R)</td>
+<td>サーボ送受信のループ処理数（L系R系で多い方）</td>
+</tr>
+</tbody>
+</table>
+<p>★廃止 int servo_num = max(MOUNT_SERVO_NUM_L, MOUNT_SERVO_NUM_R); // サーボ送受信のループ処理数（L系R系で多い方）</p>
+<p><br></p>
+<h4><b>フラグ用</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td>flag_spi_ready</td>
+<td>SPI送信の順番制御用</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>flag_udp_busy</td>
+<td>UDPスレッドでの受信中フラグ（送信抑制）</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>flag_udp_rsvd</td>
+<td>UDPスレッドでの受信完了フラグ</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>flag_imuahrs_available</td>
+<td>IMU/AHRSセンサ値へのアクセスセマフォ</td>
+</tr>
+</tbody>
+</table>
+<p>★廃止 int frame_sync_r_expect = 0; // フレーム毎に前回受信値に+１として受信値と比較（-30000~29999)<br>
+★廃止 spi_ready_flag<br>
+★廃止 udp_rsvd_flag<br>
+★廃止 udp_busy_flag<br>
+★廃止 flag_sensor_IMUAHRS_writable<br></p>
+<p><br></p>
+<h4><b>タイマー関連</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>long</td>
+<td>frame_ms = FRAME_DURATION</td>
+<td>1フレームあたりの単位時間(ms)</td>
+</tr>
+<tr>
+<td>long</td>
+<td>mrd_t_mil = (long)millis()</td>
+<td>Meridianフレーム管理時計の時刻</td>
+</tr>
+<tr>
+<td>long</td>
+<td>now_t_mil = (long)millis()</td>
+<td>現在時刻をミリ秒で取得</td>
+</tr>
+<tr>
+<td>long</td>
+<td>now_t_mic = (long)micros()</td>
+<td>現在時刻をマイクロ秒で取得</td>
+</tr>
+<tr>
+<td>int</td>
+<td>frame_count</td>
+<td>サイン計算用の変数</td>
+</tr>
+<tr>
+<td>int</td>
+<td>frame_count_diff</td>
+<td>サインカーブ動作などのフレームカウントをいくつずつ進めるか</td>
+</tr>
+<tr>
+<td>int</td>
+<td>frame_count_max = 360000</td>
+<td>フレームカウントの最大値</td>
+</tr>
+<tr>
+<td>int</td>
+<td>joypad_frame_count</td>
+<td>JOYPADのデータを読みに行くためのフレームカウント</td>
+</tr>
+<tr>
+<td>int</td>
+<td>mrd_seq_s_increment</td>
+<td>フレーム毎にシーケンス番号0-59999をカウントし、送信</td>
+</tr>
+<tr>
+<td>int</td>
+<td>mrd_seq_r_expect</td>
+<td>フレーム毎に0-59999をカウントし、受信シーケンス番号と比較</td>
+</tr>
+<tr>
+<td>int</td>
+<td>mrd_seq_r</td>
+<td>今フレームに受信したframe_syncを格納</td>
+</tr>
+</tbody>
+</table>
+<p>★廃止 long merc = (long)millis();             // フレーム管理時計の時刻 Meridian Clock.<br>
+★廃止 long curr = (long)millis();             // 現在時刻を取得<br>
+★廃止 long curr_micro = (long)micros();       // 現在時刻を取得<br>
+★廃止 int meridim_seq_s_increment = 0; // フレーム毎に0-59999をカウントし、送信<br>
+★廃止 int meridim_seq_r_expect = 0;    // フレーム毎に0-59999をカウントし、受信値と比較<br>
+★廃止 int meridim_seq_r = 0;           // 今フ<br></p>
+<p><br></p>
+<h4><b>エラー監視用</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>err_esp_pc</td>
+<td>PCの受信エラー回数（ESP32からのUDP）</td>
+</tr>
+<tr>
+<td>int</td>
+<td>err_pc_esp</td>
+<td>ESP32の受信エラー回数（PCからのUDP）</td>
+</tr>
+<tr>
+<td>int</td>
+<td>err_esp_tsy</td>
+<td>Teensyの受信エラー回数（ESP32からのSPI）</td>
+</tr>
+<tr>
+<td>int</td>
+<td>err_tsy_esp</td>
+<td>ESP32の受信エラー回数（TeensyからのSPI）</td>
+</tr>
+<tr>
+<td>int</td>
+<td>err_esp_skip</td>
+<td>ESPの受信シーケンス番号スキップ回数（UDP）</td>
+</tr>
+<tr>
+<td>int</td>
+<td>err_tsy_skip</td>
+<td>Teensyの受信シーケンス番号スキップ回数（ESP経由UDP）</td>
+</tr>
+<tr>
+<td>int</td>
+<td>err_pc_skip</td>
+<td>PCの受信シーケンス番号スキップ回数（UDP）</td>
+</tr>
+</tbody>
+</table>
+<p>★廃止 int spi_ok = 0;<br>
+★廃止 int spi_trial = 0;<br></p>
+<p><br></p>
+<h4><b>モード切り替え関連</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td>trim_adjust = TRIM_ADJUST_MODE</td>
+<td>トリムモードのオンオフ</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>monitor_all_error = MONITOR_ALL_ERROR</td>
+<td>全経路の受信エラー率シリアル表示</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>wifi用</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>bluetooth用</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>リモコン関連</b></h4>
+<table>
+<thead>
+<tr>
+<th>リモコン用共用体設定</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>typedef union{<br>short sval[4];<br>unsigned short usval[8];<br>uint16_t ui16val[1];<br>} UnionPad;</td>
+<td><br>.sval short型<br>.usval unsigned short型<br>.ui16val unsigned int16型 <br>UnionPad この共用体の型名</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>共用体型名</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UnionPad</td>
+<td>pad_array</td>
+<td>リモコン値格納用の配列</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unsigned short</td>
+<td>pad_stick_R</td>
+<td>受信ジョイスティックデータy</td>
+</tr>
+<tr>
+<td>int</td>
+<td>pad_stick_R_x</td>
+<td>受信ジョイスティックデータRx</td>
+</tr>
+<tr>
+<td>int</td>
+<td>pad_stick_R_y</td>
+<td>受信ジョイスティックデータRy</td>
+</tr>
+<tr>
+<td>unsigned short</td>
+<td>pad_stick_L</td>
+<td>受信ジョイスティックデータL</td>
+</tr>
+<tr>
+<td>int</td>
+<td>pad_stick_L_x</td>
+<td>受信ジョイスティックデータLx</td>
+</tr>
+<tr>
+<td>int</td>
+<td>pad_stick_L_y</td>
+<td>受信ジョイスティックデータLy</td>
+</tr>
+<tr>
+<td>unsigned short</td>
+<td>pad_stick_L2R2V</td>
+<td>受信ジョイスティックデータL2R2アナログ</td>
+</tr>
+<tr>
+<td>int</td>
+<td>pad_R2_val</td>
+<td>受信ジョイスティックデータL2アナログ</td>
+</tr>
+<tr>
+<td>int</td>
+<td>pad_L2_val</td>
+<td>受信ジョイスティックデータR2アナログ</td>
+</tr>
+</tbody>
+</table>
+<p>★廃止 unsigned short pad_array[] ={0, 0, 0, 0};//button, pad_stick_L_x:pad_stick_L_y, pad_stick_R_x:pad_stick_R_y, pad_L2_val:pad_R2_val<br>
+★廃止 unsigned short button_1 = 0; // 受信ボタンデータ1群<br>
+★廃止 unsigned short button_2 = 0; // 受信ボタンデータ2群<br>
+★廃止 short stick_Rx = 0;          // <br>
+★廃止 short stick_Ry = 0;          // 受信ジョイスティックデータRy<br>
+★廃止 short stick_Lx = 0;          // 受信ジョイスティックデータLx<br>
+★廃止 short stick_Ly = 0;          // 受信ジョイスティックデータLy<br>
+★廃止? int joypad_search = 3;<br></p>
+<p><br></p>
+<h4><b>センサー関連</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>yaw_center</td>
+<td>ヨー軸方向の原点リセット用</td>
+</tr>
+<tr>
+<td><b>MPU6050用</b></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MPU6050</td>
+<td>mpu</td>
+<td>MPU6050取り扱い用のインスタンス</td>
+</tr>
+<tr>
+<td>uint8_t</td>
+<td>mpuIntStatus</td>
+<td>holds actual interrupt status byte from MPU</td>
+</tr>
+<tr>
+<td>uint8_t</td>
+<td>devStatus</td>
+<td>return status after each device operation (0 = success, !0 = error)</td>
+</tr>
+<tr>
+<td>uint16_t</td>
+<td>packetSize</td>
+<td>expected DMP packet size (default is 42 bytes)</td>
+</tr>
+<tr>
+<td>uint8_t</td>
+<td>fifoBuffer[64]</td>
+<td>FIFO storage buffer</td>
+</tr>
+<tr>
+<td>Quaternion</td>
+<td>q</td>
+<td>[w, x, y, z] quaternion container</td>
+</tr>
+<tr>
+<td>VectorFloat</td>
+<td>gravity</td>
+<td>[x, y, z] gravity vector</td>
+</tr>
+<tr>
+<td>float</td>
+<td>ypr[3]</td>
+<td>[roll, pitch, yaw] value container</td>
+</tr>
+<tr>
+<td>float</td>
+<td>yaw_zero</td>
+<td></td>
+</tr>
+<tr>
+<td>float</td>
+<td>mpu_read[16]</td>
+<td>mpuから読み込んだ一次データ<br>acc_x,y,z,gyro_x,y,z,mag_x,y,z,gr_x,y,z,rpy_r,p,y,temp</td>
+</tr>
+<tr>
+<td>float</td>
+<td>mpu_zeros[16] = {0}</td>
+<td>リセット用</td>
+</tr>
+<tr>
+<td>float</td>
+<td>mpu_ave_data[16]</td>
+<td>移動平均値計算用（データ格納）</td>
+</tr>
+<tr>
+<td>float</td>
+<td>mpu_result[16]</td>
+<td>加工後の最新のmpuデータ（二次データ）</td>
+</tr>
+<tr>
+<td>float</td>
+<td>mpu_stock_data[IMUAHRS_STOCK][16]</td>
+<td>移動平均値計算用のデータストック</td>
+</tr>
+<tr>
+<td>int</td>
+<td>mpu_stock_count = 0</td>
+<td>移動平均値計算用</td>
+</tr>
+<tr>
+<td>VectorInt16</td>
+<td>aa</td>
+<td>[x, y, z] 加速度センサの測定値</td>
+</tr>
+<tr>
+<td>VectorInt16</td>
+<td>gyro</td>
+<td>[x, y, z] 角速度センサの測定値</td>
+</tr>
+<tr>
+<td>VectorInt16</td>
+<td>mag</td>
+<td>[x, y, z] 磁力センサの測定値</td>
+</tr>
+<tr>
+<td>long</td>
+<td>temperature</td>
+<td>センサの温度測定値</td>
+</tr>
+<tr>
+<td><b>BNO055用</b></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Adafruit_BNO055</td>
+<td>bno = Adafruit_BNO055(55, 0x28, &amp;Wire)</td>
+<td>BNO055取り扱い用のインスタンス</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>サーボボジション関連</b></h4>
+<table>
+<thead>
+<tr>
+<th>型</th>
+<th>変数名</th>
+<th>単位</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>idl_mount[15]</td>
+<td>0,1</td>
+<td>サーボのマウント有無 IDL_MT[0] ~[14]に対応 (L系統)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>idr_mount[15]</td>
+<td>0,1</td>
+<td>サーボのマウント有無 IDR_MT[0] ~[14]に対応 (R系統)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>id3_mount[15]</td>
+<td>0,1</td>
+<td>サーボのマウント有無 ID3_MT[0] ~[14]に対応 (3系統)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>idl_cw[15]</td>
+<td>-1,1</td>
+<td>サーボの回転方向補正 IDL_CW[0] ~[14]に対応 (L系統)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>idr_cw[15]</td>
+<td>-1,1</td>
+<td>サーボの回転方向補正 IDR_CW[0] ~[14]に対応 (R系統)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>id3_cw[15]</td>
+<td>-1,1</td>
+<td>サーボの回転方向補正 ID3_CW[0] ~[14]に対応 (3系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>idl_trim[15]</td>
+<td>degree</td>
+<td>サーボの直立ポーズトリム値 IDL_TRIM[0] ~[14]に対応 (L系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>idr_trim[15]</td>
+<td>degree</td>
+<td>サーボの直立ポーズトリム値 IDR_TRIM[0] ~[14]に対応 (R系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>id3_trim[15]</td>
+<td>degree</td>
+<td>サーボの直立ポーズトリム値 ID3_TRIM[0] ~[14]に対応 (3系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>idl_tgt[15]</td>
+<td>degree</td>
+<td>サーボの目標値格納 (L系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>idr_tgt[15]</td>
+<td>degree</td>
+<td>サーボの目標値格納 (R系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>id3_tgt[15]</td>
+<td>degree</td>
+<td>サーボの目標値格納 (3系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>idl_tgt_past[15]</td>
+<td>degree</td>
+<td>前回の目標位置 (L系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>idr_tgt_past[15]</td>
+<td>degree</td>
+<td>前回の目標位置 (R系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>id3_tgt_past[15]</td>
+<td>degree</td>
+<td>前回の目標位置 (3系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>idl_diff_past[15]</td>
+<td>degree</td>
+<td>前回のサーボ値のキープ用 (L系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>idr_diff_past[15]</td>
+<td>degree</td>
+<td>前回のサーボ値のキープ用 (R系統)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>id3_diff_past[15]</td>
+<td>degree</td>
+<td>前回のサーボ値のキープ用 (3系統)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>s_servo_err_L[15]</td>
+<td></td>
+<td>サーボのエラーカウンタ格納 (L系統)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>s_servo_err_R[15]</td>
+<td></td>
+<td>サーボのエラーカウンタ格納 (R系統)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>s_servo_err_3[15]</td>
+<td></td>
+<td>サーボのエラーカウンタ格納 (3系統)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>k</td>
+<td></td>
+<td>計算用変数</td>
+</tr>
+</tbody>
+</table>
+<p>★廃止 float r_servo_pos_L[15] = {0}; // 15要素 degree値<br>
+★廃止 float r_servo_pos_R[15] = {0}; // 15要素<br>
+★廃止 float idl_diff[15]; // L系統<br>
+★廃止 float idr_diff[15]; // R系統<br>
+★廃止 int|s_servo_pos_L[15]|degree<em>100|サーボのポジション格納 (L系統)|<br>
+★廃止 int|s_servo_pos_R[15]|degree</em>100|サーボのポジション格納 (R系統)|<br>
+★廃止 int|s_servo_pos_3[15]|degree*100|サーボポジション格納 (3系統)|<br></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../Library/cksm_rslt/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../Library/cksm_rslt/" class="btn btn-xs btn-link">
+        cksm_rslt
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../define_master/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../define_master/" class="btn btn-xs btn-link">
+        #define master
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

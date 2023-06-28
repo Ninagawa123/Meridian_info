@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>print_imuahrs - Meridian Infomation</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../print_servo_mounts/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../print_servo_mounts/" class="btn btn-xs btn-link">
+        print_servo_mounts
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../print_esp_hello_ip/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../print_esp_hello_ip/" class="btn btn-xs btn-link">
+        print_esp_hello_ip
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <hr />
+<h2><b>void print_imuahrs(int imuahrs_mount, int imuahrs_freq)</b></h2>
+<hr />
+<p>接続されたの６軸,９軸センサーの種類を表示します。<br />
+引数1 : センサのタイプ番号<br />
+引数2 : センサへの問い合わせフレーム間隔(ms)  </p>
+<p>&lt;センサのタイプ番号&gt;<br />
+0:None, 1:MPU6050(GY-521), 2:MPU9250(GY-6050/GY-9250), 3:BNO055<br />
+<br>  </p>
+<pre><code>/**
+ * @brief Print IMU/AHRS sensor's type to serial.
+ *
+ * @param[in] imuahrs_mount imuahrs_mount number
+ *                          0:off, 1:MPU6050(GY-521), 2:MPU9250(GY-6050/GY-9250) 3:BNO055
+ * @param[in] imuahrs_freq Frequency to calling imu/ahrs via I2C.
+ **/
+
+void Meridian::print_imuahrs(int imuahrs_mount, int imuahrs_freq)
+{
+    Serial.print(&quot;I2C IMU/AHRS Sensor mounted: &quot;);
+
+    switch (imuahrs_mount)
+    {
+    case 0:
+        Serial.print(&quot;None. &quot;);
+        break;
+    case 1:
+        Serial.print(&quot;MPU6050(GY-521) &quot;);
+        break;
+    case 2:
+        Serial.print(&quot;MPU9250(GY-6050/GY-9250) &quot;);
+        break;
+    case 3:
+        Serial.print(&quot;BNO055 &quot;);
+        break;
+    default:
+        break;
+    }
+
+    if (imuahrs_mount != 0)
+    {
+        Serial.print(&quot;  freq: &quot;);
+        Serial.println(imuahrs_freq);
+    }
+}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../print_servo_mounts/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../print_servo_mounts/" class="btn btn-xs btn-link">
+        print_servo_mounts
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../print_esp_hello_ip/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../print_esp_hello_ip/" class="btn btn-xs btn-link">
+        print_esp_hello_ip
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
