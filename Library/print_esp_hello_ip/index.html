@@ -86,8 +86,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 引数2 : ESP32側のIPアドレス※<br />
 引数3 : ESP32のIP固定時のIPアドレス (IPAddress型)<br />
 引数4 : ESP32のIP固定の有無。 True:ON, False:OFF<br />
-※ 引数2のESP32側の動的IPアドレスはMeridian起動時にESP32のシリアルモニタに表示。<br />
-<br>  </p>
+※ 引数2のESP32側の動的IPアドレスはMeridian起動時にESP32のシリアルモニタに表示。  </p>
+<p><br>  </p>
 <pre><code>/**
  * @brief Print Wi-Fi status to serial.
  *
@@ -95,7 +95,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  * @param[in] wifi_localip Wi-Fi IP of this device.
  * @param[in] fixed_ip_addr Fixed Wi-Fi IP of this device. (If mode_fixed_ip is True)
  * @param[in] mode_fixed_ip Use fixed Wi-Fi IP or Not.
- **/
+ */
 
 void Meridian::print_esp_hello_ip(String wifi_send_ip, IPAddress wifi_localip, String fixed_ip_addr, bool mode_fixed_ip)
 {

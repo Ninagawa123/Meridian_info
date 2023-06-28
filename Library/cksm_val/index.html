@@ -82,10 +82,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h2><b>short cksm_val(short arr[ ], int len)</b></h2>
 <hr />
 <p>Meridim配列のチェックサムを算出します。<br />
-引数1にはMeridim配列(short型)、引数2には配列の長さ(int型)を設定します。<br />
+引数1 : Meridim配列(short型)<br />
+引数2 : 配列の長さ(int型)
 Meridim配列の末尾-1までの数値を合計して最後にビット反転し、<br />
-Short型に変換したものをチェックサム値として返します。<br />
-<br>  </p>
+Short型に変換したものをチェックサム値として返します。  </p>
+<p><br>  </p>
 <pre><code>/**
 * @brief calculate checksum of Meridim
 *
@@ -96,12 +97,12 @@ Short型に変換したものをチェックサム値として返します。<br
 
 short Meridian::cksm_val(short arr[], int len)
 {
-    int cksm = 0;
+    int _cksm = 0;
     for (int i = 0; i &lt; len - 1; i++)
     {
-        cksm += int(arr[i]);
+        _cksm += int(arr[i]);
     }
-    return short(~cksm);
+    return short(~_cksm);
 }
 </code></pre>
 

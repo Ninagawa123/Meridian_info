@@ -84,15 +84,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>ESP等での起動メッセージを表示します。(Wi-Fi接続前から) <br />
 引数1 : バージョン文字列<br />
 引数2 : PCシリアル通信速度<br />
-引数3 : Wi-FI AP SSID文字列<br />
-<br>  </p>
+引数3 : Wi-FI AP SSID文字列  </p>
+<p><br>  </p>
 <pre><code>/**
  * @brief Print wake-up massage to serial.
  *
  * @param[in] version VESRION of Meridian.
  * @param[in] serial_pc_bps PC-Serial speed.
  * @param[in] wifi_ap_ssid Wi-Fi AP adress to connect.
- **/  
+ */  
 
 void Meridian::print_esp_hello_start(String version, String serial_pc_bps, String wifi_ap_ssid)
 {

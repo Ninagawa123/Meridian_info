@@ -83,17 +83,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <hr />
 <p>Teensy等での起動メッセージを表示します。<br />
 引数1 : L系列のサーボマウント配列<br />
-引数2 : R系列のサーボマウント配列 
-引数3 : 3系列のサーボマウント配列 
-<br>  </p>
-<pre><code>
-/**
+引数2 : R系列のサーボマウント配列<br />
+引数3 : 3系列のサーボマウント配列  </p>
+<p><br>  </p>
+<pre><code>/**
  * @brief Print mounted servomotor's id.
  *
  * @param[in] idl_svmt Left side servos arrey.
  * @param[in] idr_svmt Right side servos arrey.
  * @param[in] id3_svmt 3rd side servos arrey.
- **/
+ */
 
 void Meridian::print_servo_mounts(int idl_svmt[], int idr_svmt[])
 {
@@ -122,9 +121,9 @@ void Meridian::print_servo_mounts(int idl_svmt[], int idr_svmt[])
     int x = 0;
     for (int i = 0; i &lt; 15; i++)
     {
-        x = x + id3_svmt[i];
+        _x = _x + id3_svmt[i];
     }
-    if (x){
+    if (_x){
         Serial.print(&quot;3rd side Servos mounted: &quot;);
         for (int i = 0; i &lt; 15; i++)
         {

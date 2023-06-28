@@ -85,15 +85,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 引数1 : センサのタイプ番号<br />
 引数2 : センサへの問い合わせフレーム間隔(ms)  </p>
 <p>&lt;センサのタイプ番号&gt;<br />
-0:None, 1:MPU6050(GY-521), 2:MPU9250(GY-6050/GY-9250), 3:BNO055<br />
-<br>  </p>
+0:None, 1:MPU6050(GY-521), 2:MPU9250(GY-6050/GY-9250), 3:BNO055  </p>
+<p><br>  </p>
 <pre><code>/**
  * @brief Print IMU/AHRS sensor's type to serial.
  *
  * @param[in] imuahrs_mount imuahrs_mount number
  *                          0:off, 1:MPU6050(GY-521), 2:MPU9250(GY-6050/GY-9250) 3:BNO055
  * @param[in] imuahrs_freq Frequency to calling imu/ahrs via I2C.
- **/
+ */
 
 void Meridian::print_imuahrs(int imuahrs_mount, int imuahrs_freq)
 {

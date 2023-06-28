@@ -86,6 +86,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 引数2 : サーボのトリム補正degree角度値(float型)<br />
 引数3 : サーボの回転方向+-補正値(int型 -1,+1)<br />
 結果はint型、-1600〜1600の範囲に限定されます。<br />
+　　
 <br>  </p>
 <pre><code>/**
  * @brief Degree value to Futaba's RSxx Servo value.
@@ -94,20 +95,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  * @param[in] trim Trim degree value
  * @param[in] cw Correction value for direction of rotation（+1 or -1）
  * @return int, Futaba's RSxx Servo value（-1600 to 1600）
- **/
+ */
 
 int Meridian::Deg2RSxx(float degree, float trim, int cw)
 {
-    float x = (degree + trim) * 10 * cw; 
-    if (x &gt; 1600)                        // max limit
+    float _x = (degree + trim) * 10 * cw; 
+    if (_x &gt; 1600)                        // max limit
     {
-        x = 1600;
+        _x = 1600;
     }
-    else if (x &lt; -1600) // min limit
+    else if (_x &lt; -1600) // min limit
     {
-        x = -1600;
+        _x = -1600;
     }
-    return static_cast&lt;int&gt;(x);
+    return static_cast&lt;int&gt;(_x);
 }
 </code></pre>
 

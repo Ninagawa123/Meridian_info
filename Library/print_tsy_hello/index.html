@@ -84,15 +84,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>Teensy等での起動メッセージを表示します。<br />
 引数1 : バージョン文字列<br />
 引数2 : SPI通信速度<br />
-引数3 : I2C通信速度<br />
-<br>  </p>
+引数3 : I2C通信速度  </p>
+<p><br>  </p>
 <pre><code>/**
  * @brief Print version, I2C speed, SPI speed.
  *
  * @param[in] version This　Merisian's VERSION
  * @param[in] spi_speed SPI speed
  * @param[in] i2c_speed I2C speed
- **/
+ */
 
 void Meridian::print_tsy_hello(String version, int spi_speed, int i2c_speed)
 {

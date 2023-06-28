@@ -91,16 +91,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  *
  * @param[in] previous_seq_num Previous sequence number.
  * @return int, Expected sequence number. (0 to 59,999)
- **/
+ */
 
 int Meridian::predict_seq_num(int previous_seq_num)
 {
-    int x = previous_seq_num + 1;
-    if (x &gt; 59999) // Reset counter
+    int _x = previous_seq_num + 1;
+    if (_x &gt; 59999) // Reset counter
     {
-        x = 0;
+        _x = 0;
     }
-    return x;
+    return _x;
 }
 </code></pre>
 

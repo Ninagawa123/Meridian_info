@@ -85,9 +85,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 引数1 : KRS系サーボの位置の値(int型)<br />
 引数2 : サーボのトリム補正degree角度値(float型)<br />
 引数3 : サーボの回転方向+-補正値(int型 -1,+1) <br />
-を設定します。<br />
-結果はint型、-32766〜32766の範囲に限定されます。<br />
-<br>  </p>
+結果はint型、-32766〜32766の範囲に限定されます。  </p>
+<p><br>  </p>
 <pre><code>/**
  * @brief Kondo's KRS Servo value to hundredfold degree value.
  *
@@ -95,20 +94,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  * @param[in] trim Trim degree value
  * @param[in] cw Correction value for direction of rotation（+1 or -1）
  * @return int, degree * 100
- **/
+ */
 
 int Meridian::Krs2HfDeg(int krs, float trim, int cw)
 {
-    float x = (krs - 7500 - (trim * 29.62963)) * 3.375 * cw;
-    if (x &gt; 32766)
+    float _x = (krs - 7500 - (trim * 29.62963)) * 3.375 * cw;
+    if (_x &gt; 32766)
     {
-        x = 32766;
+        _x = 32766;
     }
-    else if (x &lt; -32766)
+    else if (_x &lt; -32766)
     {
-        x = -32766;
+        _x = -32766;
     }
-    return static_cast&lt;int&gt;(x);
+    return static_cast&lt;int&gt;(_x);
 }
 </code></pre>
 
