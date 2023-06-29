@@ -79,7 +79,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <hr />
-<h2><b>int increase_seq_num(int previous_seq_num)</b></h2>
+<h2><b>int seq_increase_num(int previous_seq_num)</b></h2>
 <hr />
 <p>シーケンス番号として引数に＋１した値を返します。 <br />
 引数 : 前回のシーケンス番号<br />
@@ -93,7 +93,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  * @return int, Expected sequence number. (0 to 59,999)  
  */  
 
-int Meridian::increase_seq_num(int previous_seq_num)
+int Meridian::seq_increase_num(int previous_seq_num)
 {
     int _x = previous_seq_num + 1;
     if (_x &gt; 59999) // Reset counter
