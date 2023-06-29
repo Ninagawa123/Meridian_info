@@ -57,20 +57,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../HfShort2float/" class="btn btn-xs btn-default pull-right">
+      <a href="../seq_compare_nums/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../HfShort2float/" class="btn btn-xs btn-link">
-        HfShort2float
+      <a href="../seq_compare_nums/" class="btn btn-xs btn-link">
+        seq_compare_nums
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../seq_compare_nums/" class="btn btn-xs btn-default pull-left">
+      <a href="../seq_increase_num/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../seq_compare_nums/" class="btn btn-xs btn-link">
-        seq_compare_nums
+        Previous</a><a href="../seq_increase_num/" class="btn btn-xs btn-link">
+        seq_increase_num
       </a>
     </div>
     
@@ -79,7 +79,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <hr />
-<h2><b>int predict_seq_num(int previous_seq_num)</b></h2>
+<h2><b>int seq_predict_num(int previous_seq_num)</b></h2>
 <hr />
 <p>シーケンス番号の予測値として引数に＋１した値を返します。 <br />
 引数 : 前回のシーケンス番号<br />
@@ -93,7 +93,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  * @return int, Expected sequence number. (0 to 59,999)
  */
 
-int Meridian::predict_seq_num(int previous_seq_num)
+int Meridian::seq_predict_num(int previous_seq_num)
 {
     int _x = previous_seq_num + 1;
     if (_x &gt; 59999) // Reset counter
@@ -115,20 +115,20 @@ int Meridian::predict_seq_num(int previous_seq_num)
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../HfShort2float/" class="btn btn-xs btn-default pull-right">
+      <a href="../seq_compare_nums/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../HfShort2float/" class="btn btn-xs btn-link">
-        HfShort2float
+      <a href="../seq_compare_nums/" class="btn btn-xs btn-link">
+        seq_compare_nums
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../seq_compare_nums/" class="btn btn-xs btn-default pull-left">
+      <a href="../seq_increase_num/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../seq_compare_nums/" class="btn btn-xs btn-link">
-        seq_compare_nums
+        Previous</a><a href="../seq_increase_num/" class="btn btn-xs btn-link">
+        seq_increase_num
       </a>
     </div>
     
