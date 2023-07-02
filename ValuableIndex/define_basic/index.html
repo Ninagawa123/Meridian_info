@@ -67,10 +67,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     </div>
     
     <div class="wm-article-nav">
-      <a href="../../Quick%20Start/Meridian_LITE/" class="btn btn-xs btn-default pull-left">
+      <a href="../../aboutMeridim/error_code/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../../Quick%20Start/Meridian_LITE/" class="btn btn-xs btn-link">
-        Meridian LITE
+        Previous</a><a href="../../aboutMeridim/error_code/" class="btn btn-xs btn-link">
+        [88] error code
       </a>
     </div>
     
@@ -140,6 +140,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td align="center">0,1</td>
 <td align="center">0</td>
 <td>全経路の受信エラー率の表示(0:OFF,1:ON)</td>
+</tr>
+<tr>
+<td>MONITOR_SERVO_ERR</td>
+<td align="center">0,1</td>
+<td align="center">0</td>
+<td>通信エラーのあったサーボIDの表示(0:OFF,1:ON)</td>
 </tr>
 <tr>
 <td>MONITOR_JOYPAD</td>
@@ -286,6 +292,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>ICS返信待ちのタイムアウト時間</td>
 </tr>
 <tr>
+<td>SERVO_LOST_ERROR_WAIT</td>
+<td align="center"></td>
+<td align="center">0</td>
+<td>サーボ通信エラーと判定する連続エラー回数</td>
+</tr>
+<tr>
 <td><strong>Wifiアクセスポイントの設定</strong></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -388,6 +400,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>ジョイパッドの問い合わせフレーム間隔(KRC-5FHは4,PSは10)</td>
 </tr>
 <tr>
+<td>JOYPAD_GENERALIZE</td>
+<td align="center">0,1</td>
+<td align="center">1</td>
+<td>1:入力をPS系に合わせる <br>0:合わせない</td>
+</tr>
+<tr>
 <td>BT_MAC_ADDR</td>
 <td align="center"></td>
 <td align="center">"x:x:x:x:x:x"</td>
@@ -404,6 +422,18 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td align="center">0,1</td>
 <td align="center">0</td>
 <td>0でバインドデバイス情報表示,<br>1でバインドデバイス情報クリア<br>(ペアリングできない時に1)</td>
+</tr>
+<tr>
+<td>PAD_WIIMOTE_SOLO[16]</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>WiiリモコンからPS系への変換テーブル</td>
+</tr>
+<tr>
+<td>PAD_WIIMOTE_ORIG[16]</td>
+<td align="center"></td>
+<td align="center"></td>
+<td>Wiiリモコンのオリジナル値への変換テーブル</td>
 </tr>
 <tr>
 <td><strong>ピンアサイン</strong></td>
@@ -471,10 +501,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     </div>
     
     <div class="wm-article-nav">
-      <a href="../../Quick%20Start/Meridian_LITE/" class="btn btn-xs btn-default pull-left">
+      <a href="../../aboutMeridim/error_code/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../../Quick%20Start/Meridian_LITE/" class="btn btn-xs btn-link">
-        Meridian LITE
+        Previous</a><a href="../../aboutMeridim/error_code/" class="btn btn-xs btn-link">
+        [88] error code
       </a>
     </div>
     

@@ -133,6 +133,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>ESP32Wiimote.h</td>
 </tr>
 <tr>
+<td>MPU6050</td>
+<td>mpu6050</td>
+<td>ESP32Wiimote.h</td>
+</tr>
+<tr>
 <td>IcsHardSerialClass</td>
 <td>krs_L(&amp;Serial2, PIN_EN_L, ICS_BAUDRATE, ICS_TIMEOUT)</td>
 <td>IcsHardSerialClass.h</td>
@@ -240,7 +245,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 <tr>
 <td>int</td>
-<td>servo_num_max<br>= max(MOUNT_SERVO_NUM_L, MOUNT_SERVO_NUM_R)</td>
+<td>servo_num_max<br>= max(max(MOUNT_SERVO_NUM_L, MOUNT_SERVO_NUM_R), MOUNT_SERVO_NUM_3)</td>
 <td>サーボ送受信のループ処理数（L系R系で多い方）</td>
 </tr>
 </tbody>
@@ -332,7 +337,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 <tr>
 <td>int</td>
-<td>joypad_frame_count</td>
+<td>joypad_polling_count</td>
 <td>JOYPADのデータを読みに行くためのフレームカウント</td>
 </tr>
 <tr>
@@ -352,13 +357,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 </tbody>
 </table>
-<p>★廃止 long merc = (long)millis();             // フレーム管理時計の時刻 Meridian Clock.<br>
-★廃止 long curr = (long)millis();             // 現在時刻を取得<br>
-★廃止 long curr_micro = (long)micros();       // 現在時刻を取得<br>
+<p>★廃止 long merc = (long)millis();      // フレーム管理時計の時刻 Meridian Clock.<br>
+★廃止 long curr = (long)millis();      // 現在時刻を取得<br>
+★廃止 long curr_micro = (long)micros();// 現在時刻を取得<br>
 ★廃止 int meridim_seq_s_increment = 0; // フレーム毎に0-59999をカウントし、送信<br>
 ★廃止 int meridim_seq_r_expect = 0;    // フレーム毎に0-59999をカウントし、受信値と比較<br>
-★廃止 int meridim_seq_r = 0;           // 今フ<br></p>
-<p><br></p>
+★廃止 int meridim_seq_r = 0;           // 今フレームを格納<br>
+★廃止 joypad_frame_count               //JOYPADのデータを読みに行くためのフレームカウント<br>
+<br></p>
 <h4><b>エラー監視用</b></h4>
 <table>
 <thead>
@@ -478,8 +484,32 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </thead>
 <tbody>
 <tr>
-<td>typedef union{<br>short sval[4];<br>unsigned short usval[8];<br>uint16_t ui16val[1];<br>} UnionPad;</td>
-<td><br>.sval short型<br>.usval unsigned short型<br>.ui16val unsigned int16型 <br>UnionPad この共用体の型名</td>
+<td>typedef union{<br>short sval[4];<br>uint16_t usval[4];<br>int8_t bval[8];<br>uint8_t ubval[8];<br>uint64_t ui64val[1];<br>} UnionPad;</td>
+<td><br>short型で4個の配列データを持つ<br>上記のunsigned short型<br>上記のbyte型<br>上記のunsigned byte型<br>上記のunsigned int16型<br>UnionPad この共用体の型名</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>[0]16bit</th>
+<th>[1]上位8bit</th>
+<th>[1]下位8bit</th>
+<th>[2]上位8bit</th>
+<th>[2]下位8bit</th>
+<th>[3]上位8bit</th>
+<th>[3]下位8bit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>button</td>
+<td>pad_stick_L_x</td>
+<td>pad_stick_L_y</td>
+<td>pad_stick_R_x</td>
+<td>pad_stick_R_y</td>
+<td>pad_L2_val</td>
+<td>pad_R2_val</td>
 </tr>
 </tbody>
 </table>
@@ -576,8 +606,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <tbody>
 <tr>
 <td>float</td>
-<td>yaw_center</td>
-<td>ヨー軸方向の原点リセット用</td>
+<td>imuahrs_yaw_origin</td>
+<td>IMU/AHRSのヨー軸方向の原点補正値</td>
 </tr>
 <tr>
 <td><b>MPU6050用</b></td>
@@ -623,11 +653,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>float</td>
 <td>ypr[3]</td>
 <td>[roll, pitch, yaw] value container</td>
-</tr>
-<tr>
-<td>float</td>
-<td>yaw_zero</td>
-<td></td>
 </tr>
 <tr>
 <td>float</td>
@@ -691,7 +716,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 </tbody>
 </table>
-<p><br></p>
+<p>★廃止 float yaw_center //ヨー軸方向の原点リセット用<br>
+<br></p>
 <h4><b>サーボボジション関連</b></h4>
 <table>
 <thead>
@@ -794,38 +820,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>前回の目標位置 (3系統)</td>
 </tr>
 <tr>
-<td>float</td>
-<td>idl_diff_past[15]</td>
-<td>degree</td>
-<td>前回のサーボ値のキープ用 (L系統)</td>
-</tr>
-<tr>
-<td>float</td>
-<td>idr_diff_past[15]</td>
-<td>degree</td>
-<td>前回のサーボ値のキープ用 (R系統)</td>
-</tr>
-<tr>
-<td>float</td>
-<td>id3_diff_past[15]</td>
-<td>degree</td>
-<td>前回のサーボ値のキープ用 (3系統)</td>
-</tr>
-<tr>
 <td>int</td>
-<td>s_servo_err_L[15]</td>
+<td>idl_err[15]</td>
 <td></td>
 <td>サーボのエラーカウンタ格納 (L系統)</td>
 </tr>
 <tr>
 <td>int</td>
-<td>s_servo_err_R[15]</td>
+<td>idr_err[15]</td>
 <td></td>
 <td>サーボのエラーカウンタ格納 (R系統)</td>
 </tr>
 <tr>
 <td>int</td>
-<td>s_servo_err_3[15]</td>
+<td>id3_err[15]</td>
 <td></td>
 <td>サーボのエラーカウンタ格納 (3系統)</td>
 </tr>
@@ -841,9 +849,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 ★廃止 float r_servo_pos_R[15] = {0}; // 15要素<br>
 ★廃止 float idl_diff[15]; // L系統<br>
 ★廃止 float idr_diff[15]; // R系統<br>
-★廃止 int|s_servo_pos_L[15]|degree<em>100|サーボのポジション格納 (L系統)|<br>
-★廃止 int|s_servo_pos_R[15]|degree</em>100|サーボのポジション格納 (R系統)|<br>
-★廃止 int|s_servo_pos_3[15]|degree*100|サーボポジション格納 (3系統)|<br></p>
+★廃止 float idl_diff_past[15]//前回のサーボ値のキープ用<br>
+★廃止 float idr_diff_past[15]//前回のサーボ値のキープ用<br>
+★廃止 float id3_diff_past[15]//前回のサーボ値のキープ用<br>
+★廃止 int s_servo_pos_L[15]//サーボのポジション格納<br>
+★廃止 int s_servo_pos_R[15]//サーボのポジション格納<br>
+★廃止 int s_servo_pos_3[15]//サーボポジション格納<br>
+★廃止 int s_servo_err_L[15]//サーボのエラーカウンタ格納<br>
+★廃止 int s_servo_err_R[15]//サーボのエラーカウンタ格納<br>
+★廃止 int s_servo_err_3[15]//サーボのエラーカウンタ格納<br></p>
 
   <br>
     
