@@ -88,7 +88,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <thead>
 <tr>
 <th>#define (キー)</th>
-<th align="center">配列番号</th>
+<th align="center">配列インデックス</th>
 <th>説明</th>
 </tr>
 </thead>
@@ -496,22 +496,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <tr>
 <td>MRD_USERDATA_80</td>
 <td align="center">80</td>
-<td>ユーザー定義用</td>
+<td>ユーザー定義用(クオータニオン:qw)</td>
 </tr>
 <tr>
 <td>MRD_USERDATA_81</td>
 <td align="center">81</td>
-<td>ユーザー定義用</td>
+<td>ユーザー定義用(クオータニオン:qx)</td>
 </tr>
 <tr>
 <td>MRD_USERDATA_82</td>
 <td align="center">82</td>
-<td>ユーザー定義用</td>
+<td>ユーザー定義用(クオータニオン:qy)</td>
 </tr>
 <tr>
 <td>MRD_USERDATA_83</td>
 <td align="center">83</td>
-<td>ユーザー定義用</td>
+<td>ユーザー定義用(クオータニオン:qz)</td>
 </tr>
 <tr>
 <td>MRD_USERDATA_84</td>
@@ -542,6 +542,40 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>MRD_CHECKSUM</td>
 <td align="center">89</td>
 <td>チェックサム (MSG_SIZE-1)</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3><b>今後の追加予定</b></h3>
+
+<table>
+<thead>
+<tr>
+<th>#define (キー)</th>
+<th align="center">配列インデックス</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MRD_QUAT_W</td>
+<td align="center">-</td>
+<td>姿勢方向のクオータニオン:qw</td>
+</tr>
+<tr>
+<td>MRD_QUAT_X</td>
+<td align="center">-</td>
+<td>姿勢方向のクオータニオン:qx</td>
+</tr>
+<tr>
+<td>MRD_QUAT_Y</td>
+<td align="center">-</td>
+<td>姿勢方向のクオータニオン:qy</td>
+</tr>
+<tr>
+<td>MRD_QUAT_Z</td>
+<td align="center">-</td>
+<td>姿勢方向のクオータニオン:qz</td>
 </tr>
 </tbody>
 </table>

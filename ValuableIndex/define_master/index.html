@@ -88,11 +88,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <thead>
 <tr>
 <th>#define</th>
-<th align="center">配列番号</th>
+<th align="center">コマンド値</th>
 <th>説明</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>MCMD_TORQUE_ALL_OFF</td>
+<td align="center">0</td>
+<td>すべてのサーボトルクをオフにする（脱力）</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">1-999</td>
+<td>Meridimの配列長</td>
+</tr>
 <tr>
 <td>MCMD_UPDATE_YAW_CENTER</td>
 <td align="center">10002</td>
@@ -107,6 +117,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>MCMD_CLEAR_SERVO_ERROR_ID</td>
 <td align="center">10004</td>
 <td>通信エラーのサーボのIDをクリア</td>
+</tr>
+<tr>
+<td>MCMD_BOARD_TRANSMIT_ACTIVE</td>
+<td align="center">10005</td>
+<td>ボードが定刻で送信を行うモード<br>（デフォルト設定.PC側が受信待ち）</td>
+</tr>
+<tr>
+<td>MCMD_BOARD_TRANSMIT_PASSIVE</td>
+<td align="center">10006</td>
+<td>ボードが受信を待ち返信するモード<br>（PC側が定刻送信）</td>
 </tr>
 </tbody>
 </table>
