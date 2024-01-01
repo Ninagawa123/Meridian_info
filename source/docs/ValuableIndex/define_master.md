@@ -15,3 +15,4 @@
 |MCMD_CLEAR_SERVO_ERROR_ID|10004|通信エラーのサーボのIDをクリア|
 |MCMD_BOARD_TRANSMIT_ACTIVE|10005|ボードが定刻で送信を行うモード<br>（デフォルト設定.PC側が受信待ち）|
 |MCMD_BOARD_TRANSMIT_PASSIVE|10006|ボードが受信を待ち返信するモード<br>（PC側が定刻送信）|
+|MCMD_RESET_MRD_TIMER|10007|フレーム管理時計mrd_t_milを現在時刻にリセット|
