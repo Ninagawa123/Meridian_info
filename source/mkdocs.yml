@@ -44,6 +44,9 @@ nav:
         - 'monitor_check_flow': 'Library/monitor_check_flow.md'
         - 'monitor_joypad': 'Library/monitor_joypad.md'
         - 'monitor_servo_error': 'Library/monitor_servo_error.md'
+    - 'Misc':
+        - 'Joint and Link': 'Misc/joint_and_link.md'
+
     - Blog: "https://note.com/ninagawa123/n/nb768563591be"
 
 theme: windmill
