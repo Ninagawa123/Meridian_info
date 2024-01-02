@@ -1,5 +1,5 @@
 <hr>
-<h3> JoiintとLinkの対応表 </h3>  
+<h3> JointとLinkの対応表 </h3>  
 <hr>
 <br>
 <h4><b>MeridianのURDFのJoint名,Link名と各CG系ソフトでの名称との対応表</b></h4>  
