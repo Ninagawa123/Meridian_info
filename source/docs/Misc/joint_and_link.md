@@ -17,7 +17,6 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 |l_anklejoint|l_ankle|左踵| | | |
 |l_footjoint|l_foot|左足・足根骨|LeftFoot|Left ankle|foot_l|
 |l_toejoint|l_toe|左つま先・趾骨|LeftToes|Left toe|ball_l|
-|Meridian(joint)|Meridian(link)|骨の名称|Unity/VRM|Blender|UE4|
 | | |　　| | | |
 |c_spine1joint|c_spine1|背骨1|Spine|Spine|spline_01|
 |c_spine2joint|c_spine2|背骨2| | |spline_02|
