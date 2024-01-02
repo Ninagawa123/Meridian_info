@@ -39,7 +39,7 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 |lalm|l_hand/palm|左手| | | |
 |l_gripperjoint1|l_gripper1|左グリッパー1| | | |
 | | |　　| | | |
-|l_thumbjoint_1mp|l_thumb_1prox|```左親指骨基節```|LeftThumbProximal|Thumb0_L|thumb_01_l|
+|l_thumbjoint_1mp|l_thumb_1prox|左親指骨基節|LeftThumbProximal|Thumb0_L|thumb_01_l|
 |l_thumbjoint_2pip|l_thumb_2mid|左親指骨中節|LeftThumbIntermediate|Thumb1_L|thumb_02_l|
 |l_thumbjoint_3dip|l_thumb_3dis|左親指骨末節|LeftThumbDistal|Thumb2_L|thumb_03_l|
 |l_indexjoint_1mp|l_index_1prox|左人差し指骨基節|LeftIndexProximal|IndexFinger1_L|index_01_l|
@@ -57,4 +57,4 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
   
 赤文字は多くのヒューマノイドで使用されている基本的なジョイント.  
 
-![jointlink](/img/meridian_jointlink.png)
+![jointlink](../img/meridian_jointlink.png)
