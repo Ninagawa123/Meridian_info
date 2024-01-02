@@ -166,7 +166,7 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 <td align="left">背骨1</td>
 <td align="left">Spine</td>
 <td align="left">Spine</td>
-<td align="left">spline_01</td>
+<td align="left">spine_01</td>
 </tr>
 <tr>
 <td align="left">c_spine2joint</td>
@@ -174,7 +174,7 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 <td align="left">背骨2</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left">spline_02</td>
+<td align="left">spine_02</td>
 </tr>
 <tr>
 <td align="left">c_chestjoint</td>
@@ -182,7 +182,7 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 <td align="left">胸部</td>
 <td align="left">Chest</td>
 <td align="left">Chest</td>
-<td align="left">spline_03</td>
+<td align="left">spine_03</td>
 </tr>
 <tr>
 <td align="left"></td>
@@ -233,19 +233,19 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">l_scapulajoint</td>
-<td align="left">l_scapula</td>
-<td align="left">肩甲骨部</td>
-<td align="left">UpperChest</td>
-<td align="left">Upper Chest</td>
-<td align="left"></td>
-</tr>
-<tr>
 <td align="left">l_claviclejoint</td>
 <td align="left">l_clavicle</td>
 <td align="left">左鎖骨</td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">l_scapulajoint</td>
+<td align="left">l_scapula</td>
+<td align="left">肩甲骨部</td>
+<td align="left">UpperChest</td>
+<td align="left">Upper Chest</td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -289,7 +289,7 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 <td align="left">hand_l</td>
 </tr>
 <tr>
-<td align="left">lalm</td>
+<td align="left">l_palm</td>
 <td align="left">l_hand/palm</td>
 <td align="left">左手</td>
 <td align="left"></td>
@@ -330,7 +330,7 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 </tr>
 <tr>
 <td align="left">l_thumbjoint_3dip</td>
-<td align="left">l_thumb_3dis</td>
+<td align="left">l_thumb_3dist</td>
 <td align="left">左親指骨末節</td>
 <td align="left">LeftThumbDistal</td>
 <td align="left">Thumb2_L</td>
@@ -354,7 +354,7 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 </tr>
 <tr>
 <td align="left">l_indexjoint_3dip</td>
-<td align="left">l_tindex_3dis</td>
+<td align="left">l_tindex_3dist</td>
 <td align="left">左人差し指骨末節</td>
 <td align="left">LeftIndexDistal</td>
 <td align="left">IndexFinger3_L</td>
@@ -378,14 +378,14 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 </tr>
 <tr>
 <td align="left">l_middlejoint_3dip</td>
-<td align="left">l_middle_3dis</td>
+<td align="left">l_middle_3dist</td>
 <td align="left">左中指骨末節</td>
 <td align="left">LeftMiddleDistal</td>
 <td align="left">MiddleFinger3_L</td>
 <td align="left">middle_03_l</td>
 </tr>
 <tr>
-<td align="left">lingjoint_1mp</td>
+<td align="left">l_ringjoint_1mp</td>
 <td align="left">ling_1prox</td>
 <td align="left">左薬指骨基節</td>
 <td align="left">LeftRingProximal</td>
@@ -393,7 +393,7 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 <td align="left">ring_01_l</td>
 </tr>
 <tr>
-<td align="left">lingjoint_2pip</td>
+<td align="left">l_ringjoint_2pip</td>
 <td align="left">ling_2mid</td>
 <td align="left">左薬指骨中節</td>
 <td align="left">LeftRingIntermediate</td>
@@ -401,8 +401,8 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 <td align="left">ring_02_l</td>
 </tr>
 <tr>
-<td align="left">lingjoint_3dip</td>
-<td align="left">ling_3dis</td>
+<td align="left">l_ringjoint_3dip</td>
+<td align="left">ling_3dist</td>
 <td align="left">左薬指骨末節</td>
 <td align="left">LeftRingDistal</td>
 <td align="left">RingFinger3_L</td>
@@ -426,7 +426,7 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 </tr>
 <tr>
 <td align="left">l_littlejoint_3dip</td>
-<td align="left">l_little_3dis</td>
+<td align="left">l_little_3dist</td>
 <td align="left">左小指骨末節</td>
 <td align="left">LeftLittleDistal</td>
 <td align="left">LittleFinger3_L</td>
