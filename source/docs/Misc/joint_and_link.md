@@ -1,8 +1,12 @@
 <hr>
-<h3> ローカル変数名のリスト #1 </h3>  
+<h3> JoiintとLinkの対応表 </h3>  
 <hr>
 <br>
-<h4><b>バージョン表示</b></h4>
+<h4><b>MeridianのURDFのJoint名,Link名と各CG系ソフトでの名称との対応表</b></h4>  
+CG系ソフトでは関節は球体関節とみなす.  
+Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨーの順番や選択は機体毎に設定.  
+スライダタイプのアクチュエータは別途linkに設定.  
+
 |Meridian(joint)|Meridian(link)|骨の名称|Unity/VRM|Blender|UE4|
 |:----|:----|:----------|:----|:-|:----|
 |c_basejoint|celvis|骨盤|Hips|Hips|pelvis|
@@ -50,5 +54,7 @@
 |l_littlejoint_1mp|l_little_1prox|左小指骨基節|LeftLittleProximal|LittleFinger1_L|pinky_01_l|
 |l_littlejoint_2pip|l_little_2mid|左小指骨中節|LeftLittleIntermediate|LittleFinger2_L|pinky_02_l|
 |l_littlejoint_3dip|l_little_3dis|左小指骨末節|LeftLittleDistal|LittleFinger3_L|pinky_03_l|
+  
+赤文字は多くのヒューマノイドで使用されている基本的なジョイント.  
 
 ![jointlink](/img/meridian_jointlink.png)
