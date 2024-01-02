@@ -21,7 +21,6 @@ Meridianでは各軸とも最大3軸を持つ想定. ロール, ピッチ, ヨ�
 |c_spine1joint|c_spine1|背骨1|Spine|Spine|spline_01|
 |c_spine2joint|c_spine2|背骨2| | |spline_02|
 |c_chestjoint|c_chest|胸部|Chest|Chest|spline_03|
-|c_chestjoint|c_chest|胸部| | | |
 | | |　　| | | |
 |l_eyejoint|l_eye|左目|LeftEye| | |
 |c_headjoint|c_head|頭|Head|Head|head|
