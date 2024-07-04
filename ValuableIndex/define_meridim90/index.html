@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>#define meridim90 - Meridian Information</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../define_master/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../define_master/" class="btn btn-xs btn-link">
+        #define master
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../define_servos/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../define_servos/" class="btn btn-xs btn-link">
+        #define servos
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <hr>
+<h3> #define で定義される変数名のリスト #3 </h3>
+<hr>
+<p><br></p>
+<h3><b>Meridim90 配列対応アクセスキー</b></h3>
+
+<table>
+<thead>
+<tr>
+<th>#define (キー)</th>
+<th style="text-align: center;">配列インデックス</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MRD_MASTER</td>
+<td style="text-align: center;">0</td>
+<td>マスターコマンド</td>
+</tr>
+<tr>
+<td>MRD_SEQENTIAL</td>
+<td style="text-align: center;">1</td>
+<td>シーケンス番号</td>
+</tr>
+<tr>
+<td>MRD_ACC_X</td>
+<td style="text-align: center;">2</td>
+<td>加速度センサX値</td>
+</tr>
+<tr>
+<td>MRD_ACC_Y</td>
+<td style="text-align: center;">3</td>
+<td>加速度センサY値</td>
+</tr>
+<tr>
+<td>MRD_ACC_Z</td>
+<td style="text-align: center;">4</td>
+<td>加速度センサZ値</td>
+</tr>
+<tr>
+<td>MRD_GYRO_X</td>
+<td style="text-align: center;">5</td>
+<td>ジャイロセンサX値</td>
+</tr>
+<tr>
+<td>MRD_GYRO_Y</td>
+<td style="text-align: center;">6</td>
+<td>ジャイロセンサY値</td>
+</tr>
+<tr>
+<td>MRD_GYRO_Z</td>
+<td style="text-align: center;">7</td>
+<td>ジャイロセンサZ値</td>
+</tr>
+<tr>
+<td>MRD_MAG_X</td>
+<td style="text-align: center;">8</td>
+<td>磁気コンパスX値</td>
+</tr>
+<tr>
+<td>MRD_MAG_Y</td>
+<td style="text-align: center;">9</td>
+<td>磁気コンパスY値</td>
+</tr>
+<tr>
+<td>MRD_MAG_Z</td>
+<td style="text-align: center;">10</td>
+<td>磁気コンパスZ値</td>
+</tr>
+<tr>
+<td>MRD_TEMP</td>
+<td style="text-align: center;">11</td>
+<td>温度センサ値</td>
+</tr>
+<tr>
+<td>MRD_DIR_ROLL</td>
+<td style="text-align: center;">12</td>
+<td>DMP推定ロール方向値</td>
+</tr>
+<tr>
+<td>MRD_DIR_PITCH</td>
+<td style="text-align: center;">13</td>
+<td>DMP推定ピッチ方向値</td>
+</tr>
+<tr>
+<td>MRD_DIR_YAW</td>
+<td style="text-align: center;">14</td>
+<td>DMP推定ヨー方向値</td>
+</tr>
+<tr>
+<td>MRD_CONTROL_BUTTONS</td>
+<td style="text-align: center;">15</td>
+<td>リモコンボタン</td>
+</tr>
+<tr>
+<td>MRD_CONTROL_STICK_R</td>
+<td style="text-align: center;">16</td>
+<td>リモコン右スティックxy</td>
+</tr>
+<tr>
+<td>MRD_CONTROL_STICK_L</td>
+<td style="text-align: center;">17</td>
+<td>リモコン左スティックxy</td>
+</tr>
+<tr>
+<td>MRD_CONTROL_L2R2ANALOG</td>
+<td style="text-align: center;">18</td>
+<td>リモコンL2R2アナログ</td>
+</tr>
+<tr>
+<td>MRD_MOTION_FRAMES</td>
+<td style="text-align: center;">19</td>
+<td>モーション設定のフレーム数</td>
+</tr>
+<tr>
+<td>C_HEAD_Y_CMD</td>
+<td style="text-align: center;">20</td>
+<td>頭ヨーのコマンド</td>
+</tr>
+<tr>
+<td>C_HEAD_Y_VAL</td>
+<td style="text-align: center;">21</td>
+<td>頭ヨーの値</td>
+</tr>
+<tr>
+<td>L_SHOULDER_P_CMD</td>
+<td style="text-align: center;">22</td>
+<td>左肩ピッチのコマンド</td>
+</tr>
+<tr>
+<td>L_SHOULDER_P_VAL</td>
+<td style="text-align: center;">23</td>
+<td>左肩ピッチの値</td>
+</tr>
+<tr>
+<td>L_SHOULDER_R_CMD</td>
+<td style="text-align: center;">24</td>
+<td>左肩ロールのコマンド</td>
+</tr>
+<tr>
+<td>L_SHOULDER_R_VAL</td>
+<td style="text-align: center;">25</td>
+<td>左肩ロールの値</td>
+</tr>
+<tr>
+<td>L_ELBOW_Y_CMD</td>
+<td style="text-align: center;">26</td>
+<td>左肘ヨーのコマンド</td>
+</tr>
+<tr>
+<td>L_ELBOW_Y_VAL</td>
+<td style="text-align: center;">27</td>
+<td>左肘ヨーの値</td>
+</tr>
+<tr>
+<td>L_ELBOW_P_CMD</td>
+<td style="text-align: center;">28</td>
+<td>左肘ピッチのコマンド</td>
+</tr>
+<tr>
+<td>L_ELBOW_P_VAL</td>
+<td style="text-align: center;">29</td>
+<td>左肘ピッチの値</td>
+</tr>
+<tr>
+<td>L_HIPJOINT_Y_CMD</td>
+<td style="text-align: center;">30</td>
+<td>左股ヨーのコマンド</td>
+</tr>
+<tr>
+<td>L_HIPJOINT_Y_VAL</td>
+<td style="text-align: center;">31</td>
+<td>左股ヨーの値</td>
+</tr>
+<tr>
+<td>L_HIPJOINT_R_CMD</td>
+<td style="text-align: center;">32</td>
+<td>左股ロールのコマンド</td>
+</tr>
+<tr>
+<td>L_HIPJOINT_R_VAL</td>
+<td style="text-align: center;">33</td>
+<td>左股ロールの値</td>
+</tr>
+<tr>
+<td>L_HIPJOINT_P_CMD</td>
+<td style="text-align: center;">34</td>
+<td>左股ピッチのコマンド</td>
+</tr>
+<tr>
+<td>L_HIPJOINT_P_VAL</td>
+<td style="text-align: center;">35</td>
+<td>左股ピッチの値</td>
+</tr>
+<tr>
+<td>L_KNEE_P_CMD</td>
+<td style="text-align: center;">36</td>
+<td>左膝ピッチのコマンド</td>
+</tr>
+<tr>
+<td>L_KNEE_P_VAL</td>
+<td style="text-align: center;">37</td>
+<td>左膝ピッチの値</td>
+</tr>
+<tr>
+<td>L_ANKLE_P_CMD</td>
+<td style="text-align: center;">38</td>
+<td>左足首ピッチのコマンド</td>
+</tr>
+<tr>
+<td>L_ANKLE_P_VAL</td>
+<td style="text-align: center;">39</td>
+<td>左足首ピッチの値</td>
+</tr>
+<tr>
+<td>L_ANKLE_R_CMD</td>
+<td style="text-align: center;">40</td>
+<td>左足首ロールのコマンド</td>
+</tr>
+<tr>
+<td>L_ANKLE_R_VAL</td>
+<td style="text-align: center;">41</td>
+<td>左足首ロールの値</td>
+</tr>
+<tr>
+<td>L_SERVO_ID11_CMD</td>
+<td style="text-align: center;">42</td>
+<td>追加サーボ用のコマンド</td>
+</tr>
+<tr>
+<td>L_SERVO_ID11_VAL</td>
+<td style="text-align: center;">43</td>
+<td>追加サーボ用の値</td>
+</tr>
+<tr>
+<td>L_SERVO_ID12_CMD</td>
+<td style="text-align: center;">44</td>
+<td>追加サーボ用のコマンド</td>
+</tr>
+<tr>
+<td>L_SERVO_ID12_VAL</td>
+<td style="text-align: center;">45</td>
+<td>追加サーボ用の値</td>
+</tr>
+<tr>
+<td>L_SERVO_ID13_CMD</td>
+<td style="text-align: center;">46</td>
+<td>追加サーボ用のコマンド</td>
+</tr>
+<tr>
+<td>L_SERVO_ID13_VAL</td>
+<td style="text-align: center;">47</td>
+<td>追加サーボ用の値</td>
+</tr>
+<tr>
+<td>L_SERVO_ID14_CMD</td>
+<td style="text-align: center;">48</td>
+<td>追加サーボ用のコマンド</td>
+</tr>
+<tr>
+<td>L_SERVO_ID14_VAL</td>
+<td style="text-align: center;">49</td>
+<td>追加サーボ用の値</td>
+</tr>
+<tr>
+<td>C_WAIST_Y_CMD</td>
+<td style="text-align: center;">50</td>
+<td>腰ヨーのコマンド</td>
+</tr>
+<tr>
+<td>C_WAIST_Y_VAL</td>
+<td style="text-align: center;">51</td>
+<td>腰ヨーの値</td>
+</tr>
+<tr>
+<td>R_SHOULDER_P_CMD</td>
+<td style="text-align: center;">52</td>
+<td>右肩ピッチのコマンド</td>
+</tr>
+<tr>
+<td>R_SHOULDER_P_VAL</td>
+<td style="text-align: center;">53</td>
+<td>右肩ピッチの値</td>
+</tr>
+<tr>
+<td>R_SHOULDER_R_CMD</td>
+<td style="text-align: center;">54</td>
+<td>右肩ロールのコマンド</td>
+</tr>
+<tr>
+<td>R_SHOULDER_R_VAL</td>
+<td style="text-align: center;">55</td>
+<td>右肩ロールの値</td>
+</tr>
+<tr>
+<td>R_ELBOW_Y_CMD</td>
+<td style="text-align: center;">56</td>
+<td>右肘ヨーのコマンド</td>
+</tr>
+<tr>
+<td>R_ELBOW_Y_VAL</td>
+<td style="text-align: center;">57</td>
+<td>右肘ヨーの値</td>
+</tr>
+<tr>
+<td>R_ELBOW_P_CMD</td>
+<td style="text-align: center;">58</td>
+<td>右肘ピッチのコマンド</td>
+</tr>
+<tr>
+<td>R_ELBOW_P_VAL</td>
+<td style="text-align: center;">59</td>
+<td>右肘ピッチの値</td>
+</tr>
+<tr>
+<td>R_HIPJOINT_Y_CMD</td>
+<td style="text-align: center;">60</td>
+<td>右股ヨーのコマンド</td>
+</tr>
+<tr>
+<td>R_HIPJOINT_Y_VAL</td>
+<td style="text-align: center;">61</td>
+<td>右股ヨーの値</td>
+</tr>
+<tr>
+<td>R_HIPJOINT_R_CMD</td>
+<td style="text-align: center;">62</td>
+<td>右股ロールのコマンド</td>
+</tr>
+<tr>
+<td>R_HIPJOINT_R_VAL</td>
+<td style="text-align: center;">63</td>
+<td>右股ロールの値</td>
+</tr>
+<tr>
+<td>R_HIPJOINT_P_CMD</td>
+<td style="text-align: center;">64</td>
+<td>右股ピッチのコマンド</td>
+</tr>
+<tr>
+<td>R_HIPJOINT_P_VAL</td>
+<td style="text-align: center;">65</td>
+<td>右股ピッチの値</td>
+</tr>
+<tr>
+<td>R_KNEE_P_CMD</td>
+<td style="text-align: center;">66</td>
+<td>右膝ピッチのコマンド</td>
+</tr>
+<tr>
+<td>R_KNEE_P_VAL</td>
+<td style="text-align: center;">67</td>
+<td>右膝ピッチの値</td>
+</tr>
+<tr>
+<td>R_ANKLE_P_CMD</td>
+<td style="text-align: center;">68</td>
+<td>右足首ピッチのコマンド</td>
+</tr>
+<tr>
+<td>R_ANKLE_P_VAL</td>
+<td style="text-align: center;">69</td>
+<td>右足首ピッチの値</td>
+</tr>
+<tr>
+<td>R_ANKLE_R_CMD</td>
+<td style="text-align: center;">70</td>
+<td>右足首ロールのコマンド</td>
+</tr>
+<tr>
+<td>R_ANKLE_R_VAL</td>
+<td style="text-align: center;">71</td>
+<td>右足首ロールの値</td>
+</tr>
+<tr>
+<td>R_SERVO_ID11_CMD</td>
+<td style="text-align: center;">72</td>
+<td>追加テスト用のコマンド</td>
+</tr>
+<tr>
+<td>R_SERVO_ID11_VAL</td>
+<td style="text-align: center;">73</td>
+<td>追加テスト用の値</td>
+</tr>
+<tr>
+<td>R_SERVO_ID12_CMD</td>
+<td style="text-align: center;">74</td>
+<td>追加テスト用のコマンド</td>
+</tr>
+<tr>
+<td>R_SERVO_ID12_VAL</td>
+<td style="text-align: center;">75</td>
+<td>追加テスト用の値</td>
+</tr>
+<tr>
+<td>R_SERVO_ID13_CMD</td>
+<td style="text-align: center;">76</td>
+<td>追加テスト用のコマンド</td>
+</tr>
+<tr>
+<td>R_SERVO_ID13_VAL</td>
+<td style="text-align: center;">77</td>
+<td>追加テスト用の値</td>
+</tr>
+<tr>
+<td>R_SERVO_ID14_CMD</td>
+<td style="text-align: center;">78</td>
+<td>追加テスト用のコマンド</td>
+</tr>
+<tr>
+<td>R_SERVO_ID14_VAL</td>
+<td style="text-align: center;">79</td>
+<td>追加テスト用の値</td>
+</tr>
+<tr>
+<td>MRD_USERDATA_80</td>
+<td style="text-align: center;">80</td>
+<td>ユーザー定義用(クオータニオン:qw)</td>
+</tr>
+<tr>
+<td>MRD_USERDATA_81</td>
+<td style="text-align: center;">81</td>
+<td>ユーザー定義用(クオータニオン:qx)</td>
+</tr>
+<tr>
+<td>MRD_USERDATA_82</td>
+<td style="text-align: center;">82</td>
+<td>ユーザー定義用(クオータニオン:qy)</td>
+</tr>
+<tr>
+<td>MRD_USERDATA_83</td>
+<td style="text-align: center;">83</td>
+<td>ユーザー定義用(クオータニオン:qz)</td>
+</tr>
+<tr>
+<td>MRD_USERDATA_84</td>
+<td style="text-align: center;">84</td>
+<td>ユーザー定義用</td>
+</tr>
+<tr>
+<td>MRD_USERDATA_85</td>
+<td style="text-align: center;">85</td>
+<td>ユーザー定義用</td>
+</tr>
+<tr>
+<td>MRD_USERDATA_86</td>
+<td style="text-align: center;">86</td>
+<td>ユーザー定義用</td>
+</tr>
+<tr>
+<td>MRD_USERDATA_87</td>
+<td style="text-align: center;">87</td>
+<td>ユーザー定義用</td>
+</tr>
+<tr>
+<td>MRD_ERROR_CODE</td>
+<td style="text-align: center;">88</td>
+<td>エラーコード (MSG_SIZE-2)</td>
+</tr>
+<tr>
+<td>MRD_CHECKSUM</td>
+<td style="text-align: center;">89</td>
+<td>チェックサム (MSG_SIZE-1)</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3><b>今後の追加予定</b></h3>
+
+<table>
+<thead>
+<tr>
+<th>#define (キー)</th>
+<th style="text-align: center;">配列インデックス</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MRD_QUAT_W</td>
+<td style="text-align: center;">-</td>
+<td>姿勢方向のクオータニオン:qw</td>
+</tr>
+<tr>
+<td>MRD_QUAT_X</td>
+<td style="text-align: center;">-</td>
+<td>姿勢方向のクオータニオン:qx</td>
+</tr>
+<tr>
+<td>MRD_QUAT_Y</td>
+<td style="text-align: center;">-</td>
+<td>姿勢方向のクオータニオン:qy</td>
+</tr>
+<tr>
+<td>MRD_QUAT_Z</td>
+<td style="text-align: center;">-</td>
+<td>姿勢方向のクオータニオン:qz</td>
+</tr>
+</tbody>
+</table>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../define_master/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../define_master/" class="btn btn-xs btn-link">
+        #define master
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../define_servos/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../define_servos/" class="btn btn-xs btn-link">
+        #define servos
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

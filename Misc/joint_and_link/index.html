@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Joint and Link - Meridian Information</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../../Library/monitor_servo_error/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../Library/monitor_servo_error/" class="btn btn-xs btn-link">
+        monitor_servo_error
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <hr>
+<h3> JointとLinkの対応表 </h3>
+<hr>
+<p><br></p>
+<h4><b>MeridianのURDFのJoint名,Link名と各CG系ソフトでの名称との対応表</b></h4>
+<p>CG系ソフトでは関節は球体関節であるとみなす.<br />
+Meridianでは各軸とも最大3軸を持つ想定で, ロール, ピッチ, ヨーの順番や選択は機体毎に設定する.  </p>
+<p>関節（Joint）自体に接続されるリンクはその先のボーンとなるが, Joint自体もボーンを持てるように設定しておく.<br />
+たとえば,シンプルな構成では<br />
+c_chest→l_shoulderjoint→l_upperarmと接続できるが,<br />
+肩自体も独立したパーツを持つ場合には,<br />
+c_chest→l_shoulderjoint→l_shoulder→l_upperarmjoint→l_upperarmと設定できるとする.  </p>
+<p>関節一つにパーツが複数ある場合には、名称の末尾にbasejointに近い方から_1,_2もしくは軸の接続順に_r,_p,_y等と追加する.  </p>
+<p>スライダタイプのアクチュエータは別途linkに設定.  </p>
+<p>不備な点やズレがあれば確認次第修正する.    </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Meridian(joint)</th>
+<th style="text-align: left;">Meridian(link)</th>
+<th style="text-align: left;">関節/骨の名称</th>
+<th style="text-align: left;">Unity/VRM</th>
+<th style="text-align: left;">Blender</th>
+<th style="text-align: left;">UE4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">c_basejoint</td>
+<td style="text-align: left;">c_pelvis</td>
+<td style="text-align: left;">骨盤</td>
+<td style="text-align: left;">Hips</td>
+<td style="text-align: left;">Hips</td>
+<td style="text-align: left;">pelvis</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_hipjoint</td>
+<td style="text-align: left;">l_hip</td>
+<td style="text-align: left;">股関節</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_upperlegjoint</td>
+<td style="text-align: left;">l_upperleg</td>
+<td style="text-align: left;">左大腿骨</td>
+<td style="text-align: left;">LeftUpperLeg</td>
+<td style="text-align: left;">Left leg</td>
+<td style="text-align: left;">thigh_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_kneejoint</td>
+<td style="text-align: left;">l_knee</td>
+<td style="text-align: left;">左膝</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_lowerlegjoint</td>
+<td style="text-align: left;">l_lowerleg</td>
+<td style="text-align: left;">左脛骨</td>
+<td style="text-align: left;">LeftLowerLeg</td>
+<td style="text-align: left;">Left knee</td>
+<td style="text-align: left;">calf_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_anklejoint</td>
+<td style="text-align: left;">l_ankle</td>
+<td style="text-align: left;">左踵</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_footjoint</td>
+<td style="text-align: left;">l_foot</td>
+<td style="text-align: left;">左足・足根骨</td>
+<td style="text-align: left;">LeftFoot</td>
+<td style="text-align: left;">Left ankle</td>
+<td style="text-align: left;">foot_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_toejoint</td>
+<td style="text-align: left;">l_toe</td>
+<td style="text-align: left;">左つま先・趾骨</td>
+<td style="text-align: left;">LeftToes</td>
+<td style="text-align: left;">Left toe</td>
+<td style="text-align: left;">ball_l</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">　　</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">c_spine1joint</td>
+<td style="text-align: left;">c_spine1</td>
+<td style="text-align: left;">背骨1</td>
+<td style="text-align: left;">Spine</td>
+<td style="text-align: left;">Spine</td>
+<td style="text-align: left;">spine_01</td>
+</tr>
+<tr>
+<td style="text-align: left;">c_spine2joint</td>
+<td style="text-align: left;">c_spine2</td>
+<td style="text-align: left;">背骨2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">spine_02</td>
+</tr>
+<tr>
+<td style="text-align: left;">c_chestjoint</td>
+<td style="text-align: left;">c_chest</td>
+<td style="text-align: left;">胸部</td>
+<td style="text-align: left;">Chest</td>
+<td style="text-align: left;">Chest</td>
+<td style="text-align: left;">spine_03</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">　　</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_eyejoint</td>
+<td style="text-align: left;">l_eye</td>
+<td style="text-align: left;">左目</td>
+<td style="text-align: left;">LeftEye</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">c_headjoint</td>
+<td style="text-align: left;">c_head</td>
+<td style="text-align: left;">頭</td>
+<td style="text-align: left;">Head</td>
+<td style="text-align: left;">Head</td>
+<td style="text-align: left;">head</td>
+</tr>
+<tr>
+<td style="text-align: left;">c_neckjoint</td>
+<td style="text-align: left;">c_neck</td>
+<td style="text-align: left;">首</td>
+<td style="text-align: left;">Neck</td>
+<td style="text-align: left;">Neck</td>
+<td style="text-align: left;">neck_01</td>
+</tr>
+<tr>
+<td style="text-align: left;">c_jawjoint</td>
+<td style="text-align: left;">c_jaw</td>
+<td style="text-align: left;">顎</td>
+<td style="text-align: left;">Jaw</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">　　</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_claviclejoint</td>
+<td style="text-align: left;">l_clavicle</td>
+<td style="text-align: left;">左鎖骨</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_scapulajoint</td>
+<td style="text-align: left;">l_scapula</td>
+<td style="text-align: left;">肩甲骨部</td>
+<td style="text-align: left;">UpperChest</td>
+<td style="text-align: left;">Upper Chest</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_shoulderjoint</td>
+<td style="text-align: left;">l_shoulder</td>
+<td style="text-align: left;">左肩</td>
+<td style="text-align: left;">LeftShoulder</td>
+<td style="text-align: left;">Left shoulder</td>
+<td style="text-align: left;">clavicle_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_upperarmjoint</td>
+<td style="text-align: left;">l_upperarm</td>
+<td style="text-align: left;">左上腕</td>
+<td style="text-align: left;">LeftUpperArm</td>
+<td style="text-align: left;">Left arm</td>
+<td style="text-align: left;">upperarm_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_elbowjoint</td>
+<td style="text-align: left;">l_elbow</td>
+<td style="text-align: left;">左肘</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_lowerarmjoint</td>
+<td style="text-align: left;">l_lowerarm</td>
+<td style="text-align: left;">左下腕</td>
+<td style="text-align: left;">LeftLowerArm</td>
+<td style="text-align: left;">Left elbow</td>
+<td style="text-align: left;">lowerarm_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_wrist</td>
+<td style="text-align: left;">l_wrist</td>
+<td style="text-align: left;">左手首</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Left wrist</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_palm</td>
+<td style="text-align: left;">l_hand/palm</td>
+<td style="text-align: left;">左手</td>
+<td style="text-align: left;">LeftHand</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">hand_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_gripperjoint1</td>
+<td style="text-align: left;">l_gripper1</td>
+<td style="text-align: left;">左グリッパー1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">　　</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">l_thumbjoint_1</td>
+<td style="text-align: left;">l_thumb_1prox</td>
+<td style="text-align: left;">左親指骨基節</td>
+<td style="text-align: left;">LeftThumbProximal</td>
+<td style="text-align: left;">Thumb0_L</td>
+<td style="text-align: left;">thumb_01_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_thumbjoint_2</td>
+<td style="text-align: left;">l_thumb_2mid</td>
+<td style="text-align: left;">左親指骨中節</td>
+<td style="text-align: left;">LeftThumbIntermediate</td>
+<td style="text-align: left;">Thumb1_L</td>
+<td style="text-align: left;">thumb_02_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_thumbjoint_3</td>
+<td style="text-align: left;">l_thumb_3dist</td>
+<td style="text-align: left;">左親指骨末節</td>
+<td style="text-align: left;">LeftThumbDistal</td>
+<td style="text-align: left;">Thumb2_L</td>
+<td style="text-align: left;">thumb_03_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_indexjoint_1</td>
+<td style="text-align: left;">l_index_1prox</td>
+<td style="text-align: left;">左人差し指骨基節</td>
+<td style="text-align: left;">LeftIndexProximal</td>
+<td style="text-align: left;">IndexFinger1_L</td>
+<td style="text-align: left;">index_01_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_indexjoint_2</td>
+<td style="text-align: left;">l_index_2mid</td>
+<td style="text-align: left;">左人差し指骨中節</td>
+<td style="text-align: left;">LeftIndexIntermediate</td>
+<td style="text-align: left;">IndexFinger2_L</td>
+<td style="text-align: left;">index_02_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_indexjoint_3</td>
+<td style="text-align: left;">l_tindex_3dist</td>
+<td style="text-align: left;">左人差し指骨末節</td>
+<td style="text-align: left;">LeftIndexDistal</td>
+<td style="text-align: left;">IndexFinger3_L</td>
+<td style="text-align: left;">index_03_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_middlejoint_1</td>
+<td style="text-align: left;">l_middle_1prox</td>
+<td style="text-align: left;">左中指骨基節</td>
+<td style="text-align: left;">LeftMiddleProximal</td>
+<td style="text-align: left;">MiddleFinger1_L</td>
+<td style="text-align: left;">middle_01_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_middlejoint_2</td>
+<td style="text-align: left;">l_middle_2mid</td>
+<td style="text-align: left;">左中指骨中節</td>
+<td style="text-align: left;">LeftMiddleIntermediate</td>
+<td style="text-align: left;">MiddleFinger2_L</td>
+<td style="text-align: left;">middle_02_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_middlejoint_3</td>
+<td style="text-align: left;">l_middle_3dist</td>
+<td style="text-align: left;">左中指骨末節</td>
+<td style="text-align: left;">LeftMiddleDistal</td>
+<td style="text-align: left;">MiddleFinger3_L</td>
+<td style="text-align: left;">middle_03_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_ringjoint_1</td>
+<td style="text-align: left;">l_ring_1prox</td>
+<td style="text-align: left;">左薬指骨基節</td>
+<td style="text-align: left;">LeftRingProximal</td>
+<td style="text-align: left;">RingFinger1_L</td>
+<td style="text-align: left;">ring_01_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_ringjoint_2</td>
+<td style="text-align: left;">l_ring_2mid</td>
+<td style="text-align: left;">左薬指骨中節</td>
+<td style="text-align: left;">LeftRingIntermediate</td>
+<td style="text-align: left;">RingFinger2_L</td>
+<td style="text-align: left;">ring_02_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_ringjoint_3</td>
+<td style="text-align: left;">l_ring_3dist</td>
+<td style="text-align: left;">左薬指骨末節</td>
+<td style="text-align: left;">LeftRingDistal</td>
+<td style="text-align: left;">RingFinger3_L</td>
+<td style="text-align: left;">ring_03_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_littlejoint_1</td>
+<td style="text-align: left;">l_little_1prox</td>
+<td style="text-align: left;">左小指骨基節</td>
+<td style="text-align: left;">LeftLittleProximal</td>
+<td style="text-align: left;">LittleFinger1_L</td>
+<td style="text-align: left;">pinky_01_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_littlejoint_2</td>
+<td style="text-align: left;">l_little_2mid</td>
+<td style="text-align: left;">左小指骨中節</td>
+<td style="text-align: left;">LeftLittleIntermediate</td>
+<td style="text-align: left;">LittleFinger2_L</td>
+<td style="text-align: left;">pinky_02_l</td>
+</tr>
+<tr>
+<td style="text-align: left;">l_littlejoint_3</td>
+<td style="text-align: left;">l_little_3dist</td>
+<td style="text-align: left;">左小指骨末節</td>
+<td style="text-align: left;">LeftLittleDistal</td>
+<td style="text-align: left;">LittleFinger3_L</td>
+<td style="text-align: left;">pinky_03_l</td>
+</tr>
+</tbody>
+</table>
+<p>赤文字は多くのヒューマノイドで使用されている基本的なジョイント.  </p>
+<p><img alt="jointlink" src="../../img/meridian_jointlink.png" /></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../../Library/monitor_servo_error/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../Library/monitor_servo_error/" class="btn btn-xs btn-link">
+        monitor_servo_error
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

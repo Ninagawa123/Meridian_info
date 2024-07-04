@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>cksm_val - Meridian Information</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../seq_increase_num/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../seq_increase_num/" class="btn btn-xs btn-link">
+        seq_increase_num
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../cksm_rslt/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../cksm_rslt/" class="btn btn-xs btn-link">
+        cksm_rslt
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <hr />
+<h2><b>short cksm_val(short arr[ ], int len)</b></h2>
+<hr />
+<p>Meridim配列のチェックサムを算出します。<br />
+引数1 : Meridim配列(short型)<br />
+引数2 : 配列の長さ(int型)
+Meridim配列の末尾-1までの数値を合計して最後にビット反転し、<br />
+Short型に変換したものをチェックサム値として返します。  </p>
+<p><br>  </p>
+<pre><code>/**
+* @brief calculate checksum of Meridim
+*
+* @param[in] arr Meridim array
+* @param[in] len Length of array
+* @return short checksum value
+*/
+
+short Meridian::cksm_val(short arr[], int len)
+{
+    int _cksm = 0;
+    for (int i = 0; i &lt; len - 1; i++)
+    {
+        _cksm += int(arr[i]);
+    }
+    return short(~_cksm);
+}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../seq_increase_num/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../seq_increase_num/" class="btn btn-xs btn-link">
+        seq_increase_num
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../cksm_rslt/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../cksm_rslt/" class="btn btn-xs btn-link">
+        cksm_rslt
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

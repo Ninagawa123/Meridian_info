@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>print_esp_hello_ip - Meridian Information</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../print_imuahrs/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../print_imuahrs/" class="btn btn-xs btn-link">
+        print_imuahrs
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../print_esp_hello_start/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../print_esp_hello_start/" class="btn btn-xs btn-link">
+        print_esp_hello_start
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <hr />
+<h2><b>void print_esp_hello_ip(String wifi_send_ip, String wifi_localip, String fixed_ip_addr, bool mode_fixed_ip)</b></h2>
+<hr />
+<p>ESP等での起動メッセージを表示します。(Wi-Fi接続後から)<br />
+引数1 : 接続先のPCのIPアドレス<br />
+引数2 : ESP32側のIPアドレス※<br />
+引数3 : ESP32のIP固定時のIPアドレス (mode_fixed_ipがTrueの時に有効)
+引数4 : ESP32のIP固定の有無。 True:ON, False:OFF<br />
+※ 引数2のESP32側の動的IPアドレスはMeridian起動時にESP32のシリアルモニタに表示。  </p>
+<p><br>  </p>
+<pre><code>/**
+ * @brief Print Wi-Fi status to serial.
+ *
+ * @param[in] wifi_send_ip Send Wi-Fi IP. (PC's IP adress)
+ * @param[in] wifi_localip Wi-Fi IP of this device.
+ * @param[in] fixed_ip_addr Fixed Wi-Fi IP of this device. (If mode_fixed_ip is True)
+ * @param[in] mode_fixed_ip Use fixed Wi-Fi IP or Not.
+ */
+
+void Meridian::print_esp_hello_ip(String wifi_send_ip, IPAddress wifi_localip, String fixed_ip_addr, bool mode_fixed_ip)
+{
+    Serial.println(&quot;WiFi successfully connected.&quot;);                          // WiFi接続完了通知
+    Serial.println(&quot;PC's IP address target is  =&gt; &quot; + String(wifi_send_ip)); // 送信先PCのIPアドレスの表示
+
+    if (mode_fixed_ip)
+    {
+        Serial.println(&quot;ESP32's IP address is  =&gt; &quot; + String(fixed_ip_addr) + &quot; (*Fixed)&quot;); // ESP32自身のIPアドレスの表示
+    }
+    else
+    {
+        Serial.print(&quot;ESP32's IP address is  =&gt; &quot;); // ESP32自身のIPアドレスの表示
+        Serial.println(wifi_localip);
+    }
+}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../print_imuahrs/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../print_imuahrs/" class="btn btn-xs btn-link">
+        print_imuahrs
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../print_esp_hello_start/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../print_esp_hello_start/" class="btn btn-xs btn-link">
+        print_esp_hello_start
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

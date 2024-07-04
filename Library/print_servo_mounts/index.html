@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>print_servo_mounts - Meridian Information</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../print_controlpad/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../print_controlpad/" class="btn btn-xs btn-link">
+        print_controlpad
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../print_imuahrs/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../print_imuahrs/" class="btn btn-xs btn-link">
+        print_imuahrs
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <hr />
+<h2><b>void print_servo_mounts(int idl_svmt[ ], int idr_svmt[ ], int id3_svmt[ ])</b></h2>
+<hr />
+<p>Teensy等での起動メッセージを表示します。<br />
+引数1 : L系列のサーボマウント配列<br />
+引数2 : R系列のサーボマウント配列<br />
+引数3 : 3系列のサーボマウント配列  </p>
+<p><br>  </p>
+<pre><code>/**
+ * @brief Print mounted servomotor's id.
+ *
+ * @param[in] idl_svmt Left side servos arrey.
+ * @param[in] idr_svmt Right side servos arrey.
+ * @param[in] id3_svmt 3rd side servos arrey.
+ */
+
+void Meridian::print_servo_mounts(int idl_svmt[], int idr_svmt[], int id3_svmt[]))
+{
+    Serial.print(&quot;Left side Servos mounted:  &quot;);
+    for (int i = 0; i &lt; 15; i++)
+    {
+        if (idl_svmt[i])
+        {
+            Serial.print(i);
+            Serial.print(&quot; &quot;);
+        }
+    }
+    Serial.println();
+
+    Serial.print(&quot;Right side Servos mounted: &quot;);
+    for (int i = 0; i &lt; 15; i++)
+    {
+        if (idr_svmt[i])
+        {
+            Serial.print(i);
+            Serial.print(&quot; &quot;);
+        }
+    }
+    Serial.println();
+
+    int _x = 0;
+    for (int i = 0; i &lt; 15; i++)
+    {
+        _x = _x + id3_svmt[i];
+    }
+    if (_x){
+        Serial.print(&quot;3rd side Servos mounted: &quot;);
+        for (int i = 0; i &lt; 15; i++)
+        {
+            if (id3_svmt[i])
+            {
+                Serial.print(i);
+                Serial.print(&quot; &quot;);
+            }
+        }
+    Serial.println();
+    }
+}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../print_controlpad/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../print_controlpad/" class="btn btn-xs btn-link">
+        print_controlpad
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../print_imuahrs/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../print_imuahrs/" class="btn btn-xs btn-link">
+        print_imuahrs
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

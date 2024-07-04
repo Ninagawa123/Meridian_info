@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>[88] error code - Meridian Information</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../ValuableIndex/define_basic/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../ValuableIndex/define_basic/" class="btn btn-xs btn-link">
+        #define basic
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../remort_controller/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../remort_controller/" class="btn btn-xs btn-link">
+        [15-18] remort controller
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <hr>
+<h3> Meridim : エラーコード </h3>
+<hr>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Meridim90 配列番号</th>
+<th style="text-align: left;">配列番号キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">index [88]</td>
+<td style="text-align: left;">index [ MRD_ERROR_CODE ]</td>
+<td>エラーコード</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+16ビットをフラグビットとして、各種のエラーを通知します。<br />
+ボードやPC側でフラグが立っている回数を集計し、通知や処理を行ったり、コードやハードウェアの改善の目安にします。  </p>
+<p>各コードの意味は以下になります。  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ビット</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1000 0000 0000 0000</td>
+<td style="text-align: left;">PCのUDP受信エラー(ESP32発信)</td>
+</tr>
+<tr>
+<td style="text-align: left;">0100 0000 0000 0000</td>
+<td style="text-align: left;">ESP32のUDP受信エラー(PC発信)</td>
+</tr>
+<tr>
+<td style="text-align: left;">0010 0000 0000 0000</td>
+<td style="text-align: left;">TeensyのSPI受信エラー(ESP32発信)</td>
+</tr>
+<tr>
+<td style="text-align: left;">0001 0000 0000 0000</td>
+<td style="text-align: left;">ESP32のSPI受信エラー(Teensy発信)</td>
+</tr>
+<tr>
+<td style="text-align: left;">0000 1000 0000 0000</td>
+<td style="text-align: left;">Teensyのシステム遅延</td>
+</tr>
+<tr>
+<td style="text-align: left;">0000 0100 0000 0000</td>
+<td style="text-align: left;">ESP32のUDP受信スキップエラー(PC発信)</td>
+</tr>
+<tr>
+<td style="text-align: left;">0000 0010 0000 0000</td>
+<td style="text-align: left;">TeensyのUDP受信スキップエラー(PC発信ESP32経由)</td>
+</tr>
+<tr>
+<td style="text-align: left;">0000 0001 0000 0000</td>
+<td style="text-align: left;">PCのUDP受信スキップエラー(ESP32発信)</td>
+</tr>
+<tr>
+<td style="text-align: left;">0000 0000 1111 1111</td>
+<td style="text-align: left;">サーボ信号受信エラー<br> 0~99:L系統サーボ番号<br> 100~199:R系統サーボ番号<br> 200~240:3系統サーボ番号</td>
+</tr>
+</tbody>
+</table>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../ValuableIndex/define_basic/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../ValuableIndex/define_basic/" class="btn btn-xs btn-link">
+        #define basic
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../remort_controller/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../remort_controller/" class="btn btn-xs btn-link">
+        [15-18] remort controller
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
