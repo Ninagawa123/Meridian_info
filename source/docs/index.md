@@ -1,6 +1,6 @@
 ![meridian_logo](img/meridian_logo.png)
 
-## Meridian計画とは
+## Meridian計画とは?
 ----
   
   "Meridan"はヒューマノイドロボットの制御や開発を円滑にするためのオープンソースプロジェクトです。  
