@@ -50,3 +50,6 @@ watchdog==2.1.9; python_version >= '3.6'
 
 zipp==3.6.0; python_version >= '3.6'
 
+mkdocs-material
+
+mkdocs-windmill
