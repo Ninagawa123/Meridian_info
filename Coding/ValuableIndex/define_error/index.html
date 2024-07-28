@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Define error - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr>
+<h3> #define で定義される変数名のリスト その5 </h3>
+<hr>
+<p><br></p>
+<h3><b>エラーコード</b></h3>
+<p><br></p>
+<h4><b>Meridim[MRD_ERR]のエラーコード</b></h4>
+
+<table>
+<thead>
+<tr>
+<th>ビット</th>
+<th style="text-align: left;">型</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>上位8ビット</strong></td>
+<td style="text-align: left;"></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td style="text-align: left;">bool</td>
+<td>ESP32 → PC のUDP受信エラー (0:エラーなし、1:エラー検出)</td>
+</tr>
+<tr>
+<td>14</td>
+<td style="text-align: left;">bool</td>
+<td>PC → ESP32 のUDP受信エラー</td>
+</tr>
+<tr>
+<td>13</td>
+<td style="text-align: left;">bool</td>
+<td>ESP32 → TeensyのSPI受信エラー</td>
+</tr>
+<tr>
+<td>12</td>
+<td style="text-align: left;">bool</td>
+<td>Teensy → ESP32 のSPI受信エラー</td>
+</tr>
+<tr>
+<td>11</td>
+<td style="text-align: left;">bool</td>
+<td>Teensy or ESP32のシステムディレイ (末端で捕捉)</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align: left;">bool</td>
+<td>PC → ESP32 のUDPフレームスキップエラー</td>
+</tr>
+<tr>
+<td>9</td>
+<td style="text-align: left;">bool</td>
+<td>PC → ESP32 → Teensy のフレームスキップエラー(末端で捕捉)</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align: left;">bool</td>
+<td>Teensy → ESP32 → PC のフレームスキップエラー(末端で捕捉)</td>
+</tr>
+<tr>
+<td><strong>下位8ビット</strong></td>
+<td style="text-align: left;"></td>
+<td></td>
+</tr>
+<tr>
+<td>0〜7</td>
+<td style="text-align: left;">uint_8</td>
+<td>0:エラーなし<br>1-99:メッセージ未定義<br>100〜149:エラーサーボID (L系[0~49])<br>150〜199:エラーサーボID (C系[0~49])<br>200~249:エラーサーボID  (R系[0~49])</td>
+</tr>
+</tbody>
+</table>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

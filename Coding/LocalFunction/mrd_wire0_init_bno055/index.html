@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Mrd wire0 init bno055 - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr />
+<h3>bool mrd_wire0_init_bno055(AhrsValue &a_ahrs)</h3>
+<hr />
+<p>BNO055センサーの初期化を試みます.<br />
+引数 : a_ahrs AHRSの値を保持する構造体.<br />
+戻り値 : BNO055センサーの初期化が成功した場合はtrue, それ以外の場合はfalseを返す.  </p>
+<p><br>  </p>
+<pre><code>/// @brief BNO055センサーの初期化を試みます.
+/// @param a_ahrs AHRSの値を保持する構造体.
+/// @return BNO055センサーの初期化が成功した場合はtrue, それ以外の場合はfalseを返す.
+///         現在, この関数は常にfalseを返すように設定されています.
+bool mrd_wire0_init_bno055(AhrsValue &amp;a_ahrs) {
+  if (!ahrs.bno.begin()) {
+    Serial.println(&quot;No BNO055 detected ... Check your wiring or I2C ADDR!&quot;);
+    return false;
+  } else {
+    Serial.println(&quot;BNO055 mounted.&quot;);
+    delay(50);
+    ahrs.bno.setExtCrystalUse(false);
+    delay(10);
+    return true;
+  }
+  // データの取得はセンサー用スレッドで実行
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

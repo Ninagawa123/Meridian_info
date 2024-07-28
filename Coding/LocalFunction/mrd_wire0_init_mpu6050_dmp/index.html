@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Mrd wire0 init mpu6050 dmp - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr />
+<h3>bool mrd_wire0_init_mpu6050_dmp(AhrsValue &a_ahrs)</h3>
+<hr />
+<p>MPU6050センサーのDMP（デジタルモーションプロセッサ）を初期化し,<br />
+引数 : a_ahrs AHRSの値を保持する構造体.<br />
+戻り値 : DMPの初期化が成功した場合はtrue, 失敗した場合はfalseを返す.  </p>
+<p><br>  </p>
+<pre><code>/// @brief MPU6050センサーのDMP（デジタルモーションプロセッサ）を初期化し,
+/// ジャイロスコープと加速度センサーのオフセットを設定する.
+/// @param a_ahrs AHRSの値を保持する構造体.
+/// @return DMPの初期化が成功した場合はtrue, 失敗した場合はfalseを返す.
+bool mrd_wire0_init_mpu6050_dmp(AhrsValue &amp;a_ahrs) {
+  a_ahrs.mpu6050.initialize();
+  a_ahrs.devStatus = a_ahrs.mpu6050.dmpInitialize();
+
+  // supply your own gyro offsets here, scaled for min sensitivity
+  a_ahrs.mpu6050.setXAccelOffset(-1745);
+  a_ahrs.mpu6050.setYAccelOffset(-1034);
+  a_ahrs.mpu6050.setZAccelOffset(966);
+  a_ahrs.mpu6050.setXGyroOffset(176);
+  a_ahrs.mpu6050.setYGyroOffset(-6);
+  a_ahrs.mpu6050.setZGyroOffset(-25);
+
+  // make sure it worked (returns 0 if so)
+  if (a_ahrs.devStatus == 0) {
+    a_ahrs.mpu6050.CalibrateAccel(6);
+    a_ahrs.mpu6050.CalibrateGyro(6);
+    a_ahrs.mpu6050.setDMPEnabled(true);
+    a_ahrs.packetSize = a_ahrs.mpu6050.dmpGetFIFOPacketSize();
+    Serial.println(&quot;MPU6050 OK.&quot;);
+    return true;
+  }
+  Serial.println(&quot;IMU/AHRS DMP Initialization FAILED!&quot;);
+  return false;
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

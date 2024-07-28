@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Execute master command 2 - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr />
+<h3>bool execute_master_command_2(Meridim90Union a_meridim, bool a_flg_exe)</h3>
+<hr />
+<p>Master Commandの第2群を実行する. 受信コマンドに基づき, 異なる処理を行う.<br />
+引数1 : a_meridim 実行したいコマンドの入ったMeridim配列を渡す.<br />
+引数2 : a_flg_exe Meridimの受信成功判定フラグを渡す.  <br />
+戻り値 : コマンドを実行した場合はtrue, しなかった場合はfalseを返す. </p>
+<p><br>  </p>
+<pre><code>/// @brief Master Commandの第2群を実行する. 受信コマンドに基づき, 異なる処理を行う.
+/// @param a_meridim 実行したいコマンドの入ったMeridim配列を渡す.
+/// @param a_flg_exe Meridimの受信成功判定フラグを渡す.
+/// @return コマンドを実行した場合はtrue, しなかった場合はfalseを返す.
+bool execute_master_command_2(Meridim90Union a_meridim, bool a_flg_exe) {
+  if (!a_flg_exe) {
+    return false;
+  }
+
+  // コマンド[90]: 1~999は MeridimのLength. デフォルトは90
+
+  // コマンド:[0] 全サーボ脱力
+  if (a_meridim.sval[MRD_MASTER] == 0) {
+    mrd_servos_all_off(s_udp_meridim);
+    return true;
+  }
+
+  // コマンド:[1] サーボオン 通常動作
+
+  // コマンド:MCMD_UPDATE_YAW_CENTER (10002) IMU/AHRSのヨー軸リセット
+  if (a_meridim.sval[MRD_MASTER] == MCMD_UPDATE_YAW_CENTER) {
+    ahrs.yaw_origin = ahrs.yaw_source;
+    Serial.println(&quot;cmd: yaw reset.&quot;);
+    return true;
+  }
+
+  // コマンド:MCMD_ENTER_TRIM_MODE (10003) トリムモードに入る（既存のものは廃止し, 検討中）
+
+  // コマンド:MCMD_BOARD_TRANSMIT_PASSIVE (10006) UDP受信の通信周期制御をPC側主導に（SSH的な動作）
+  if (a_meridim.sval[MRD_MASTER] == MCMD_BOARD_TRANSMIT_PASSIVE) {
+    flg.udp_board_passive = true; // UDP送信をパッシブモードに
+    flg.frame_timer_reset = true; // フレームの管理時計をリセットフラグをセット
+    return true;
+  }
+
+  // コマンド:MCMD_RESET_MRD_TIMER) (10007) フレーム管理時計tmr.mrd_milを現在時刻にリセット
+  if (a_meridim.sval[MRD_MASTER] == MCMD_RESET_MRD_TIMER) {
+    flg.frame_timer_reset = true; // フレームの管理時計をリセットフラグをセット
+    return true;
+  }
+
+  // コマンド:MCMD_STOP_BOARD_DURING (10008) ボードの末端処理を指定時間だけ止める.
+  if (a_meridim.sval[MRD_MASTER] == MCMD_STOP_BOARD_DURING) {
+    flg.stop_board_during = true; // ボードの処理停止フラグをセット
+    // ボードの末端処理をmeridim[2]ミリ秒だけ止める.
+    Serial.print(&quot;Stop ESP32's processing during &quot;);
+    Serial.print(int(a_meridim.sval[MRD_STOP_FRAMES_MS]));
+    Serial.println(&quot; ms.&quot;);
+    for (int i = 0; i &lt; int(a_meridim.sval[MRD_STOP_FRAMES_MS]); i++) {
+      delay(1);
+    }
+    flg.stop_board_during = false; // ボードの処理停止フラグをクリア
+    flg.frame_timer_reset = true; // フレームの管理時計をリセットフラグをセット
+    return true;
+  }
+  return false;
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

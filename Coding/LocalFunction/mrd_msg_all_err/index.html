@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Mrd msg all err - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr />
+<h3>bool mrd_msg_all_err(MrdErr a_err, bool mrd_disp_all_error)</h3>
+<hr />
+<p>システム内の様々な通信エラーとスキップ数をモニタリングし, シリアルポートに出力する.<br />
+引数 : a_err エラーデータの入った構造体.<br />
+引数 : mrd_disp_all_error モニタリング表示のオンオフ.<br />
+戻り値 : エラーメッセージを表示した場合はtrueを, 表示しなかった場合はfalseを返す.  </p>
+<p><br>  </p>
+<pre><code>/// @brief システム内の様々な通信エラーとスキップ数をモニタリングし, シリアルポートに出力する.
+/// @param a_err エラーデータの入った構造体.
+/// @param mrd_disp_all_error モニタリング表示のオンオフ.
+/// @return エラーメッセージを表示した場合はtrueを, 表示しなかった場合はfalseを返す.
+bool mrd_msg_all_err(MrdErr a_err, bool mrd_disp_all_error) {
+  if (mrd_disp_all_error) {
+    Serial.print(&quot;[ERR] es&gt;pc:&quot;);
+    Serial.print(a_err.esp_pc);
+    Serial.print(&quot; pc&gt;es:&quot;);
+    Serial.print(a_err.pc_esp);
+    Serial.print(&quot; es&gt;ts:&quot;);
+    Serial.print(a_err.esp_tsy);
+    Serial.print(&quot; ts&gt;es:&quot;);
+    Serial.print(a_err.esp_tsy);
+    Serial.print(&quot; tsSkp:&quot;);
+    Serial.print(a_err.tsy_skip);
+    Serial.print(&quot; esSkp:&quot;);
+    Serial.print(a_err.esp_skip);
+    Serial.print(&quot; pcSkp:&quot;);
+    Serial.print(a_err.pc_skip);
+    Serial.println();
+    return true;
+  }
+  return false;
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

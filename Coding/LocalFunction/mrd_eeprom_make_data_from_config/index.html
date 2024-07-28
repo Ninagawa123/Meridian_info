@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Mrd eeprom make data from config - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr />
+<h3>UnionEEPROM mrd_eeprom_make_data_from_config()</h3>
+<hr />
+<p>config.hにあるサーボの諸設定からEEPROM格納用の配列データを作成する.<br />
+戻り値 : config.hから作成したEEPROM格納用の配列データを返す.  </p>
+<p><br>  </p>
+<pre><code>/// @brief config.hにあるサーボの諸設定からEEPROM格納用の配列データを作成する.
+/// @return config.hから作成したEEPROM格納用の配列データを返す.
+UnionEEPROM mrd_eeprom_make_data_from_config() {
+  UnionEEPROM array_tmp = {0};
+  for (int i = 0; i &lt; 15; i++) {
+    // 各サーボのマウントありなし（0:サーボなし, +:サーボあり順転, -:サーボあり逆転）
+    // 例: idl_mt[20] = -21; → FUTABA_RSxTTLサーボを逆転設定でマウント
+    array_tmp.saval[0][20 + i * 2] = short(sv.idl_mount[i] * sv.idl_cw[i]);
+    array_tmp.saval[0][50 + i * 2] = short(sv.idr_mount[i] * sv.idr_cw[i]);
+    // 各サーボの直立デフォルト値 degree
+    array_tmp.saval[1][21 + i * 2] = mrd.float2HfShort(sv.idl_trim[i]);
+    array_tmp.saval[1][51 + i * 2] = mrd.float2HfShort(sv.idr_trim[i]);
+  };
+  return array_tmp;
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

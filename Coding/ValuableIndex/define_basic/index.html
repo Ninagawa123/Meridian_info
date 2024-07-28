@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Define basic - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr>
+<h3> #define で定義される変数名のリスト その1 </h3>
+<hr>
+<p><br></p>
+<h3><b>基本設定</b></h3>
+<p><br></p>
+<h4><b>主にconfig.hで設定する項目</b></h4>
+
+<table>
+<thead>
+<tr>
+<th>#define</th>
+<th style="text-align: center;">値範囲</th>
+<th style="text-align: center;">初期値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Meridim基本設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>MRDM_LEN</td>
+<td style="text-align: center;">1-700</td>
+<td style="text-align: center;">90</td>
+<td>Meridim配列の長さ</td>
+</tr>
+<tr>
+<td>MRDM_BYTE</td>
+<td style="text-align: center;">MRDM_LEN*2</td>
+<td style="text-align: center;">180</td>
+<td>Meridim配列のバイト型の長さ</td>
+</tr>
+<tr>
+<td>FRAME_DURATION</td>
+<td style="text-align: center;">1以上</td>
+<td style="text-align: center;">10</td>
+<td>1フレームあたりの単位時間(単位ms)</td>
+</tr>
+<tr>
+<td>CHARGE_TIME</td>
+<td style="text-align: center;">0以上</td>
+<td style="text-align: center;">200</td>
+<td>起動時のコンデンサ充電待機時間(単位ms)</td>
+</tr>
+<tr>
+<td><strong>動作モード</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>MODE_ESP32_STDALONE</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>ESP32をMeridianボードに挿さずに動作確認<br>(1:する, 0:しない)</td>
+</tr>
+<tr>
+<td>MODE_UDP_RECEIVE</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">1</td>
+<td>PCからデータを受信(1:する, 0:しない)</td>
+</tr>
+<tr>
+<td>MODE_UDP_SEND</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">1</td>
+<td>PCへデータを送信(1:する, 0:しない)</td>
+</tr>
+<tr>
+<td><strong>起動時のチェック</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>CHECK_SD_RW</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>SDカードリーダーの読み書きチェック</td>
+</tr>
+<tr>
+<td>CHECK_EEPROM_RW</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>EEPROMの動作チェック</td>
+</tr>
+<tr>
+<td><strong>シリアルモニタ</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>MONITOR_FLOW</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>フロー番号の表示</td>
+</tr>
+<tr>
+<td>MONITOR_ALL_ERROR</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>全経路の受信エラー率の表示</td>
+</tr>
+<tr>
+<td>MONITOR_SERVO_ERR</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>通信エラーのあったサーボIDの表示</td>
+</tr>
+<tr>
+<td>MONITOR_SEQ_NUMBER</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>シーケンス番号の表示</td>
+</tr>
+<tr>
+<td>MONITOR_PAD</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>リモコンデータの表示</td>
+</tr>
+<tr>
+<td><strong>マウント関連</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>MOUNT_SD</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>SDカードリーダーの搭載(1:あり, 0:なし)</td>
+</tr>
+<tr>
+<td>MOUNT_IMUAHRS</td>
+<td style="text-align: center;">0-3</td>
+<td style="text-align: center;">NO_IMU</td>
+<td>IMU/AHRSの搭載<br>(0:NO_IMU, 1:MPU6050_IMU, 2:MPU9250_IMU, 3:BNO055_AHRS)</td>
+</tr>
+<tr>
+<td>MOUNT_PAD</td>
+<td style="text-align: center;">0-5</td>
+<td style="text-align: center;">0</td>
+<td>ジョイパッドの搭載<br>(0:なし, 1:MERIMOTE, 2:BLUERETRO, 3:SBDBT, 4:KRR5FH,4:Wiimote)</td>
+</tr>
+<tr>
+<td><strong>I2C設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>I2C0_SPEED</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">400000</td>
+<td>I2Cの速度(400kHz推奨)</td>
+</tr>
+<tr>
+<td>IMUAHRS_INTERVAL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td>IMU/AHRSの読み取り間隔(ms)</td>
+</tr>
+<tr>
+<td>IMUAHRS_STOCK</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">4</td>
+<td>移動平均を取る際のフレーム数</td>
+</tr>
+<tr>
+<td><strong>サーボ関連設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>SERVO_BAUDRATE_L</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1250000</td>
+<td>L系統のサーボの通信速度(bps)</td>
+</tr>
+<tr>
+<td>SERVO_BAUDRATE_R</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1250000</td>
+<td>R系統のサーボの通信速度(bps)</td>
+</tr>
+<tr>
+<td>SERVO_BAUDRATE_C</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1250000</td>
+<td>C系統のサーボの通信速度(bps)</td>
+</tr>
+<tr>
+<td>SERVO_TIMEOUT_L</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td>L系統のサーボ返信タイムアウト時間(ms)</td>
+</tr>
+<tr>
+<td>SERVO_TIMEOUT_R</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td>L系統のサーボ返信タイムアウト時間(ms)</td>
+</tr>
+<tr>
+<td>SERVO_TIMEOUT_C</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td>C系統のサーボ返信タイムアウト時間(ms)</td>
+</tr>
+<tr>
+<td>SERVO_LOST_ERROR_WAIT</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">6</td>
+<td>サーボ通信エラーと判定する連続エラー回数</td>
+</tr>
+<tr>
+<td><strong>PC接続関連設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>SERIAL_PC_BPS</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">115200</td>
+<td>PCとのシリアル通信の速度(bps)</td>
+</tr>
+<tr>
+<td><strong>SPI設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>SPI_SPEED</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">6000000</td>
+<td>SPI通信の速度(bps)</td>
+</tr>
+<tr>
+<td><strong>EEPROMの設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>EEPROM_SIZE</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">540</td>
+<td>使用するEEPROMのサイズ(バイト)</td>
+</tr>
+<tr>
+<td>EEPROM_SET</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>起動時にEEPROMにconfig.hの内容をセット<br>(1:する, 0:しない)</td>
+</tr>
+<tr>
+<td>EEPROM_PROTECT</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>EEPROMの書き込み保護<br>(1:書き込み禁止, 0:保護しない)</td>
+</tr>
+<tr>
+<td>EEPROM_LOAD</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>起動時にEEPROMの内容を諸設定に反映<br>(1:する, 0:しない)</td>
+</tr>
+<tr>
+<td>EEPROM_DUMP</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>起動時のEEPROM内容のダンプ表示</td>
+</tr>
+<tr>
+<td>EEPROM_FORMAT</td>
+<td style="text-align: center;">Bin,Hex,Dec</td>
+<td style="text-align: center;">Dec</td>
+<td>起動時のEEPROM内容のダンプ表示の書式</td>
+</tr>
+<tr>
+<td><strong>Wifiアクセスポイントの設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>MODE_FIXED_IP</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>IPアドレスを固定する</td>
+</tr>
+<tr>
+<td>UDP_TIMEOUT</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">4</td>
+<td>UDPの待受タイムアウト時間(ms)</td>
+</tr>
+<tr>
+<td><strong>リモコンの設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>PAD_INTERVAL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td>ジョイパッドのデータを読むフレーム間隔<br>(KRC-5FHでは4推奨)</td>
+</tr>
+<tr>
+<td>PAD_BUTTON_MARGE</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">1</td>
+<td>受信ボタンデータをMeridim受信値に<br>(1:論理和でマージする, 0:上書きする)</td>
+</tr>
+<tr>
+<td>PAD_GENERALIZE</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">1</td>
+<td>ジョイパッドの入力値をPS系に一般化する</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>ピンアサイン</b></h4>
+
+<table>
+<thead>
+<tr>
+<th>#define</th>
+<th style="text-align: center;">LITE</th>
+<th style="text-align: center;">TWIN</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PIN_ERR_LED</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">2</td>
+<td>LED用</td>
+</tr>
+<tr>
+<td>PIN_EN_L</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">6</td>
+<td>L系統のサーボのENピン</td>
+</tr>
+<tr>
+<td>PIN_EN_R</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td>R系統のサーボのENピン</td>
+</tr>
+<tr>
+<td>PIN_EN_C</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">23</td>
+<td>C系統のサーボのENピン</td>
+</tr>
+<tr>
+<td>PIN_CHIPSELECT_SD</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">9</td>
+<td>SDカードSPI通信用のChipSelect</td>
+</tr>
+<tr>
+<td>PIN_I2C0_SDA</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;"></td>
+<td>I2CのSDAピン</td>
+</tr>
+<tr>
+<td>PIN_I2C0_SCL</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;"></td>
+<td>I2CのSCLピン</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>列挙型</b></h4>
+
+<table>
+<thead>
+<tr>
+<th>列挙型名</th>
+<th style="text-align: left;">値:列挙子</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UartLine</td>
+<td style="text-align: left;">0:L<br>1:R<br>2:C</td>
+<td>サーボ系統の列挙型</td>
+</tr>
+<tr>
+<td>ImuAhrsType</td>
+<td style="text-align: left;">0:NO_IMU<br>1:MPU6050_IMU<br>2:MPU9250_IMU<br>BNO055_AHRS</td>
+<td>6軸9軸センサ種の列挙型</td>
+</tr>
+<tr>
+<td>PadReceiverType</td>
+<td style="text-align: left;">0:PC<br>1:MERIMOTE<br>2:BLUERETRO<br>3:SBDBT<br>4:KRR5FH<br>5:Wiimote</td>
+<td>リモコン種の列挙型</td>
+</tr>
+<tr>
+<td>BinHexDec</td>
+<td style="text-align: left;">0:Bin<br> 1:Hex<br>2:Dec<br></td>
+<td>数値表示タイプの列挙型</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><b>システム用固定値</b></h4>
+
+<table>
+<thead>
+<tr>
+<th>定義</th>
+<th style="text-align: center;">固定値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PAD_LEN</td>
+<td style="text-align: center;">4</td>
+<td>ジョイパッド用配列の長さ</td>
+</tr>
+<tr>
+<td>PAD_I2C_LEN</td>
+<td style="text-align: center;">5</td>
+<td>ジョイパッドI2C用配列の長さ</td>
+</tr>
+<tr>
+<td>MRD_ERR_u</td>
+<td style="text-align: center;">MRD_ERR * 2 + 1</td>
+<td>エラーフラグの格納場所(上位8ビット)</td>
+</tr>
+<tr>
+<td>MRD_ERR_l</td>
+<td style="text-align: center;">MRD_ERR * 2</td>
+<td>エラーフラグの格納場所(下位8ビット)</td>
+</tr>
+</tbody>
+</table>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

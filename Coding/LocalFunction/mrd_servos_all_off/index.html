@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Mrd servos all off - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr />
+<h3>bool mrd_servos_all_off(Meridim90Union a_meridim)</h3>
+<hr />
+<p>第一引数のMeridim配列のすべてのサーボモーターをオフ（フリー状態）に設定する.<br />
+引数 : a_meridim サーボの動作パラメータを含むMeridim配列.<br />
+戻り値 : 設定完了時にtrueを返す.  </p>
+<p><br>  </p>
+<pre><code>/// @brief 第一引数のMeridim配列のすべてのサーボモーターをオフ（フリー状態）に設定する.
+/// @param a_meridim サーボの動作パラメータを含むMeridim配列.
+/// @return 設定完了時にtrueを返す.
+bool mrd_servos_all_off(Meridim90Union a_meridim) {
+  for (int i = 0; i &lt; 15; i++) {
+    a_meridim.sval[i * 2 + 20] = 0; // サーボのコマンドをオフに設定
+    a_meridim.sval[i * 2 + 50] = 0; //
+  }
+  Serial.println(&quot;All servos torq off.&quot;);
+  return true;
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Remort controller - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr>
+<h3> Meridim : リモコン受信 </h3>
+<hr>
+<p><br>
+Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じることで、<br />
+多種多様なコントローラーの受信値を一般化して取り扱います。  </p>
+<table>
+<thead>
+<tr>
+<th>Meridim90 配列番号</th>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index[15]</td>
+<td>index[MRD_CONTROL_BUTTONS]</td>
+<td>ボタン入力</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<hr>
+
+<h4> <b>ボタン入力</b> </h4>
+<hr>
+
+<p><strong>一般化した場合の入力値 (JOYPAD_GENERALIZE = 1)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type\bit</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">7</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">9</th>
+<th style="text-align: center;">10</th>
+<th style="text-align: center;">11</th>
+<th style="text-align: center;">12</th>
+<th style="text-align: center;">13</th>
+<th style="text-align: center;">14</th>
+<th style="text-align: center;">15</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PS2</td>
+<td style="text-align: center;">select</td>
+<td style="text-align: center;">Stk_L3</td>
+<td style="text-align: center;">Stk_R3</td>
+<td style="text-align: center;">start</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;">L2</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">L1</td>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">□</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>PS3</td>
+<td style="text-align: center;">select</td>
+<td style="text-align: center;">Stk_L3</td>
+<td style="text-align: center;">Stk_R3</td>
+<td style="text-align: center;">start</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;">L2</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">L1</td>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">□</td>
+<td style="text-align: center;">ps</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>PS4</td>
+<td style="text-align: center;">share</td>
+<td style="text-align: center;">Stk_L3</td>
+<td style="text-align: center;">Stk_R3</td>
+<td style="text-align: center;">options</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;">L2</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">L1</td>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">□</td>
+<td style="text-align: center;">ps</td>
+<td style="text-align: center;">touch</td>
+</tr>
+<tr>
+<td>KRC-5FH</td>
+<td style="text-align: center;">SP1(15)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">SP2(368)</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;">L2</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">L1</td>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">□</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Wii</td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">home</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">○A</td>
+<td style="text-align: center;">○2</td>
+<td style="text-align: center;">○1</td>
+<td style="text-align: center;">□B</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>val</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">128</td>
+<td style="text-align: center;">256</td>
+<td style="text-align: center;">512</td>
+<td style="text-align: center;">1024</td>
+<td style="text-align: center;">2048</td>
+<td style="text-align: center;">4096</td>
+<td style="text-align: center;">8192</td>
+<td style="text-align: center;">16384</td>
+<td style="text-align: center;">32768</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">160</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>一般化しない場合の入力値 (JOYPAD_GENERALIZE = 0)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type\bit</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">7</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">9</th>
+<th style="text-align: center;">10</th>
+<th style="text-align: center;">11</th>
+<th style="text-align: center;">12</th>
+<th style="text-align: center;">13</th>
+<th style="text-align: center;">14</th>
+<th style="text-align: center;">15</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PS2</td>
+<td style="text-align: center;">select</td>
+<td style="text-align: center;">Stk_R3</td>
+<td style="text-align: center;">Stk_L3</td>
+<td style="text-align: center;">start</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;">L2</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">L1</td>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">□</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>PS3</td>
+<td style="text-align: center;">select</td>
+<td style="text-align: center;">Stk_R3</td>
+<td style="text-align: center;">Stk_L3</td>
+<td style="text-align: center;">start</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;">L2</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">L1</td>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">□</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>PS4</td>
+<td style="text-align: center;">share</td>
+<td style="text-align: center;">Stk_R3</td>
+<td style="text-align: center;">Stk_L3</td>
+<td style="text-align: center;">options</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;">L2</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">L1</td>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">□</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>KRC-5FH</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">□</td>
+<td style="text-align: center;">L1</td>
+<td style="text-align: center;">L2</td>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">SP1</td>
+<td style="text-align: center;">SP2</td>
+</tr>
+<tr>
+<td>Wii</td>
+<td style="text-align: center;">↓</td>
+<td style="text-align: center;">↑</td>
+<td style="text-align: center;">→</td>
+<td style="text-align: center;">←</td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">○2</td>
+<td style="text-align: center;">○1</td>
+<td style="text-align: center;">□B</td>
+<td style="text-align: center;">○A</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">home</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>val</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">128</td>
+<td style="text-align: center;">256</td>
+<td style="text-align: center;">512</td>
+<td style="text-align: center;">1024</td>
+<td style="text-align: center;">2048</td>
+<td style="text-align: center;">4096</td>
+<td style="text-align: center;">8192</td>
+<td style="text-align: center;">16384</td>
+<td style="text-align: center;">32768</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">368</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr>
+<h4> <b>スティック入力</b> </h4>
+<hr>
+
+<table>
+<thead>
+<tr>
+<th>Meridim90 配列番号</th>
+<th>キー</th>
+<th>ビット</th>
+<th>説明</th>
+<th>val</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index[16]</td>
+<td>index[MRD_CONTROL_STICK_L]</td>
+<td>上位8ビット</td>
+<td>Stick_L_x</td>
+<td>-127~+127</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>下位8ビット</td>
+<td>Stick_L_y</td>
+<td>-127~+127</td>
+</tr>
+<tr>
+<td>index[17]</td>
+<td>index[MRD_CONTROL_STICK_R]</td>
+<td>上位8ビット</td>
+<td>Stick_L_x</td>
+<td>-127~+127</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>下位8ビット</td>
+<td>Stick_L_y</td>
+<td>-127~+127</td>
+</tr>
+<tr>
+<td>index[18]</td>
+<td>index[MRD_CONTROL_L2R2ANALOG]</td>
+<td>上位8ビット</td>
+<td>L2アナログ</td>
+<td>0~+255</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>下位8ビット</td>
+<td>R2アナログ</td>
+<td>0~255</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr>
+<h4> <b>ボタンの変換テーブル</b> </h4>
+<hr>
+
+<p>unsigned short型に1ビット目から順にボタンフラグを格納していく場合の変換テーブル  </p>
+<p>WiiリモコンからPS系への変換テーブル(wiimote.h使用時)<br />
+PAD_WIIMOTE_SOLO[16] = {0x1000, 0x0080, 0x0000, 0x0010, 0x0200, 0x0400, 0x0100, 0x0800, 0x0000, 0x0000, 0x0000, 0x0000, 0x0008, 0x0001, 0x0002, 0x0004};</p>
+<p>Wiiリモコンのオリジナル値への変換テーブル(wiimote.h使用時)  <br />
+PAD_WIIMOTE_ORIG[16] = {0x0100, 0x0200, 0x0400, 0x0800, 0x1000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0002, 0x0004, 0x0008, 0x0010, 0x0000, 0x0000, 0x0080};</p>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

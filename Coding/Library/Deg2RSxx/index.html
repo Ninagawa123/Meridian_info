@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Deg2RSxx - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr />
+<h3>int Deg2RSxx(float degree, float trim, int cw)</h3>
+<hr />
+<p>小数点２桁までの角度値Degreeを、FUTABAのRSxx系サーボの値に変換して返します。<br />
+引数1 : degree角度値(float型)<br />
+引数2 : サーボのトリム補正degree角度値(float型)<br />
+引数3 : サーボの回転方向+-補正値(int型 -1,+1)<br />
+結果はint型、-1600〜1600の範囲に限定されます。<br />
+　　
+<br>  </p>
+<pre><code>/**
+ * @brief Degree value to Futaba's RSxx Servo value.
+ *
+ * @param[in] degree Source degree
+ * @param[in] trim Trim degree value
+ * @param[in] cw Correction value for direction of rotation（+1 or -1）
+ * @return int, Futaba's RSxx Servo value（-1600 to 1600）
+ */
+
+int Meridian::Deg2RSxx(float degree, float trim, int cw)
+{
+    float _x = (degree + trim) * 10 * cw; 
+    if (_x &gt; 1600)                        // max limit
+    {
+        _x = 1600;
+    }
+    else if (_x &lt; -1600) // min limit
+    {
+        _x = -1600;
+    }
+    return static_cast&lt;int&gt;(_x);
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

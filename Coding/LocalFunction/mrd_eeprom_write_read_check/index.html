@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Mrd eeprom write read check - Meridian Information</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <hr />
+<h3>bool mrd_eeprom_write_read_check(UnionEEPROM a_write_data, bool a_do, bool a_protect, int a_bhd)</h3>
+<hr />
+<p>EEPROMに設定値を書き込み, その後で読み込んで内容を確認し, シリアルポートに出力する.<br />
+引数 : a_write_data EEPROM書き込み用の配列データ.<br />
+引数 : a_do EEPROMの読み書きチェックを実施するかのブール値.<br />
+引数 : a_protect EEPROMの書き込み許可があるかどうかのブール値.<br />
+引数 : a_bhd ダンプリストの表示形式.(0:Bin, 1:Hex, 2:Dec)<br />
+戻り値 : EEPROMの書き込みと読み込みが成功した場合はtrueを, それ以外はfalseを返す.  </p>
+<p><br>  </p>
+<pre><code>/// @brief EEPROMに設定値を書き込み, その後で読み込んで内容を確認し, シリアルポートに出力する.
+/// @param a_write_data EEPROM書き込み用の配列データ.
+/// @param a_do EEPROMの読み書きチェックを実施するかのブール値.
+/// @param a_protect EEPROMの書き込み許可があるかどうかのブール値.
+/// @param a_bhd ダンプリストの表示形式.(0:Bin, 1:Hex, 2:Dec)
+/// @return EEPROMの書き込みと読み込みが成功した場合はtrueを, それ以外はfalseを返す.
+bool mrd_eeprom_write_read_check(UnionEEPROM a_write_data, bool a_do, bool a_protect, int a_bhd) {
+  if (!a_do) // EEPROMの読み書きチェックを実施するか
+  {
+    return false;
+  }
+
+  // EEPROM書き込みを実行
+  Serial.println(&quot;Try to write EEPROM: &quot;);
+  mrd_eeprom_dump_to_serial(a_write_data, a_bhd); // 書き込み内容をダンプ表示
+
+  if (mrd_eeprom_write(a_write_data, a_protect)) {
+    Serial.println(&quot;...Write OK.&quot;);
+  } else {
+    Serial.println(&quot;...Write failed.&quot;);
+    return false;
+  }
+
+  // EEPROM読み込みを実行
+  Serial.println(&quot;Read EEPROM: &quot;);
+  UnionEEPROM read_data_tmp = mrd_eeprom_read();
+  mrd_eeprom_dump_to_serial(read_data_tmp, a_bhd); // 読み込み内容をダンプ表示
+  Serial.println(&quot;...Read completed.&quot;);
+
+  return true;
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

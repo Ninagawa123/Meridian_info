@@ -32,42 +32,19 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Meridian TWIN Quick Start", url: "#_top", children: [
-          ]},
-          {title: "Update 20230710 v1.0.0", url: "#update-20230710-v100", children: [
-          ]},
-          {title: "Meridian_TWIN", url: "#meridian_twin", children: [
-          ]},
-          {title: "\u958b\u767a\u8cc7\u6599", url: "#_1", children: [
-          ]},
-          {title: "System composition", url: "#system-composition", children: [
-          ]},
-          {title: "\u958b\u767a\u74b0\u5883", url: "#_2", children: [
-          ]},
-          {title: "Installation", url: "#installation", children: [
-          ]},
-          {title: "\u30d5\u30a1\u30a4\u30eb\u306e\u6e96\u5099", url: "#_3", children: [
-              {title: "Teensy4.0\u306e\u6e96\u5099", url: "#teensy40" },
-              {title: "ESP32DevkitC\u306e\u6e96\u5099", url: "#esp32devkitc" },
-          ]},
-          {title: "Meridian console\u3092\u5b9f\u884c\u3059\u308b", url: "#meridian-console", children: [
-          ]},
-          {title: "Unity\u7248\u30c7\u30e2\u3092\u5b9f\u884c\u3059\u308b", url: "#unity", children: [
-              {title: "UnityHub\u306b\u767b\u9332\u3057\u3066\u8d77\u52d5\u3059\u308b", url: "#unityhub" },
-              {title: "Unity\u306e\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u306eIP\u30a2\u30c9\u30ec\u30b9\u3092\u66f8\u304d\u63db\u3048\u308b", url: "#unityip" },
-              {title: "ESP32\u306eIP\u30a2\u30c9\u30ec\u30b9\u3092\u66f8\u304d\u63db\u3048\u308b", url: "#esp32ip_1" },
-              {title: "Windows\u306e\u5834\u5408\u306f\u30d5\u30a1\u30a4\u30a2\u30fc\u30a6\u30a9\u30fc\u30eb\u3092\u8a2d\u5b9a\u3059\u308b", url: "#windows" },
-              {title: "Unity\u3068Meridian\u30dc\u30fc\u30c9\u3092\u8d77\u52d5\u3059\u308b", url: "#unitymeridian" },
-          ]},
-          {title: "ROS\u7248\u30c7\u30e2\u3092\u5b9f\u884c\u3059\u308b", url: "#ros", children: [
-              {title: "ROS noetic\u306e\u5c0e\u5165", url: "#ros-noetic" },
-              {title: "URDF\u306e\u8868\u793a\u30c6\u30b9\u30c8", url: "#urdf" },
-              {title: "ROS, rviz, meridian_demo\u3092\u5b9f\u884c\u3059\u308b", url: "#ros-rviz-meridian_demo" },
-          ]},
-          {title: "\u30c8\u30e9\u30d6\u30eb\u30b7\u30e5\u30fc\u30c6\u30a3\u30f3\u30b0", url: "#_11", children: [
-              {title: "ROS\u7248\u30c7\u30e2\u5b9f\u884c\u6642\u306e\u30c8\u30e9\u30d6\u30eb\u30b7\u30e5\u30fc\u30c6\u30a3\u30f3\u30b0", url: "#ros_1" },
-              {title: "\u30dc\u30fc\u30c9\u304c\u52d5\u3044\u3066\u3044\u306a\u3044\u6642\u306e\u30c8\u30e9\u30d6\u30eb\u30b7\u30e5\u30fc\u30c6\u30a3\u30f3\u30b0", url: "#_12" },
-              {title: "\u65e2\u77e5\u306e\u8ab2\u984c", url: "#_13" },
+          {title: "Meridian_TWIN v1.1.0", url: "#_top", children: [
+              {title: "\u958b\u767a\u8cc7\u6599", url: "#_1" },
+              {title: "System composition", url: "#system-composition" },
+              {title: "\u958b\u767a\u74b0\u5883", url: "#_2" },
+              {title: "Installation", url: "#installation" },
+              {title: "\u30d5\u30a1\u30a4\u30eb\u306e\u6e96\u5099", url: "#_3" },
+              {title: "Meridian console\u3092\u5b9f\u884c\u3059\u308b", url: "#meridian-console" },
+              {title: "Unity\u7248\u30c7\u30e2\u3092\u5b9f\u884c\u3059\u308b", url: "#unity" },
+              {title: "ROS\u7248\u30c7\u30e2\u3092\u5b9f\u884c\u3059\u308b", url: "#ros" },
+              {title: "\u30c8\u30e9\u30d6\u30eb\u30b7\u30e5\u30fc\u30c6\u30a3\u30f3\u30b0", url: "#_10" },
+              {title: "Update", url: "#update" },
+              {title: "Merimote v0.0.1", url: "#merimote-v001" },
+              {title: "Update\u60c5\u5831", url: "#update_1" },
           ]},
         ];
 
@@ -115,24 +92,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="meridian-twin-quick-start">Meridian TWIN Quick Start<a class="headerlink" href="#meridian-twin-quick-start" title="Permanent link">&para;</a></h1>
-<p>Meridian TWINの導入方法について, 下記のgithubのREADMEを転記します.<br />
-ソースファイルは下記よりDLして進めてください.  <br>  </p>
-<p><a href="https://github.com/Ninagawa123/Meridian_TWIN">https://github.com/Ninagawa123/Meridian_TWIN</a><br />
-<br></p>
-<hr />
-<h1 id="update-20230710-v100">Update 20230710  v1.0.0<a class="headerlink" href="#update-20230710-v100" title="Permanent link">&para;</a></h1>
-<p>ライブラリ対応版として大幅なアップデートを行いました.(前回までのバージョンはoldディレクトリにzipで格納しています.)    <br />
-メインが整理され, 改造の見通しが立ちやすくなりました.<br />
-また, マイコンごとにまちまちだった変数名の書式も統一しました.<br />
-変数のルールやライブラリ関数については, 下記に情報を集約していきます.<br />
-https://ninagawa123.github.io/Meridian_info/  </p>
-<h1 id="meridian_twin">Meridian_TWIN<a class="headerlink" href="#meridian_twin" title="Permanent link">&para;</a></h1>
+    <h1 id="meridian_twin-v110"><a href="https://github.com/Ninagawa123/Meridian_TWIN">Meridian_TWIN v1.1.0</a><a class="headerlink" href="#meridian_twin-v110" title="Permanent link">&para;</a></h1>
+<p><img alt="meridian_logo_800x450" src="https://github.com/Ninagawa123/Meridian_TWIN/assets/8329123/f4034bae-70ab-49db-a834-f4bab2ecdad3" /></p>
 <p>Meridian計画はヒューマノイドの制御システムについてのオープンソースプロジェクトです.<br />
 ホビーロボットのデジタルツイン化を簡単に実装することができ, PC上のシミュレーション空間とロボット実機をWIFI経由で10msの更新頻度でデータリンクします.  </p>
 <p>システムの中核はMeridim配列というロボットの状態データを格納できる軽量で汎用的なデータ配列です.<br />
 このデータ配列がデバイス間を高速に廻ることで, リアルタイムな状態データを共有を可能にします.<br />
 Meridim配列を中間プロトコルとして既存のシステムの間に挟むことで, 複数社のコマンドサーボやセンサ, Unityなどの開発環境, ROSで使用可能な多岐にわたるシミュレーターなどを自由に繋ぎ合わせることができます.  </p>
+<p><img alt="meridian_circulate_image" src="https://github.com/Ninagawa123/Meridian_TWIN/assets/8329123/c786bec4-3bf4-4f71-8090-dbf179d04758" /></p>
 <p>当リポジトリで取り扱う ”Meridian_TWIN" はESP32とTeensy4.0を併用するタイプで, 対応ボードはMeridian Board Type.Kとなります.<br />
 また, ESP32DeckitC単体で動作する簡易バージョンのMeridian_LITE(対応ボードはMeridian Board -LITE-)も開発済みです.<br />
 Meridianは今後も用途に応じて様々なハードウェア, ソフトウェアに対応させていく予定です.  </p>
@@ -140,52 +107,54 @@ Meridianは今後も用途に応じて様々なハードウェア, ソフトウ�
 100Hzデータリンクのデモ動画</p>
 <p><a href="https://www.youtube.com/watch?v=Wfc9j4Pmr3E"><img alt="dance" src="https://img.youtube.com/vi/Wfc9j4Pmr3E/0.jpg" /></a><br />
 100Hzダンスのデモ動画</p>
-<h1 id="_1">開発資料<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_1">開発資料<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>プログラムのフローや配列の定義, ボードのピンアサインについては「document」ディレクトリの中に資料としてまとめています.<br />
 専用ボードの回路図も公開しており, 自作したりブレットボードで再現することが可能です.<br />
 動作可能なサンプルプログラムも当リポジトリ内で公開しています.  </p>
-<p>Meridianの概要や変数やライブラリ関数について, 下記に集約中です.<br />
-https://ninagawa123.github.io/Meridian_info/</p>
+<p>Meridianの概要や変数やライブラリ関数について, 下記に集約中です.（データがやや古いです.）<br />
+<a href="https://ninagawa123.github.io/Meridian_info/">https://ninagawa123.github.io/Meridian_info/</a>  </p>
 <p>また, 全体の仕組みや開発進捗は以下のnoteにまとめています.<br />
-https://note.com/ninagawa123/n/ncfde7a6fc835  </p>
-<h1 id="system-composition">System composition<a class="headerlink" href="#system-composition" title="Permanent link">&para;</a></h1>
+<a href="https://note.com/ninagawa123/n/ncfde7a6fc835">https://note.com/ninagawa123/n/ncfde7a6fc835</a>  </p>
+<h2 id="system-composition">System composition<a class="headerlink" href="#system-composition" title="Permanent link">&para;</a></h2>
 <p>Meridian_TWINは, ハードウェアとして通信用のESP32DevKitC, 制御用のTeensy4.0, それらを連結する専用ボードのMeiridian Boardで構成されます.<br />
 デモは近藤科学のKRSサーボ(通信速度1.25Mbps)に対応しており, Meiridian Board Type.KはKHR-3HV用に搭載することができます.<br />
 PC側はROS1のmelodic/noeticに対応しており, 現在Rvizでの表示が可能です. またUnity(Mac/Win版)でもヒューマノイドの姿勢をリアルタイムに反映させることができます.  </p>
 <p><img width="500" alt="TypeK" src="https://user-images.githubusercontent.com/8329123/180233435-4ed5fcb0-a2c6-4e73-94b1-b842ffb79af4.png">  </p>
-<h1 id="_2">開発環境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="_2">開発環境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>PlatformIO (Teensy4.0のプラットフォームバージョンは3.5.0対応)  </li>
 <li>Teensyduino(Teensy Loader 1.54, PlatformIOと併用)  </li>
 <li>Teensy4.0  </li>
 <li>ESP32DevkitC  </li>
 <li>MPU6050(GY-521)  </li>
-<li>Meridian Board Type.K</li>
+<li>Meridian Board Type.K  </li>
 </ul>
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Teensy4.0, ESP32DevKitCにそれぞれのファイルを書き込みます.<br />
 以下の説明の理解にはPlatformIOやTeensy4.0, ESP32の扱いについてのごく初歩的な知識が必要です.
 PlatformIOを初めて使うような方向けの導入手順については後日まとめる予定です.<br />
 普段Arduino IDEを使っている方のためのPlatformIOの導入Tipsについては下記にまとめました.<br />
-https://qiita.com/Ninagawa_Izumi/items/6f58d9dbfdfe99be9c13  </p>
-<h1 id="_3">ファイルの準備<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<a href="https://qiita.com/Ninagawa_Izumi/items/6f58d9dbfdfe99be9c13">https://qiita.com/Ninagawa_Izumi/items/6f58d9dbfdfe99be9c13</a>  </p>
+<h2 id="_3">ファイルの準備<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>当リポジトリ右上の「\&lt;&gt;code」ボタンより「Download ZIP」を選択し,<br />
 ファイルをお手元のPCの適切なディレクトリに展開します.<br />
 (もちろんgit cloneなど他の手順でも構いません.)  </p>
-<h2 id="teensy40">Teensy4.0の準備<a class="headerlink" href="#teensy40" title="Permanent link">&para;</a></h2>
+<h3 id="teensy40">Teensy4.0の準備<a class="headerlink" href="#teensy40" title="Permanent link">&para;</a></h3>
 <h4 id="platformioteensy40">PlatformIOでTeensy4.0用のプロジェクトファイルを開く<a class="headerlink" href="#platformioteensy40" title="Permanent link">&para;</a></h4>
 <p>PlatformIOのファイルメニューより「フォルダーを開く」とし, 先ほど展開したファイルの中から「Meridian_TWIN_for_Teensy40」のディレクトリを選択します.<br />
 (Meridian_TWIN_for_ESP32と間違えないようご注意ください.)  </p>
 <p>主なファイル構成は下記になります.  </p>
-<p>MERIDIAN_TWIN_FOR_TEENSY40  <br>
-&nbsp;├lib  <br>
-&nbsp;│&nbsp;└ ICSClass_V210 (サーボ用ライブラリ)  <br>
-&nbsp;├ src  <br>
-&nbsp;│&nbsp;├ config.h (Meridian設定ファイル)  <br>
-&nbsp;│&nbsp;├ main.cpp (Meridian本体)  <br>
-&nbsp;│&nbsp;└ main.h  (Meridianヘッダファイル)  <br>
-&nbsp;└ platfomio.ini (ボード設定ファイル)  </p>
-
+<pre><code>MERIDIAN_TWIN_FOR_TEENSY40
+│  
+├─ lib  
+│   └ ICSClass_V210 (サーボ用ライブラリ)
+│  
+├─ src  
+│   ├ config.h (Meridian設定ファイル)  
+│   ├ main.cpp (Meridian本体)  
+│   └ main.h  (Meridianヘッダファイル)  
+└ platfomio.ini (ボード設定ファイル)  &lt;/p&gt;
+</code></pre>
 <h4 id="teensy40_1">Teensy4.0に導入されるライブラリ<a class="headerlink" href="#teensy40_1" title="Permanent link">&para;</a></h4>
 <p>下記のライブラリはファイルを開く際に自動的に導入されます.<br />
 - <strong>Meridian by Ninagawa123</strong> 
@@ -198,7 +167,7 @@ https://qiita.com/Ninagawa_Izumi/items/6f58d9dbfdfe99be9c13  </p>
 <h5 id="icsclass_v210">IcsClass_V210の導入について<a class="headerlink" href="#icsclass_v210" title="Permanent link">&para;</a></h5>
 <p>近藤科学のICSサーボのためのライブラリもMITライセンスに基づき同梱していますが,<br />
 最新版については下記をご参照ください.<br />
-https://kondo-robot.com/faq/ics-library-a2  </p>
+<a href="https://kondo-robot.com/faq/ics-library-a2">https://kondo-robot.com/faq/ics-library-a2</a>  </p>
 <h4 id="_4">サーボのマウントを設定する<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>Teensy4.0用のソースコードの「src/config.h」を開き,155行目ごろから始まるサーボ設定のところで,各サーボのマウントありなしを変更します. <br />
 接続しているサーボIDは1に, 接続していないIDは0に設定します.<br />
@@ -220,7 +189,7 @@ https://kondo-robot.com/faq/ics-library-a2  </p>
 <h4 id="teensy40_2">Teensy4.0にソースコードを書き込む<a class="headerlink" href="#teensy40_2" title="Permanent link">&para;</a></h4>
 <p>Teensy4.0とPCをUSBケーブルで接続し, PlatformIOの下にある「チェックマーク」のボタンを押して内容をビルドし,[SUCCESS]が表示されることを確認します. その後, 「→」ボタンを押してTeensy4.0にコードを書き込みます.(ボードは自動的に認識されます.)<br />
 センサーやリモコンなどの機器の接続について, 「src/config.h」にて詳細に設定できます.    </p>
-<h2 id="esp32devkitc">ESP32DevkitCの準備<a class="headerlink" href="#esp32devkitc" title="Permanent link">&para;</a></h2>
+<h3 id="esp32devkitc">ESP32DevkitCの準備<a class="headerlink" href="#esp32devkitc" title="Permanent link">&para;</a></h3>
 <h4 id="platformioesp32">PlatformIOでESP32用のプロジェクトファイルを開く<a class="headerlink" href="#platformioesp32" title="Permanent link">&para;</a></h4>
 <p>PlatformIOのファイルメニューより「フォルダーを開く」とし, 先ほど展開したファイルの中から「Meridian_TWIN_for_ESP32」のディレクトリを選択します.<br />
 (Meridian_TWIN_for_Teensy40と間違えないよう注意.)  </p>
@@ -239,14 +208,6 @@ https://kondo-robot.com/faq/ics-library-a2  </p>
 - <strong>Meridian@^0.1.0 by Ninagawa123</strong><br />
 - <strong>ESP32DMASPI@0.1.2 by hideakitai</strong>  </p>
 <p>PlatformIOで"MeridianTWIN_ESP32"等の名前で新規プロジェクトを作成し, BoardはEspressif ESP32 Dev Module, FrameWorkにはArduinoを選択します.  </p>
-<h4 id="_8">追加のライブラリを導入し、修正する<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>PS4Controller.h</strong><br />
-PS4リモコン用のライブラリを追加導入します.(https://github.com/aed3/PS4-esp32)<br />
-libのインポートなどにルールがあり、下記にまとめました.<br />
-またPS4ライブラリをESP32用に修正する方法もまとめています<br />
-https://qiita.com/Ninagawa_Izumi/items/d8966092fe2abd3cba79  </li>
-</ul>
 <h5 id="pcip">接続先のPCのIPアドレスを調べる<a class="headerlink" href="#pcip" title="Permanent link">&para;</a></h5>
 <p>windowsのコマンドプロンプトを開き,<br />
 $ ipconfig （Ubuntuの場合は$ ip a もしくは $ ifconfig）<br />
@@ -254,7 +215,7 @@ $ ipconfig （Ubuntuの場合は$ ip a もしくは $ ifconfig）<br />
 IPv4アドレスが表示されます(192.168.1.xxなど)<br />
 Macの場合は画面右上のwifiマークから”ネットワーク”環境設定...で表示されます.  </p>
 <h5 id="wifi">WIFIを設定する<a class="headerlink" href="#wifi" title="Permanent link">&para;</a></h5>
-<p>「src/config.h」 /* Wifiアクセスポイントの設定 */ のところで,<br />
+<p>「src/config.h」 // Wifiアクセスポイントの設定 のところで,<br />
 接続したいWIFIのアクセスポイントのSSIDとパスワードを入力します.<br />
 アクセスポイントは5GHzではなく<strong>2.4GHz</strong>に対応している必要があります.<br />
 また, 先ほど調べた接続先のPCのIPアドレスも記入します.  </p>
@@ -262,10 +223,14 @@ Macの場合は画面右上のwifiマークから”ネットワーク”環境�
 <p>すでにお手元でESP32 DevkitCに書き込みを行ったことのあるPCであれば問題ないですが、
 初めての場合、「CP210x USB - UART ブリッジ VCP ドライバ」が必要になる場合があります。
 未導入の方は下記サイトより適切なものをインストールをしてください。
-https://jp.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads</p>
+<a href="https://jp.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads">https://jp.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads</a></p>
 <h4 id="esp32_1">ESP32にソースコードを書き込む<a class="headerlink" href="#esp32_1" title="Permanent link">&para;</a></h4>
 <p>ここで一度, 更新したファイルを<strong>セーブしESP32に書き込みます</strong>.<br />
 ESP32とPCをUSBケーブルで接続し, PlatformIOの下にある「チェックマーク」のボタンを押して内容をビルドし,[SUCCESS]が表示されることを確認します. その後, 「→」ボタンを押してESP32にコードを書き込みます.(ボードは自動的に認識されます.)  </p>
+<h5 id="esp32_2">ESP32のアップロードがうまくいかない場合<a class="headerlink" href="#esp32_2" title="Permanent link">&para;</a></h5>
+<p>アップロードが失敗する場合でも, 何度か行うことで成功する場合があるので試してみてください.<br />
+アップロード開始時にESP32DeckitCのENボタンを押すことでアップロードがうまくいく場合もあります.<br />
+また, ESP32DeckitCのENとGNDの間に10uFのセラミックコンデンサを入れると、ENボタンを押さずとも書き込みができるようになる場合があります.</p>
 <h4 id="esp32ip">ESP32のIPアドレスを調べる<a class="headerlink" href="#esp32ip" title="Permanent link">&para;</a></h4>
 <p>PlatformIOで画面下のコンセントアイコンからシリアルモニタを開き, ESP32DevKitC本体のENボタンを押します.<br />
 wifi接続に成功すると  </p>
@@ -277,7 +242,7 @@ ESP32's IP address is  =&gt; 192.168.1.xxx<br />
 ESP32's Bluetooth Mac Address is =&gt; xx:xx:xx:xx:xx:xx  </p>
 </blockquote>
 <p>と表示され, 「ESP32's IP address =&gt;」にESP32本体のIPアドレスが表示されます.このxxの番号をメモしておきます.  </p>
-<h4 id="esp32_2">ESP32にソースコードを書き込む<a class="headerlink" href="#esp32_2" title="Permanent link">&para;</a></h4>
+<h4 id="esp32_3">ESP32にソースコードを書き込む<a class="headerlink" href="#esp32_3" title="Permanent link">&para;</a></h4>
 <p>PS4リモコンを使用する場合は, 「src/config.h」にESP32のBluetooth Mac Addressを記入します.<br />
 更新したファイルをセーブし, ESP32に書き込みます.<br />
 </p>
@@ -287,45 +252,29 @@ ESP32's Bluetooth Mac Address is =&gt; xx:xx:xx:xx:xx:xx  </p>
 - PCとのSerial通信速度設定を115200に指定
 - ライブラリの指定
 - OTA（無線経由のプログラム書き込み機能）の無効化によるパーティション拡張</p>
-<h4 id="_9">設定の確認<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<h4 id="_8">設定の確認<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>他にも, 接続するリモコンやシリアルモニタなどについての設定が可能です.<br />
-Bluetoothリモコンを接続しない場合は必ずMOUNT_JOYPADを0に設定してください.(リモコンの受信待ちでMeridianの通信速度が大幅に低下します.)  </p>
-<h4 id="_10">各種設定の確認<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+Bluetoothリモコンを接続しない場合は必ずMOUNT_JOYPADを0に設定してください.</p>
+<h4 id="_9">各種設定の確認<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>Teensy40, ESP32両方の「src/config.h」内のコメントを参考に適宜変更してください.<br />
 Teensy40は主にサーボやセンサーなどのハードウェア接続の設定や制御システムの基本設定,<br />
 ESP32は主に通信系のWifiとBluetoothリモコンの設定になります.  </p>
 <p>これでMeridian Board側の設定は完了です.  </p>
-<h1 id="meridian-console">Meridian consoleを実行する<a class="headerlink" href="#meridian-console" title="Permanent link">&para;</a></h1>
+<h2 id="meridian-console">Meridian consoleを実行する<a class="headerlink" href="#meridian-console" title="Permanent link">&para;</a></h2>
 <p>Meridianで受け取るデータを表示できるコンソールを用意しました.python3が使える環境で実行可能です.<br />
 https://github.com/Ninagawa123/Meridian_console<br />
 <img alt="meridian_console" src="https://raw.githubusercontent.com/Ninagawa123/Meridian_console/main/image/console_img.jpg" />  </p>
-<h1 id="unity">Unity版デモを実行する<a class="headerlink" href="#unity" title="Permanent link">&para;</a></h1>
-<p>（※Mac/Winで動作を確認.Winではファイアーウォールの設定が必要です.）  </p>
-<h3 id="unityhub">UnityHubに登録して起動する<a class="headerlink" href="#unityhub" title="Permanent link">&para;</a></h3>
-<p>https://github.com/Ninagawa123/Meridian_core/tree/main/Unity_demo<br />
-フォルダ「Unity_demo」の中のMeridian_unity_demo_win_20220210.zipをDLし解凍します.<br />
-UnityHubを開き, ProjectsのADDで解凍済みの「Meridian_unity_demo_win_20220210」フォルダを指定します.<br />
-UnityHubに登録されたらプロジェクトを起動します.（Unityのバージョンは<strong>2020.3.25f1(LTS)</strong> です.） </p>
-<h3 id="unityip">UnityのソースコードのIPアドレスを書き換える<a class="headerlink" href="#unityip" title="Permanent link">&para;</a></h3>
-<p>画面下の「Project」→「Assets」→「Script」よりUdp_handler_sendをダブルクリックして開きます（VScodeなどが立ち上がります）<br />
-ソースコード9行目のconst string HOST = "192.168.1.xx"; にESP32DevKitCのIPアドレスを記入し, セーブします.</p>
-<h3 id="esp32ip_1">ESP32のIPアドレスを書き換える<a class="headerlink" href="#esp32ip_1" title="Permanent link">&para;</a></h3>
-<p>これまでの手順で設定済みの場合はそのままでOKです.</p>
-<h3 id="windows">Windowsの場合はファイアーウォールを設定する<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
-<p>Windowsスタートメニュー→「設定」→「更新とセキュリティ」→「Windowsセキュリティ」→「ファイアーウォールとネットワーク保護」→「詳細設定」→「受信の規則」の一覧から「Unity 2020.3.25f1 Editor」の「パブリック」となっているものを選択しダブルクリック.「接続を許可する」にチェックを入れOKする.</p>
-<h3 id="unitymeridian">UnityとMeridianボードを起動する<a class="headerlink" href="#unitymeridian" title="Permanent link">&para;</a></h3>
-<p>Unityを起動した後, Meridianボードを起動します.
-通信が成立していればロボットの関節にシンクロして画面の中のモデルが動きます.</p>
-<p>画面の「Send」にチェックを入れるとUnityからロボットを操作することができます.
-スライドバーに対応したサーボが動きます.またスライドバーの上のテキストボックスに直接数値を入力することができます.
-数値の単位はdegreeとなります.</p>
-<p>「Action」にチェックを入れるとUnityからロボットにサンプルのモーションを送信します.
-左半身の各関節角度をsinカーブで増減させます.
-このモーションはParamMaster.csの160行目-167行目で設定しているので, 適宜書き換えてお試しください.</p>
-<h1 id="ros">ROS版デモを実行する<a class="headerlink" href="#ros" title="Permanent link">&para;</a></h1>
+<h2 id="unity">Unity版デモを実行する<a class="headerlink" href="#unity" title="Permanent link">&para;</a></h2>
+<p>Meridian_TWINとUnityを連携させることができます.<br />
+下記のリポジトリの内容をお試しください.<br />
+<a href="https://github.com/Ninagawa123/Meridian_Unity/tree/main">https://github.com/Ninagawa123/Meridian_Unity/tree/main</a>  </p>
+<p><img width="500" alt="Meridian_Unity" src="https://github.com/Ninagawa123/Meridian_TWIN/assets/8329123/5b486e83-40b8-4556-8a98-8d0ac643effd"></p>
+<h2 id="ros">ROS版デモを実行する<a class="headerlink" href="#ros" title="Permanent link">&para;</a></h2>
 <h3 id="ros-noetic">ROS noeticの導入<a class="headerlink" href="#ros-noetic" title="Permanent link">&para;</a></h3>
 <p>お手持ちの環境にROSを導入してください.<br />
-Raspberry pi4でROS-noeticを導入する手順については下記にまとめました.
+以下の公式のインストール方法をご参照ください.
+http://wiki.ros.org/ja/noetic/Installation/Ubuntu</p>
+<p>また、Raspberry pi4でROS-noeticを導入する手順については下記にまとめました.
 https://qiita.com/Ninagawa_Izumi/items/e84e9841f7a048832fcc  </p>
 <h3 id="urdf">URDFの表示テスト<a class="headerlink" href="#urdf" title="Permanent link">&para;</a></h3>
 <p>https://github.com/Ninagawa123/roid1
@@ -344,23 +293,17 @@ $ python Meridian_console.py  </p>
 そのまま（他のチェックボックスが空の状態）で, ロボットのサーボを手で動かした時にロボットにも反映されます.  </p>
 <p>また, 「DEMO」「Enable」にチェックを入れると, 画面内のロボットがサインカーブで構成されたダンスのデモを行います.<br />
 ここでさらに「Power」にもチェックを入れると, ロボットのサーボにパワーが入り, 画面と同じ動きを実機で再現します.  </p>
-<h1 id="_11">トラブルシューティング<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h1>
+<h2 id="_10">トラブルシューティング<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <h3 id="ros_1">ROS版デモ実行時のトラブルシューティング<a class="headerlink" href="#ros_1" title="Permanent link">&para;</a></h3>
 <p>Error: Cannot assign requested address となる<br />
 <em>→ おそらくアドレス番号が「192.168.x.xx」などのまま書き変わっていません.「ESP32のIPアドレスを調べる」「PCやラズパイ自身のIPアドレスを調べる」の項目を参考に,<br />
 Meridian consoleのアドレスを更新してください.</em>  </p>
-<h3 id="_12">ボードが動いていない時のトラブルシューティング<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h3 id="_11">ボードが動いていない時のトラブルシューティング<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>動作テストとしてUSB給電のみで使っている場合に動作しない場合があります.<br />
 その場合, ESP32側にUSB給電することで動く場合があります.<br />
 それでも動かない場合は電源供給付きのUSBハブを利用するか, Meridianボードに電源を接続することでアンペアを確保してください.<br />
 Meridianボードの電源入力にバッテリーや安定化電源で電力を供給することでも安定的に動きます.  </p>
-<h3 id="_13">既知の課題<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<h4 id="meridian-board20230710">Meridian Board(2023.07.10)<a class="headerlink" href="#meridian-board20230710" title="Permanent link">&para;</a></h4>
-<ul>
-<li>各経路で, 0.1%以下の通信エラーが発生します.Meridianのシステムでは通信エラー時はすぐに次のデータを使用することでこのエラーをフォローしています.</li>
-<li>PS4コントローラの接続時, データスキップが5%~15%ほど生じます.</li>
-<li>Wiiコントローラの接続時はデータのスキップはほとんど発生しません.</li>
-</ul>
+<h3 id="_12">既知の課題<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <h4 id="meridian-board-typek">Meridian Board Type.K のフリーピン結線時の注意<a class="headerlink" href="#meridian-board-typek" title="Permanent link">&para;</a></h4>
 <p>Meridian Board Type.Kには未接続のピン穴を複数設けてあり, 背面からマイコンの入出力と半田付けするすることでIOポートとして利用可能です.その際の注意点を以下にメモします.<br />
 - ESP32のRX0, TX0はPCとのUSBシリアルで使用されています.<br />
@@ -377,6 +320,142 @@ Meridianボードの電源入力にバッテリーや安定化電源で電力を
 万が一回路が破損した場合には,3系統の回路で代用するか,修理用のキット(BOOTHで販売)で回路を交換してください.    </p>
 <h4 id="9bno055">9軸センサのBNO055がうまく動作しない<a class="headerlink" href="#9bno055" title="Permanent link">&para;</a></h4>
 <p>Teensy4.0との相性問題で,通信中に正しいデータが取得できなくなります.改善方法を探っています.  </p>
+<h2 id="update">Update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
+<h4 id="update-20240506-v110">Update 20240506 v1.1.0<a class="headerlink" href="#update-20240506-v110" title="Permanent link">&para;</a></h4>
+<p>コードの内容を大幅にリファクタリングし, アップデートしました.
+コードを機能ごとのファイルに分け, モージュール化しました. これにより追加機能の開発に取り組みやすくなりました.  </p>
+<p><img alt="Meridian_TWIN_module_diagram_20240506" src="https://github.com/Ninagawa123/Meridian_TWIN/assets/8329123/2d77a89e-ffc8-43b5-8ba3-b4757d01679f" /></p>
+<p><img alt="Meridan90_flowchart_20240504" src="https://github.com/Ninagawa123/Meridian_TWIN/assets/8329123/f4fb614d-844c-4568-98f5-f2270f87d86c" /></p>
+<p>また, 通信フローを抜本的に見直し, 送受信の上り, 下りを明確にしました. 具体的には, これまでTeensy-ESP間の通信は1フレームあたり1回でしtが, 通信を2回行うようにしました. これによりPC側からみて, 送信したコマンドの実行結果が入った受信データをリアルタムに受け取れるようになりました.  </p>
+<p>Meridianと親和するリモコン受信機のコードも公開しました. M5StampPICOをWiiremoteやPS4コントローラーの受信機とし, I2C経由でMeridianにPADデータを流し込めます.</p>
+<p>https://github.com/Ninagawa123/Merimote?tab=readme-ov-file</p>
+<p><img width="400" alt="merimote" src="https://github.com/user-attachments/assets/562b162e-1b4a-4766-8667-0760f6f7ee3f"></p>
+<h2 id="merimote-v001"><a href="https://github.com/Ninagawa123/Merimote">Merimote v0.0.1</a><a class="headerlink" href="#merimote-v001" title="Permanent link">&para;</a></h2>
+<p>Merimoteは主にM5StampPICOを用いたマルチユースのリモコン受信デバイスです。<br />
+Arduino frameworkのオープンソースのため拡張しやすく、好みのリモコン環境を構築できます。<br />
+Meridianシステムの一部ですが、もちろんMerimote単独でも利用することができます。<br />
+M5StampPICOとArduinoUNOの接続サンプルを用意しましたので、I2Cの動作確認もすぐに試せます。<br />
+Merimote is a module for receiving remote control signals.<br />
+Merimote primarily uses the M5StampPICO as a multi-use remote control receiving device. It is open source, making it easy to extend and allows for building a custom remote control environment. It is part of the Meridian system, but can also be used independently.<br />
+I have prepared a connection sample for the M5Stamp PICO and Arduino UNO, so you can also immediately test the I2C functionality.  </p>
+<h3 id="current-compatible-devices-and-outputs">Current Compatible Devices and Outputs<a class="headerlink" href="#current-compatible-devices-and-outputs" title="Permanent link">&para;</a></h3>
+<p>・M5StampPICO<br />
+・I2C output<br />
+・Wii Remort
+・PS4 Controler  </p>
+<h3 id="why-m5stamppico">Why M5StampPICO<a class="headerlink" href="#why-m5stamppico" title="Permanent link">&para;</a></h3>
+<p>多くのリモコンに対応するためには、SPPが必要があります。<br />
+M5StampPICOは小型でSPPに対応したデバイスです。<br />
+To support many remotes, SPP is necessary. M5StampPICO is a compact device that supports SPP.  </p>
+<h3 id="reasons-for-separating-the-receiver-from-the-microcontroller">Reasons for Separating the Receiver from the Microcontroller<a class="headerlink" href="#reasons-for-separating-the-receiver-from-the-microcontroller" title="Permanent link">&para;</a></h3>
+<p>ESP32などで高速なWifi通信を行う場合、Bluetoothと併用することでリアルタイム処理が間に合わなくなる場合があります。<br />
+そこでリモコンの受信処理を分散し、整理したデータをI2Cで渡すようにしました。<br />
+また別モジュール化して疎結合化したことで、個別に拡張しやすくなるという利点があります。<br />
+When performing high-speed Wifi communications with devices like the ESP32, combining it with Bluetooth can delay real-time processing. Therefore, remote control reception is decentralized, and organized data is transmitted via I2C. Also, modularizing and decoupling facilitate easy individual extensions.  </p>
+<h3 id="i2c-data-format">I2C Data Format<a class="headerlink" href="#i2c-data-format" title="Permanent link">&para;</a></h3>
+<p>デフォルトのM5StampPICOのI2Cアドレスを0x58と設定しています。<br />
+呼び出すことで下記の配列データを返します。<br />
+The default I2C address for the M5StampPICO is set to 0x58. It returns the following array data when called:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">byte index</th>
+<th style="text-align: center;">0,1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">7</th>
+<th style="text-align: center;">8,9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">short index</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1_high</td>
+<td style="text-align: center;">1_low</td>
+<td style="text-align: center;">2_high</td>
+<td style="text-align: center;">2_low</td>
+<td style="text-align: center;">3_high</td>
+<td style="text-align: center;">3_low</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">Assign</td>
+<td style="text-align: center;">Button</td>
+<td style="text-align: center;">Stick_L_x</td>
+<td style="text-align: center;">Stick_L_y</td>
+<td style="text-align: center;">Stick_R_x</td>
+<td style="text-align: center;">Stick_R_y</td>
+<td style="text-align: center;">L2_analog</td>
+<td style="text-align: center;">R2_analog</td>
+<td style="text-align: center;">checksum</td>
+</tr>
+<tr>
+<td style="text-align: center;">Type</td>
+<td style="text-align: center;">BIN</td>
+<td style="text-align: center;">-127to127</td>
+<td style="text-align: center;">-127to127</td>
+<td style="text-align: center;">-127to127</td>
+<td style="text-align: center;">-127to127</td>
+<td style="text-align: center;">0to255</td>
+<td style="text-align: center;">0to255</td>
+<td style="text-align: center;">HEX</td>
+</tr>
+</tbody>
+</table>
+<p>Short型でindex0〜4、Byte型でindex0〜9となる共用体配列です。<br />
+チェックサムはshort型のindex0~3までを合計後にビット反転したものになります。<br />
+その他の仕様については<a href="https://ninagawa123.github.io/Meridian_info/#aboutMeridim/remort_controller/">Meridian</a>に準拠します。<br />
+This is a union array with Short type ranging from index 0 to 4 and Byte type from index 0 to 9. The checksum is calculated by summing up Short type from index 0 to 3 and then inverting the bits. For further specifications, please refer to Meridian, which this complies with.  </p>
+<h3 id="how-to-install">How To Install<a class="headerlink" href="#how-to-install" title="Permanent link">&para;</a></h3>
+<p>PlatformIOでMerimote&gt;MerimotePICOフォルダを開き、M5StackPICOにインストールします。<br />
+通信先となるマイコンボードとSCK同士、SDA同士、GND、5Vを接続します。  </p>
+<h3 id="how-to-use">How To Use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h3>
+<p>config.hで設定を行います。  </p>
+<pre><code>#define MOUNT_JOYPAD 4 // 接続するジョイパッドの種類です。現在は4:PS4 ,5:Wii_yoko が使えます。  
+#define I2C_DEV_ADDR 0x58 // I2Cデバイスアドレスを設定できます。  
+#define MONITOR_JOYPAD 1 // 動作確認用にシリアルモニタで入力データを表示できます。（0:OFF, 1:ボタンのみ, 2:アナログ込み） 
+</code></pre>
+<h3 id="led">LED<a class="headerlink" href="#led" title="Permanent link">&para;</a></h3>
+<p>PIN25(DAC)とGNDの間に抵抗入りLEDを接続すると、リモコンペアリング前は点滅し、ペアリング後に常時点灯となります。  </p>
+<h3 id="reset-button">Reset Button<a class="headerlink" href="#reset-button" title="Permanent link">&para;</a></h3>
+<p>PIN32と5Vをショートするとソフトウェアリセットし、再度ペアリングができるようになります。  </p>
+<h3 id="trouble-shooting">Trouble Shooting<a class="headerlink" href="#trouble-shooting" title="Permanent link">&para;</a></h3>
+<p>接続が確立しない場合、<br />
+#define BT_REMOVE_BONDED_DEVICES 1<br />
+を書き込んで再起動すると、BTデバイスの登録がリセットされ、接続できるようになるかもしれません。  </p>
+<h3 id="wii">Wiiリモコンの接続方法<a class="headerlink" href="#wii" title="Permanent link">&para;</a></h3>
+<p>#define MOUNT_JOYPAD 5 として書き込みます。<br />
+Wiiリモコンの1,2ボタンを同時押しするとペアリングします。  </p>
+<h3 id="ps4">PS4リモコンの接続方法<a class="headerlink" href="#ps4" title="Permanent link">&para;</a></h3>
+<p>#define MOUNT_JOYPAD 4 として書き込みます。<br />
+起動するとシリアルモニタにM5StampPICOのMACアドレスがxx:xx:xx:xx:xx:xxのフォーマットで表示されるのでメモします。<br />
+<strong>SixaxisPairTool</strong>を検索してPCにダウンロードし、SixaxisPairToolの起動後にPS4リモコンをUSBケーブルでPCに接続します。<br />
+接続先のMacアドレスを設定できるようになるので、メモしたアドレスを上書き登録します。<br />
+M5StampPICOの起動後にPSボタンを押すと、ペアリングが確立します。  </p>
+<h3 id="_13">動作確認<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>簡易的に動作確認ができるArduino UNO用のサンプルスクリプトを用意しました。<br />
+Arduino UnoなどとM5StampPICOをSCK同士、SDA同士、V5、GNDをそれぞれ結線し、Sample＞Merimote_Receiver.inoをArduino IDE等で書き込んでください。<br />
+実行後にシリアルモニタで下図のように動作確認ができます。  </p>
+<p><img width="400" alt="Merimote_Receiver" src="https://github.com/Ninagawa123/Merimote/assets/8329123/2bd1d101-ddce-4497-9dcd-9cdfd1a659a0"></p>
+<h3 id="blueretro">BlueRetroを使えばよいのでは？<a class="headerlink" href="#blueretro" title="Permanent link">&para;</a></h3>
+<p>MeridianはBlueRetro準拠に移行予定です。<br />
+一方、Merimoteはコードベースで内容のカスタマイズができて便利な面も多いので、必要に応じて育てていこうと思います。  </p>
+<h2 id="update_1">Update情報<a class="headerlink" href="#update_1" title="Permanent link">&para;</a></h2>
+<h4 id="update-20240506-v110_1">Update 20240506 v1.1.0<a class="headerlink" href="#update-20240506-v110_1" title="Permanent link">&para;</a></h4>
+<p>関数を機能ごとにヘッダファイルとして切り出し、モジュール構造としました。  </p>
+<h4 id="update-20240325-v101">Update 20240325 v1.0.1<a class="headerlink" href="#update-20240325-v101" title="Permanent link">&para;</a></h4>
+<p>esp32側のpratformio.ini内、lib_depsのhideakitai/ESP32DMASPI@0.1.2が自動では検出できなくなったため、<br />
+hideakitai/ESP32DMASPI@0.3.0 にアップデートしました。  </p>
+<h4 id="update-20230710-v100">Update 20230710  v1.0.0<a class="headerlink" href="#update-20230710-v100" title="Permanent link">&para;</a></h4>
+<p>ライブラリ対応版として大幅なアップデートを行いました.(前回までのバージョンはoldディレクトリにzipで格納しています.)    <br />
+メインが整理され, 改造の見通しが立ちやすくなりました.<br />
+また, マイコンごとにまちまちだった変数名の書式も統一しました.<br />
+変数のルールやライブラリ関数については, 下記に情報を集約していきます.<br />
+https://ninagawa123.github.io/Meridian_info/  </p>
 
   <br>
     
