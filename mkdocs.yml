@@ -8,46 +8,102 @@ nav:
     - 'Quick Start':
         - 'Meridian TWIN': 'QuickStart/Meridian_TWIN.md'
         - 'Meridian LITE': 'QuickStart/Meridian_LITE.md'
-    - 'about Meridim':
-        - 'overview ': 'aboutMeridim/overview.md'
-        - '[0] master command': 'aboutMeridim/master_command.md'
-        - '[1] sequential number': 'aboutMeridim/sequential_number.md'
-        - '[15-18] remort controller': 'aboutMeridim/remort_controller.md'
-        - '[88] error code': 'aboutMeridim/error_code.md'
-    - 'Valuable Index':
-        - '#define basic': 'ValuableIndex/define_basic.md'
-        - '#define servos': 'ValuableIndex/define_servos.md'
-        - '#define meridim90': 'ValuableIndex/define_meridim90.md'
-        - '#define master': 'ValuableIndex/define_master.md'
-        - 'local value': 'ValuableIndex/local_val.md'
-    - 'Library Function':
-        - 'Index': 'Library/index.md'
-        - 'cksm_rslt': 'Library/cksm_rslt.md'
-        - 'cksm_val': 'Library/cksm_val.md'
-        - 'seq_increase_num': 'Library/seq_increase_num.md'
-        - 'seq_predict_num': 'Library/seq_predict_num.md'
-        - 'seq_compare_nums': 'Library/seq_compare_nums.md'
-        - 'HfShort2float': 'Library/HfShort2float.md'
-        - 'float2HfShort': 'Library/float2HfShort.md'
-        - 'Deg2Krs': 'Library/Deg2Krs.md'
-        - 'HfDeg2Krs': 'Library/HfDeg2Krs.md'
-        - 'Krs2Deg': 'Library/Krs2Deg.md'
-        - 'Krs2HfDeg': 'Library/Krs2HfDeg.md'
-        - 'Deg2RSxx': 'Library/Deg2RSxx.md'
-        - 'HfDeg2RSxx': 'Library/HfDeg2RSxx.md'
-        - 'RSxx2Deg': 'Library/RSxx2Deg.md'
-        - 'RSxx2HfDeg': 'Library/RSxx2HfDeg.md'
-        - 'print_tsy_hello': 'Library/print_tsy_hello.md'
-        - 'print_esp_hello_start': 'Library/print_esp_hello_start.md'
-        - 'print_esp_hello_ip': 'Library/print_esp_hello_ip.md'
-        - 'print_imuahrs': 'Library/print_imuahrs.md'
-        - 'print_servo_mounts': 'Library/print_servo_mounts.md'
-        - 'print_controlpad': 'Library/print_controlpad.md'
-        - 'monitor_check_flow': 'Library/monitor_check_flow.md'
-        - 'monitor_joypad': 'Library/monitor_joypad.md'
-        - 'monitor_servo_error': 'Library/monitor_servo_error.md'
+        - 'Merimote': 'QuickStart/Merimote.md'
+    - 'Protocol':
+        - 'Meridim90':
+            - 'index ': 'Protocol/Meridim90/overview90.md'
+            - '[0] master command': 'Protocol/Meridim90/master_command.md'
+            - '[1] sequential number': 'Protocol/Meridim90/sequential_number.md'
+            - '[15-18] remort controller': 'Protocol/Meridim90/remort_controller.md'
+            - '[88] error code': 'Protocol/Meridim90/error_code.md'
+        - 'MeridimFX':
+            - 'overview ': 'Protocol/MeridimFx/overviewFX.md'
+    - 'Software':
+        - 'Meridian console ': 'Software/Meridian_console.md'
+        - 'Meridian unity ': 'Software/Meridian_unity.md'
+    - 'Hardware':
+        - 'Architecture ': 'Hardware/architecture.md'
+        - 'Boards ': 'Hardware/boards.md'
+    - 'URDF':
+        - 'Roid1 ': 'URDF/Roid1.md'
+    - 'Coding':
+        - 'Guidelines': 'Coding/codingguidelines.md'
+        - 'Valuable Index':
+            - '#define basic': 'Coding/ValuableIndex/define_basic.md'
+            - '#define servos': 'Coding/ValuableIndex/define_servos.md'
+            - '#define meridim90': 'Coding/ValuableIndex/define_meridim90.md'
+            - '#define master': 'Coding/ValuableIndex/define_master.md'
+            - '#define error': 'Coding/ValuableIndex/define_error.md'
+            - 'local value': 'Coding/ValuableIndex/local_val.md'
+        - 'Library Function':
+            - 'Index': 'Coding/Library/index.md'
+            - 'cksm_rslt': 'Coding/Library/cksm_rslt.md'
+            - 'cksm_val': 'Coding/Library/cksm_val.md'
+            - 'seq_increase_num': 'Coding/Library/seq_increase_num.md'
+            - 'seq_predict_num': 'Coding/Library/seq_predict_num.md'
+            - 'seq_compare_nums': 'Coding/Library/seq_compare_nums.md'
+            - 'HfShort2float': 'Coding/Library/HfShort2float.md'
+            - 'float2HfShort': 'Coding/Library/float2HfShort.md'
+            - 'Deg2Krs': 'Coding/Library/Deg2Krs.md'
+            - 'HfDeg2Krs': 'Coding/Library/HfDeg2Krs.md'
+            - 'Krs2Deg': 'Coding/Library/Krs2Deg.md'
+            - 'Krs2HfDeg': 'Coding/Library/Krs2HfDeg.md'
+            - 'Deg2RSxx': 'Coding/Library/Deg2RSxx.md'
+            - 'HfDeg2RSxx': 'Coding/Library/HfDeg2RSxx.md'
+            - 'RSxx2Deg': 'Coding/Library/RSxx2Deg.md'
+            - 'RSxx2HfDeg': 'Coding/Library/RSxx2HfDeg.md'
+            - 'print_tsy_hello': 'Coding/Library/print_tsy_hello.md'
+            - 'print_esp_hello_start': 'Coding/Library/print_esp_hello_start.md'
+            - 'print_esp_hello_ip': 'Coding/Library/print_esp_hello_ip.md'
+            - 'print_imuahrs': 'Coding/Library/print_imuahrs.md'
+            - 'print_servo_mounts': 'Coding/Library/print_servo_mounts.md'
+            - 'print_controlpad': 'Coding/Library/print_controlpad.md'
+            - 'monitor_check_flow': 'Coding/Library/monitor_check_flow.md'
+            - 'monitor_joypad': 'Coding/Library/monitor_joypad.md'
+            - 'monitor_servo_error': 'Coding/Library/monitor_servo_error.md'
+        - 'Local Function':
+            - 'execute_master_command_1' : 'LocalFunction/execute_master_command_1.md'
+            - 'execute_master_command_2' : 'LocalFunction/execute_master_command_2.md'
+            - 'mrd_udp_receive' : 'LocalFunction/mrd_udp_receive.md'
+            - 'mrd_udp_send' : 'LocalFunction/mrd_udp_send.md'
+            - 'mrd_eeprom_init' : 'LocalFunction/mrd_eeprom_init.md'
+            - 'mrd_eeprom_read' : 'LocalFunction/mrd_eeprom_read.md'
+            - 'mrd_eeprom_write_read_check' : 'LocalFunction/mrd_eeprom_write_read_check.md'
+            - 'mrd_eeprom_make_data_from_config' : 'LocalFunction/mrd_eeprom_make_data_from_config.md'
+            - 'mrd_eeprom_dump_at_boot' : 'LocalFunction/mrd_eeprom_dump_at_boot.md'
+            - 'mrd_eeprom_dump_to_serial' : 'LocalFunction/mrd_eeprom_dump_to_serial.md'
+            - 'mrd_wire0_init_i2c' : 'LocalFunction/mrd_wire0_init_i2c.md'
+            - 'mrd_wire0_init_mpu6050_dmp' : 'LocalFunction/mrd_wire0_init_mpu6050_dmp.md'
+            - 'mrd_wire0_init_bno055' : 'LocalFunction/mrd_wire0_init_bno055.md'
+            - 'mrd_wire0_run' : 'LocalFunction/mrd_wire0_run.md'
+            - 'mrd_wire0_startIntervalTimer' : 'LocalFunction/mrd_wire0_startIntervalTimer.md'
+            - 'mrd_msg_lite_hello' : 'LocalFunction/mrd_msg_lite_hello.md'
+            - 'mrd_msg_mounted_pad' : 'LocalFunction/mrd_msg_mounted_pad.md'
+            - 'mrd_msg_seq_number' : 'LocalFunction/mrd_msg_seq_number.md'
+            - 'mrd_msg_esp_wifi' : 'LocalFunction/mrd_msg_esp_wifi.md'
+            - 'mrd_msg_esp_ip' : 'LocalFunction/mrd_msg_esp_ip.md'
+            - 'mrd_msg_all_err' : 'LocalFunction/mrd_msg_all_err.md'
+            - 'mrd_msg_print_imuahrs' : 'LocalFunction/mrd_msg_print_imuahrs.md'
+            - 'mrd_msg_lite_servo_bps' : 'LocalFunction/mrd_msg_lite_servo_bps.md'
+            - 'mrd_msg_lite_flow_start' : 'LocalFunction/mrd_msg_lite_flow_start.md'
+            - 'mrd_servos_drive_lite' : 'LocalFunction/mrd_servos_drive_lite.md'
+            - 'mrd_servos_all_off' : 'LocalFunction/mrd_servos_all_off.md'
+            - 'mrd_move_init' : 'LocalFunction/mrd_move_init.md'
+    - 'Tools':
+        - 'MADIwrite RS30xTTL': 'Tools/MADIwrite.md'
     - 'Misc':
         - 'Joint and Link': 'Misc/joint_and_link.md'
+    - 'Repositories':
+        - 'Repositories': 'Misc/Repositories.md'
+    - 'Philosophy': 
+        - 'Design Philosophy': 'Philosophy/DesignPhilosophy.md'
+    - 'Contributors': 
+        - 'Contributors': 'https://note.com/ninagawa123/n/nbc8ec25bad69'
+
+
+
+
+
 
     - Blog: "https://note.com/ninagawa123/n/nb768563591be"
 
