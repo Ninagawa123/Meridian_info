@@ -17,7 +17,7 @@ Meridian Board - LITE - に搭載したESP32DevkitCで使える他,
 * ESP32DevkitC (送信, 書き換えのみ)  
 * ESP32DevkitC + Meridian Board - LITE -　(受信可)  
 * ESP32DevkitC + ICS変換基板　(受信可)  
-* その他、Arduino系の基板はピンや使用シリアルを変更することで使えると思います.  
+* その他, Arduino系の基板はピンや使用シリアルを変更することで使えると思います.  
   
 ## 使い方  
 （１）ソースコード前半の変数設定に希望の状態を設定します. 詳細については変数欄のコメントをご覧ください.  

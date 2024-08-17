@@ -1,7 +1,7 @@
 ----  
 <h3>void print_tsy_hello(String version, int spi_speed, int i2c_speed)</h3>
 ----  
-Teensy等での起動メッセージを表示します。  
+Teensy等での起動メッセージを表示します.   
 引数1 : バージョン文字列  
 引数2 : SPI通信速度  
 引数3 : I2C通信速度  

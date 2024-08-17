@@ -1,12 +1,12 @@
 ----  
 <h3>bool cksm_rslt(short arr[ ], int len)</h3>
 ----  
-Meridim配列のチェックサムを判定します。  
+Meridim配列のチェックサムを判定します.   
 引数1 : Meridim配列(short型)
 引数2 : 配列の長さ(int型)
-Meridim配列の末尾-1までの数値を合計し、最後にビット反転しShort型に変換したチェックサム値と、  
-Meridim配列の末尾のチェックサム値を比較します。  
-結果がチェックOKならTrue、NGならFalseを返します。  
+Meridim配列の末尾-1までの数値を合計し, 最後にビット反転しShort型に変換したチェックサム値と,   
+Meridim配列の末尾のチェックサム値を比較します.   
+結果がチェックOKならTrue, NGならFalseを返します.   
   
 <br>  
 ```

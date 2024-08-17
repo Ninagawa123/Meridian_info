@@ -1,7 +1,7 @@
 ----  
 <h3>void monitor_check_flow(const String &text, bool monitor_flow)</h3>
 ----  
-デバック用のフロー表示を行います。  
+デバック用のフロー表示を行います.   
 引数1 : シリアルモニタに表示する文字列  
 引数2 : True:ON, False:OFF  
   

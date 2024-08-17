@@ -24,11 +24,12 @@
 |MRD_DIR_ROLL|12|DMP推定ロール方向値|
 |MRD_DIR_PITCH|13|DMP推定ピッチ方向値|
 |MRD_DIR_YAW|14|DMP推定ヨー方向値|
-|MRD_CONTROL_BUTTONS|15|リモコンボタン|
-|MRD_CONTROL_STICK_R|16|リモコン右スティックxy|
-|MRD_CONTROL_STICK_L|17|リモコン左スティックxy|
-|MRD_CONTROL_L2R2ANALOG|18|リモコンL2R2アナログ|
+|MRD_PAD_BUTTONS|15|リモコンボタン|
+|MRD_PAD_STICK_L|16|リモコン左スティックxy|
+|MRD_PAD_STICK_R|17|リモコン右スティックxy|
+|MRD_PAD_L2R2ANALOG|18|リモコンL2R2アナログ|
 |MRD_MOTION_FRAMES|19|モーション設定のフレーム数|
+|MRD_STOP_FRAMES||ボード処理停止フレーム数(19番を上記と共用)|
 |C_HEAD_Y_CMD|20|頭ヨーのコマンド|
 |C_HEAD_Y_VAL|21|頭ヨーの値|
 |L_SHOULDER_P_CMD|22|左肩ピッチのコマンド|

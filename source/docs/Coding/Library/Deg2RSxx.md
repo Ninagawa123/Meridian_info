@@ -1,11 +1,11 @@
 ----  
 <h3>int Deg2RSxx(float degree, float trim, int cw)</h3>
 ----  
-小数点２桁までの角度値Degreeを、FUTABAのRSxx系サーボの値に変換して返します。  
+小数点２桁までの角度値Degreeを, FUTABAのRSxx系サーボの値に変換して返します.   
 引数1 : degree角度値(float型)  
 引数2 : サーボのトリム補正degree角度値(float型)  
 引数3 : サーボの回転方向+-補正値(int型 -1,+1)  
-結果はint型、-1600〜1600の範囲に限定されます。  
+結果はint型, -1600〜1600の範囲に限定されます.   
 　　
 <br>  
 ```  

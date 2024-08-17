@@ -1,8 +1,8 @@
 ----  
 <h3>float HfShort2float(short val)</h3>
 ----  
-int型の値を100で割ったものをfloat型として返します。  
-Short型に格納された値を通常のdegree角度値に変換する際など使用します。  
+int型の値を100で割ったものをfloat型として返します.   
+Short型に格納された値を通常のdegree角度値に変換する際など使用します.   
   
 <br>  
 ```  

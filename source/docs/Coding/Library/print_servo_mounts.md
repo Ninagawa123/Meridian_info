@@ -1,7 +1,7 @@
 ----  
-<h3>void print_servo_mounts(int idl_svmt[ ], int idr_svmt[ ], int id3_svmt[ ])</h3>
+<h3>void print_servo_mounts(int IXL_svmt[ ], int IXR_svmt[ ], int id3_svmt[ ])</h3>
 ----  
-Teensy等での起動メッセージを表示します。  
+Teensy等での起動メッセージを表示します.   
 引数1 : L系列のサーボマウント配列  
 引数2 : R系列のサーボマウント配列  
 引数3 : 3系列のサーボマウント配列  
@@ -11,17 +11,17 @@ Teensy等での起動メッセージを表示します。
 /**
  * @brief Print mounted servomotor's id.
  *
- * @param[in] idl_svmt Left side servos arrey.
- * @param[in] idr_svmt Right side servos arrey.
+ * @param[in] IXL_svmt Left side servos arrey.
+ * @param[in] IXR_svmt Right side servos arrey.
  * @param[in] id3_svmt 3rd side servos arrey.
  */
   
-void Meridian::print_servo_mounts(int idl_svmt[], int idr_svmt[], int id3_svmt[]))
+void Meridian::print_servo_mounts(int IXL_svmt[], int IXR_svmt[], int id3_svmt[]))
 {
     Serial.print("Left side Servos mounted:  ");
     for (int i = 0; i < 15; i++)
     {
-        if (idl_svmt[i])
+        if (IXL_svmt[i])
         {
             Serial.print(i);
             Serial.print(" ");
@@ -32,7 +32,7 @@ void Meridian::print_servo_mounts(int idl_svmt[], int idr_svmt[], int id3_svmt[]
     Serial.print("Right side Servos mounted: ");
     for (int i = 0; i < 15; i++)
     {
-        if (idr_svmt[i])
+        if (IXR_svmt[i])
         {
             Serial.print(i);
             Serial.print(" ");

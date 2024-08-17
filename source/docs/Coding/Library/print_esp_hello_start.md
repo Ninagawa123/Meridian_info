@@ -1,7 +1,7 @@
 ----  
 <h3>void print_esp_hello_start(String version, String serial_pc_bps, String wifi_ap_ssid)</h3>
 ----  
-ESP等での起動メッセージを表示します。(Wi-Fi接続前から)   
+ESP等での起動メッセージを表示します. (Wi-Fi接続前から)   
 引数1 : バージョン文字列  
 引数2 : PCシリアル通信速度  
 引数3 : Wi-FI AP SSID文字列  

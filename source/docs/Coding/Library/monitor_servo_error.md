@@ -1,10 +1,10 @@
 ----  
-<h3>void monitor_servo_error(const String &text, int num, bool monitor_servo_error)</h3>
+<h3>void MONITOR_ERR_SERVOor(const String &text, int num, bool MONITOR_ERR_SERVOor)</h3>
 ----  
-信号エラーのあったサーボのIDをシリアルモニタで表示します。  
-引数1 : 通信エラーのあったサーボモータの系列。"L","R","C"など  
-引数2 : 通信エラーのあったサーボモーターのID番号。  
-引数3 : サーボエラーのシリアル表示の有無。 0:OFF, 1:ON  
+信号エラーのあったサーボのIDをシリアルモニタで表示します.   
+引数1 : 通信エラーのあったサーボモータの系列. "L","R","C"など  
+引数2 : 通信エラーのあったサーボモーターのID番号.   
+引数3 : サーボエラーのシリアル表示の有無.  0:OFF, 1:ON  
   
 <br>  
 ```  
@@ -13,12 +13,12 @@
  *
  * @param[in] text String. "L","R","C",etc
  * @param[in] num Servo id.
- * @param[in] monitor_servo_error True:on ,False;off
+ * @param[in] MONITOR_ERR_SERVOor True:on ,False;off
  */  
   
-void Meridian::monitor_servo_error(const String &text, int num, bool monitor_servo_error)
+void Meridian::MONITOR_ERR_SERVOor(const String &text, int num, bool MONITOR_ERR_SERVOor)
 {
-    if (monitor_servo_error)
+    if (MONITOR_ERR_SERVOor)
     {
         Serial.print("Servo err ");
         Serial.print(text);

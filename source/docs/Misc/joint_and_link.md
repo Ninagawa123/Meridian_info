@@ -12,7 +12,7 @@ c_chest→l_shoulderjoint→l_upperarmと接続できるが,
 肩自体も独立したパーツを持つ場合には,  
 c_chest→l_shoulderjoint→l_shoulder→l_upperarmjoint→l_upperarmと設定できるとする.  
   
-関節一つにパーツが複数ある場合には、名称の末尾にbasejointに近い方から_1,_2もしくは軸の接続順に_r,_p,_y等と追加する.  
+関節一つにパーツが複数ある場合には, 名称の末尾にbasejointに近い方から_1,_2もしくは軸の接続順に_r,_p,_y等と追加する.  
   
 スライダタイプのアクチュエータは別途linkに設定.  
   

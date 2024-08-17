@@ -1,11 +1,11 @@
 ----  
 <h3>int RSxx2HfDeg(int rsxx, float trim, int cw)</h3>
 ----  
-FUTABAのRSxx系サーボの値を、小数点２桁までの角度値Degreeを100倍した値に変換します。  
+FUTABAのRSxx系サーボの値を, 小数点２桁までの角度値Degreeを100倍した値に変換します.   
 引数1 : FutabaRSxx系サーボの位置の値(int型)  
 引数2 : サーボのトリム補正degree角度値(float型)  
 引数3 : サーボの回転方向+-補正値(int型 -1,+1)   
-結果はint型、-32766〜32766の範囲に限定されます。  
+結果はint型, -32766〜32766の範囲に限定されます.   
   
 <br>  
 ```  
