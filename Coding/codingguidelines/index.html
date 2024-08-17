@@ -35,9 +35,10 @@
           {title: "Coarding guidelines", url: "#_top", children: [
               {title: "C++ LLVM Coding Standards\u306b\u6e96\u62e0", url: "#c-llvm-coding-standards" },
               {title: "C++ Meridian \u547d\u540d\u898f\u5247\u30ed\u30fc\u30ab\u30eb\u30eb\u30fc\u30eb", url: "#c-meridian" },
+              {title: "\u30b9\u30cd\u30fc\u30af\u30b1\u30fc\u30b9\u306e\u4f7f\u3044\u65b9", url: "#_1" },
               {title: "C++ \u30c9\u30ad\u30e5\u30e1\u30f3\u30c6\u30fc\u30b7\u30e7\u30f3\u30b3\u30e1\u30f3\u30c8", url: "#c" },
-              {title: "\u4e3b\u306a\u7528\u8a9e", url: "#_1" },
-              {title: "\u4e3b\u306a\u5b9a\u6570\u306e\u547d\u540d\u30eb\u30fc\u30eb", url: "#_2" },
+              {title: "\u4e3b\u306a\u7528\u8a9e", url: "#_2" },
+              {title: "\u4e3b\u306a\u5b9a\u6570\u306e\u547d\u540d\u30eb\u30fc\u30eb", url: "#_3" },
               {title: "C# \u672a\u5b9a", url: "#c_1" },
               {title: "Java \u672a\u5b9a", url: "#java" },
               {title: "Python PEP8\u306b\u6e96\u62e0", url: "#python-pep8" },
@@ -93,7 +94,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h2 id="c-llvm-coding-standards">C++ LLVM Coding Standardsに準拠<a class="headerlink" href="#c-llvm-coding-standards" title="Permanent link">&para;</a></h2>
 <hr />
 <p>Arduino, ESP32, TeensyなどのC++系のコーディングスタイルはおおむね <a href="https://llvm.org/docs/CodingStandards.html">LLVM Coding Standards</a> に準拠する.<br />
-自動変換の .clang-format では現状、下記のような定義とする.</p>
+自動変換の .clang-format では現状, 下記のような定義とする.</p>
 <p><br></p>
 <h4 id="clang-format">.clang-format:<a class="headerlink" href="#clang-format" title="Permanent link">&para;</a></h4>
 <pre><code>BasedOnStyle: LLVM
@@ -102,32 +103,40 @@ AlignTrailingComments: true
 AlignConsecutiveMacros: true
 </code></pre>
 <p><br>
-その他、Meridianとして下記のローカルルールを推奨する。</p>
+その他, Meridianとして下記のローカルルールを推奨する. </p>
 <p><br></p>
 <h2 id="c-meridian">C++ Meridian 命名規則ローカルルール<a class="headerlink" href="#c-meridian" title="Permanent link">&para;</a></h2>
 <hr />
 <ol>
-<li>変数名はスネークケースとする 例）flg.meridim_rcvd  </li>
-<li>関数名はスネークケースとする(ROS風)  </li>
-<li>クラス名・構造体名・列挙型名はパスカルケースとする  </li>
-<li>関数宣言時の引数は a_ をつける 例）a_meridim  </li>
-<li>関数内の補助変数は _tmp をつける 例）int count_tmp  </li>
-<li>モジュールとなるファイル名は mrd_ をつける 例）mrd_wifi.h  </li>
+<li>変数名はスネークケースとする. 例）flg.meridim_rcvd  </li>
+<li>関数名はスネークケースとする(ROS風).  </li>
+<li>クラス名・構造体名・列挙型名はパスカルケースとする.  </li>
+<li>関数宣言時の引数は a_ をつける. 例）a_meridim  </li>
+<li>関数内の補助変数は _tmp をつける. 例）int count_tmp  </li>
+<li>モジュールとなるファイル名は mrd_ をつける. 例）mrd_wifi.h  </li>
+</ol>
+<p><br></p>
+<h2 id="_1">スネークケースの使い方<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>カテゴリ(名詞) &gt; 内容（名詞・動詞）&gt; 補足 の優先順とする. 例) mrd_wire0_init  </li>
+<li>meridianオリジナルの関数は先頭に mrd_ をつける.  </li>
+<li>関数をライブラリやクラスに昇格する際は, _の区切りでカテゴライズする.<br />
+   例）　mrd_wire0_init → mrd_wire0.init  </li>
 </ol>
 <p><br></p>
 <h2 id="c">C++ ドキュメンテーションコメント<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
 <hr />
-<p>関数などの解説には下記のように///を使用する。 </p>
+<p>関数などの解説には下記のように///を使用する.  </p>
 <pre><code>/// @brief 解説.
 /// @param 引数.
 /// @return 戻り値.
 </code></pre>
-<p>/** */はコードの改造時にブロックコメントアウトとして使用できるよう、
-ドキュメンテーションコメントとしては使用しないこと。</p>
-<p>変数などの解説は同じ行もしくは一つ上の行に // でコメントをつける。</p>
-<p>こうすることで、 VSCODE上で関数や変数にカーソルを当てた時に説明が表示されるようになる。 </p>
+<p>/** */はコードの改造時にブロックコメントアウトとして使用できるよう, 
+ドキュメンテーションコメントとしては使用しないこと. </p>
+<p>変数などの解説は同じ行もしくは一つ上の行に // でコメントをつける. </p>
+<p>こうすることで,  VSCODE上で関数や変数にカーソルを当てた時に説明が表示されるようになる.  </p>
 <p><br> </p>
-<h2 id="_1">主な用語<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_2">主な用語<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <hr />
 <table>
 <thead>
@@ -147,16 +156,16 @@ AlignConsecutiveMacros: true
 </tr>
 <tr>
 <td style="text-align: left;">Meridim90</td>
-<td style="text-align: left;">基準となる簡易的な固定配列(90要素、180バイト 固定)</td>
+<td style="text-align: left;">基準となる簡易的な固定配列(90要素, 180バイト 固定)</td>
 </tr>
 <tr>
 <td style="text-align: left;">MeridimFX</td>
-<td style="text-align: left;">基準となる簡易的な固定配列(最大 700要素、1400バイトまで可変長)</td>
+<td style="text-align: left;">基準となる簡易的な固定配列(最大 700要素, 1400バイトまで可変長)</td>
 </tr>
 </tbody>
 </table>
 <p><br> </p>
-<h2 id="_2">主な定数の命名ルール<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">主な定数の命名ルール<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <hr />
 <table>
 <thead>
@@ -203,12 +212,16 @@ AlignConsecutiveMacros: true
 <td style="text-align: left;">ピンアサイン</td>
 </tr>
 <tr>
-<td style="text-align: left;">IDR_</td>
+<td style="text-align: left;">IXR_</td>
 <td style="text-align: left;">L系統のサーボパラメータ</td>
 </tr>
 <tr>
-<td style="text-align: left;">IDL_</td>
+<td style="text-align: left;">IXL_</td>
 <td style="text-align: left;">R系統のサーボパラメータ</td>
+</tr>
+<tr>
+<td style="text-align: left;">IXC_</td>
+<td style="text-align: left;">C系統のサーボパラメータ</td>
 </tr>
 <tr>
 <td style="text-align: left;">MRD_</td>
@@ -219,17 +232,17 @@ AlignConsecutiveMacros: true
 <p><br>  </p>
 <h2 id="c_1">C# 未定<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h2>
 <hr />
-<p>C# は主にUnityで使用します。<br />
-詳細未定ですが、 計算コードなどをなるべくコピペなどでそのままC++に移植できる書式を想定しています。  </p>
+<p>C# は主にUnityで使用します. <br />
+詳細未定ですが,  計算コードなどをなるべくコピペなどでそのままC++に移植できる書式を想定しています.   </p>
 <p><br>  </p>
 <h2 id="java">Java 未定<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
 <hr />
-<p>JavaもC#と同様、計算コードなどをC++に移植しやすい書式を想定しています。  </p>
+<p>JavaもC#と同様, 計算コードなどをC++に移植しやすい書式を想定しています.   </p>
 <p><br>  </p>
 <h2 id="python-pep8">Python PEP8に準拠<a class="headerlink" href="#python-pep8" title="Permanent link">&para;</a></h2>
 <hr />
-<p>Python ファイルはおおむね <a href="https://peps.python.org/pep-0008/">PEP8</a> に準拠します。</p>
-<p>(現状、Meridian_console.pyはまだPEP8を遵守できていません。)</p>
+<p>Python ファイルはおおむね <a href="https://peps.python.org/pep-0008/">PEP8</a> に準拠します. </p>
+<p>(現状, Meridian_console.pyはまだPEP8を遵守できていません. )</p>
 
   <br>
     

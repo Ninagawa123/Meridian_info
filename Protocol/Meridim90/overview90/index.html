@@ -79,17 +79,18 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <hr>
-<h3> Meridim : Meridim配列の概要 </h3>
+<h3> Meridim90 : 基本的なMeridim配列の概要 </h3>
 <hr>
 <p><br>
-Meridim配列は16bit(2byte)を１要素とした可変長の配列で、<br />
-ロボットの状態データやコマンドをコンパクトに格納することができます。<br />
-使い勝手のために<strong>基本形の長さを[90]と定めており、これをMeridim90</strong>と呼びます。<br />
-Meridim配列の長さはユーザーが自由に設定できますが、Ethernetの１パケット(1フレーム)に収まるデータ量が1472バイトであることから、目安として
-<strong>Meridim[700] 程度を上限</strong>と想定しています。<br />
-このシステムの目的はマイコンでのリアルタイム処理であるため、要素数はできるだけコンパクトな方がよいでしょう。<br />
+Meridim配列は16bit(2byte)を１要素とした可変長の配列で, <br />
+ロボットの状態データやコマンドをコンパクトに格納することができます. <br />
+中でも<strong>長さを[90]と定めた基本形をMeridim90</strong>と呼びます.   </p>
+<p>Meridim配列の長さはユーザーが自由に設定できますが, Ethernetの１パケット(1フレーム)に収まるデータ量が1472バイトであることから, 目安として
+<strong>Meridim[700] 程度を上限</strong>と想定しています. <br />
+このシステムの目的はマイコンでのリアルタイム処理であるため, 要素数はできるだけコンパクトであることが望ましいです. <br />
 <br></p>
-<p>以下にMeridim90を例として、配列の概要を説明します。  </p>
+<p>以下にMeridim90配列の概要を説明します. <br />
+<br>  </p>
 <table>
 <thead>
 <tr>
@@ -106,7 +107,7 @@ Meridim配列の長さはユーザーが自由に設定できますが、Etherne
 </tr>
 <tr>
 <td style="text-align: left;">index [1]</td>
-<td style="text-align: left;">MRD_SEQENTIAL</td>
+<td style="text-align: left;">MRD_SEQ</td>
 <td>シーケンス番号</td>
 </tr>
 <tr>
@@ -136,28 +137,33 @@ Meridim配列の長さはユーザーが自由に設定できますが、Etherne
 </tr>
 <tr>
 <td style="text-align: left;">index [15]</td>
-<td style="text-align: left;">MRD_CONTROL_BUTTONS</td>
+<td style="text-align: left;">MRD_PAD_BUTTONS</td>
 <td>リモコンボタン</td>
 </tr>
 <tr>
 <td style="text-align: left;">index [16]</td>
-<td style="text-align: left;">MRD_CONTROL_STICK_R</td>
-<td>リモコン右スティックxy</td>
-</tr>
-<tr>
-<td style="text-align: left;">index [17]</td>
-<td style="text-align: left;">MRD_CONTROL_STICK_L</td>
+<td style="text-align: left;">MRD_PAD_STICK_L</td>
 <td>リモコン左スティックxy</td>
 </tr>
 <tr>
+<td style="text-align: left;">index [17]</td>
+<td style="text-align: left;">MRD_PAD_STICK_R</td>
+<td>リモコン右スティックxy</td>
+</tr>
+<tr>
 <td style="text-align: left;">index [18]</td>
-<td style="text-align: left;">MRD_CONTROL_L2R2ANALOG</td>
+<td style="text-align: left;">MRD_PAD_L2R2ANALOG</td>
 <td>リモコンL2R2アナログ</td>
 </tr>
 <tr>
 <td style="text-align: left;">index [19]</td>
 <td style="text-align: left;">MRD_MOTION_FRAMES</td>
 <td>モーション設定のフレーム数</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">MRD_STOP_FRAMES</td>
+<td>ボード停止時のフレーム数</td>
 </tr>
 <tr>
 <td style="text-align: left;">index [20]-[49]</td>
@@ -176,7 +182,7 @@ Meridim配列の長さはユーザーが自由に設定できますが、Etherne
 </tr>
 <tr>
 <td style="text-align: left;">index [88]</td>
-<td style="text-align: left;">MRD_ERROR_CODE</td>
+<td style="text-align: left;">MRD_ERR_CODE</td>
 <td>エラーコード (index[MSG_SIZE-2])</td>
 </tr>
 <tr>
@@ -186,6 +192,7 @@ Meridim配列の長さはユーザーが自由に設定できますが、Etherne
 </tr>
 </tbody>
 </table>
+<p>→ <a href="../../../Coding/ValuableIndex/define_meridim90/">Meridm90の詳細リストへ</a></p>
 
   <br>
     

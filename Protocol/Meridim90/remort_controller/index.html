@@ -82,8 +82,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3> Meridim : リモコン受信 </h3>
 <hr>
 <p><br>
-Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じることで、<br />
-多種多様なコントローラーの受信値を一般化して取り扱います。  </p>
+Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じることで, <br />
+多種多様なコントローラーの受信値を一般化して取り扱います.   </p>
 <table>
 <thead>
 <tr>
@@ -95,7 +95,7 @@ Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じる
 <tbody>
 <tr>
 <td>index[15]</td>
-<td>index[MRD_CONTROL_BUTTONS]</td>
+<td>index[MRD_PAD_BUTTONS]</td>
 <td>ボタン入力</td>
 </tr>
 </tbody>
@@ -229,8 +229,8 @@ Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じる
 <td style="text-align: center;">←</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">C</td>
-<td style="text-align: center;">Z</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">○A</td>
 <td style="text-align: center;">○2</td>
 <td style="text-align: center;">○1</td>
@@ -360,12 +360,12 @@ Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じる
 <td style="text-align: center;">△</td>
 <td style="text-align: center;">×</td>
 <td style="text-align: center;">○</td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;">□</td>
 <td style="text-align: center;">L1</td>
 <td style="text-align: center;">L2</td>
 <td style="text-align: center;">R1</td>
 <td style="text-align: center;">R2</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -387,8 +387,8 @@ Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じる
 <td style="text-align: center;">□B</td>
 <td style="text-align: center;">○A</td>
 <td style="text-align: center;">-</td>
-<td style="text-align: center;">C</td>
-<td style="text-align: center;">Z</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">home</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -434,7 +434,7 @@ Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じる
 <tbody>
 <tr>
 <td>index[16]</td>
-<td>index[MRD_CONTROL_STICK_L]</td>
+<td>index[MRD_PAD_STICK_L]</td>
 <td>上位8ビット</td>
 <td>Stick_L_x</td>
 <td>-127~+127</td>
@@ -448,7 +448,7 @@ Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じる
 </tr>
 <tr>
 <td>index[17]</td>
-<td>index[MRD_CONTROL_STICK_R]</td>
+<td>index[MRD_PAD_STICK_R]</td>
 <td>上位8ビット</td>
 <td>Stick_L_x</td>
 <td>-127~+127</td>
@@ -462,7 +462,7 @@ Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じる
 </tr>
 <tr>
 <td>index[18]</td>
-<td>index[MRD_CONTROL_L2R2ANALOG]</td>
+<td>index[MRD_PAD_L2R2ANALOG]</td>
 <td>上位8ビット</td>
 <td>L2アナログ</td>
 <td>0~+255</td>
@@ -482,10 +482,15 @@ Meridim配列ではリモコン受信値の配列格納をPS2,PS3系に準じる
 <hr>
 
 <p>unsigned short型に1ビット目から順にボタンフラグを格納していく場合の変換テーブル  </p>
-<p>WiiリモコンからPS系への変換テーブル(wiimote.h使用時)<br />
-PAD_WIIMOTE_SOLO[16] = {0x1000, 0x0080, 0x0000, 0x0010, 0x0200, 0x0400, 0x0100, 0x0800, 0x0000, 0x0000, 0x0000, 0x0000, 0x0008, 0x0001, 0x0002, 0x0004};</p>
-<p>Wiiリモコンのオリジナル値への変換テーブル(wiimote.h使用時)  <br />
-PAD_WIIMOTE_ORIG[16] = {0x0100, 0x0200, 0x0400, 0x0800, 0x1000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0002, 0x0004, 0x0008, 0x0010, 0x0000, 0x0000, 0x0080};</p>
+<p><strong>WiiリモコンからPS系への変換テーブル(wiimote.h使用時)</strong><br />
+PAD_TABLE_WIIMOTE_SOLO[16] = {0x1000, 0x0080, 0x0000, 0x0010, 0x0200, 0x0400, 0x0100, 0x0800, 0x0000, 0x0000, 0x0000, 0x0000, 0x0008, 0x0001, 0x0002, 0x0004};</p>
+<p><strong>Wiiリモコンのオリジナル値への変換テーブル(wiimote.h使用時)</strong>  <br />
+PAD_TABLE_WIIMOTE_ORIG[16] = {0x0100, 0x0200, 0x0400, 0x0800, 0x1000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0002, 0x0004, 0x0008, 0x0010, 0x0000, 0x0000, 0x0080};</p>
+<p><strong>KRC5FHからPS系への変換テーブル</strong><br />
+PAD_TABLE_KRC5FH_TO_COMMON[16] = {0, 64, 32, 128, 1, 4, 2, 8, 1024, 4096, 512, 2048, 16, 64, 32, 256};<br />
+※ 変換前に値が15なら結果に1を論理和し, 0b1111111111110000で論理積して左十字ボタンのクリア<br />
+※ 変換前に値が368なら結果に8を論理和し, 0b1111111010001111で論理積して右十字ボタンのクリア<br />
+※ 変換後に0b11111111111111001と論理積でフィルタリングする  </p>
 
   <br>
     

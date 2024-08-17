@@ -108,7 +108,7 @@ Meridian_TWINもしくはMeridian_LITEのESP32用ファイルのconfig.hに, Uni
 <p>Unityを起動した後, 「SampleScene」をダブルクリックし, 再生ボタンを押します.<br />
 Meridianボードと通信が成立していればロボットの関節にシンクロして画面の中のモデルが動きます.  </p>
 <p>画面の「Send」にチェックを入れるとUnityからロボットを操作することができます.<br />
-スライドバーに対応したサーボが動きます。またスライドバーの上のテキストボックスに直接数値を入力することができます.<br />
+スライドバーに対応したサーボが動きます. またスライドバーの上のテキストボックスに直接数値を入力することができます.<br />
 数値の単位はdegreeとなります.  </p>
 <p>「Action」にチェックを入れるとUnityからロボットにサンプルのモーションを送信します.<br />
 左半身の各関節角度をsinカーブで増減させます.<br />
@@ -119,7 +119,7 @@ Meridianボードと通信が成立していればロボットの関節にシン
 - config.h内 #define ESP32_STDALONE 1 としてテストモードを有効にする.<br />
 - keys.hにWifi設定も書き込む. この時, 接続先が2.4GHz帯となるように注意する.  </p>
 <p>また, 当UnityファイルのUDP_SendHandler.csのConst String Host = ""にESP32のIPアドレスが正しく書き込まれているかを確認してください.  </p>
-<p>ESP32はMeridian Boardに挿す必要はなく、ESP32DevkitC単体で試すことができます。<br />
+<p>ESP32はMeridian Boardに挿す必要はなく, ESP32DevkitC単体で試すことができます. <br />
 ESP32に電源が供給され, かつUnityの再生ボタンが押された状態となれば接続が完了します.<br />
 <img width="600" alt="SS 1071" src="https://github.com/Ninagawa123/Meridian_Unity/assets/8329123/bf4f53e0-c676-4926-af17-b79a60cd3c8b"><br />
 接続が成功すると, ESP32側からL0番のサーボに+-30度のダミーデータが送信され, 首を左右に振るような動きになります. 機体の向きは画面に背を向けた状態になります.  </p>

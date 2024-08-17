@@ -151,180 +151,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>PCへデータを送信(1:する, 0:しない)</td>
 </tr>
 <tr>
-<td><strong>起動時のチェック</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td>CHECK_SD_RW</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">0</td>
-<td>SDカードリーダーの読み書きチェック</td>
-</tr>
-<tr>
-<td>CHECK_EEPROM_RW</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">0</td>
-<td>EEPROMの動作チェック</td>
-</tr>
-<tr>
-<td><strong>シリアルモニタ</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td>MONITOR_FLOW</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">0</td>
-<td>フロー番号の表示</td>
-</tr>
-<tr>
-<td>MONITOR_ALL_ERROR</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">0</td>
-<td>全経路の受信エラー率の表示</td>
-</tr>
-<tr>
-<td>MONITOR_SERVO_ERR</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">0</td>
-<td>通信エラーのあったサーボIDの表示</td>
-</tr>
-<tr>
-<td>MONITOR_SEQ_NUMBER</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">0</td>
-<td>シーケンス番号の表示</td>
-</tr>
-<tr>
-<td>MONITOR_PAD</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">0</td>
-<td>リモコンデータの表示</td>
-</tr>
-<tr>
-<td><strong>マウント関連</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td>MOUNT_SD</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">0</td>
-<td>SDカードリーダーの搭載(1:あり, 0:なし)</td>
-</tr>
-<tr>
-<td>MOUNT_IMUAHRS</td>
-<td style="text-align: center;">0-3</td>
-<td style="text-align: center;">NO_IMU</td>
-<td>IMU/AHRSの搭載<br>(0:NO_IMU, 1:MPU6050_IMU, 2:MPU9250_IMU, 3:BNO055_AHRS)</td>
-</tr>
-<tr>
-<td>MOUNT_PAD</td>
-<td style="text-align: center;">0-5</td>
-<td style="text-align: center;">0</td>
-<td>ジョイパッドの搭載<br>(0:なし, 1:MERIMOTE, 2:BLUERETRO, 3:SBDBT, 4:KRR5FH,4:Wiimote)</td>
-</tr>
-<tr>
-<td><strong>I2C設定</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td>I2C0_SPEED</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">400000</td>
-<td>I2Cの速度(400kHz推奨)</td>
-</tr>
-<tr>
-<td>IMUAHRS_INTERVAL</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">10</td>
-<td>IMU/AHRSの読み取り間隔(ms)</td>
-</tr>
-<tr>
-<td>IMUAHRS_STOCK</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">4</td>
-<td>移動平均を取る際のフレーム数</td>
-</tr>
-<tr>
-<td><strong>サーボ関連設定</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td>SERVO_BAUDRATE_L</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">1250000</td>
-<td>L系統のサーボの通信速度(bps)</td>
-</tr>
-<tr>
-<td>SERVO_BAUDRATE_R</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">1250000</td>
-<td>R系統のサーボの通信速度(bps)</td>
-</tr>
-<tr>
-<td>SERVO_BAUDRATE_C</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">1250000</td>
-<td>C系統のサーボの通信速度(bps)</td>
-</tr>
-<tr>
-<td>SERVO_TIMEOUT_L</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">2</td>
-<td>L系統のサーボ返信タイムアウト時間(ms)</td>
-</tr>
-<tr>
-<td>SERVO_TIMEOUT_R</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">2</td>
-<td>L系統のサーボ返信タイムアウト時間(ms)</td>
-</tr>
-<tr>
-<td>SERVO_TIMEOUT_C</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">2</td>
-<td>C系統のサーボ返信タイムアウト時間(ms)</td>
-</tr>
-<tr>
-<td>SERVO_LOST_ERROR_WAIT</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">6</td>
-<td>サーボ通信エラーと判定する連続エラー回数</td>
-</tr>
-<tr>
-<td><strong>PC接続関連設定</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td>SERIAL_PC_BPS</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">115200</td>
-<td>PCとのシリアル通信の速度(bps)</td>
-</tr>
-<tr>
-<td><strong>SPI設定</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td>SPI_SPEED</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">6000000</td>
-<td>SPI通信の速度(bps)</td>
-</tr>
-<tr>
 <td><strong>EEPROMの設定</strong></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -364,7 +190,253 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>EEPROM_FORMAT</td>
 <td style="text-align: center;">Bin,Hex,Dec</td>
 <td style="text-align: center;">Dec</td>
-<td>起動時のEEPROM内容のダンプ表示の書式</td>
+<td>EEPROM内容のダンプ表示の書式</td>
+</tr>
+<tr>
+<td><strong>起動時のチェック</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>CHECK_SD_RW</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>SDカードリーダーの読み書きチェック</td>
+</tr>
+<tr>
+<td>CHECK_EEPROM_RW</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>EEPROMの動作チェック</td>
+</tr>
+<tr>
+<td><strong>シリアルモニタリング</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>MONITOR_FRAME_DELAY</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>フレーム遅延時間の表示（0:OFF, 1:ON）</td>
+</tr>
+<tr>
+<td>MONITOR_FLOW</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>フロー番号の表示</td>
+</tr>
+<tr>
+<td>MONITOR_ERR_SERVO</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>通信エラーのあったサーボIDの表示</td>
+</tr>
+<tr>
+<td>MONITOR_ERR_ALL</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>全経路の受信エラー率の表示</td>
+</tr>
+<tr>
+<td>MONITOR_SEQ</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>シーケンス番号の表示</td>
+</tr>
+<tr>
+<td>MONITOR_PAD</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>リモコンデータの表示</td>
+</tr>
+<tr>
+<td>MONITOR_SUPPRESS_DURATION</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8000</td>
+<td>起動直後のタイムアウトメッセージ<br>抑制時間(単位ms)</td>
+</tr>
+<tr>
+<td><strong>マウント関連</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>MOUNT_SD</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">0</td>
+<td>SDカードリーダーの搭載(1:あり, 0:なし)</td>
+</tr>
+<tr>
+<td>MOUNT_IMUAHRS</td>
+<td style="text-align: center;">0-3</td>
+<td style="text-align: center;">NO_IMU</td>
+<td>IMU/AHRSの搭載<br>(0:NO_IMU, 1:MPU6050_IMU, 2:MPU9250_IMU, 3:BNO055_AHRS)</td>
+</tr>
+<tr>
+<td>MOUNT_PAD</td>
+<td style="text-align: center;">0-5</td>
+<td style="text-align: center;">0</td>
+<td>ジョイパッドの搭載<br>(0:なし, 1:MERIMOTE, 2:BLUERETRO, 3:SBDBT, 4:KRR5FH, 5:Wiimote)</td>
+</tr>
+<tr>
+<td><strong>I2C設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>I2C0_SPEED</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">400000</td>
+<td>I2Cの速度(400kHz推奨)</td>
+</tr>
+<tr>
+<td>IMUAHRS_INTERVAL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td>IMU/AHRSの読み取り間隔(ms)</td>
+</tr>
+<tr>
+<td>IMUAHRS_STOCK</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">4</td>
+<td>移動平均を取る際のフレーム数</td>
+</tr>
+<tr>
+<td>I2C1_SPEED</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">100000</td>
+<td>I2Cの速度</td>
+</tr>
+<tr>
+<td>I2C1_MERIMOTE_ADDR</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0x58</td>
+<td>MerimoteのI2Cアドレス</td>
+</tr>
+<tr>
+<td><strong>SPI設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>SPI_SPEED</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">6000000</td>
+<td>SPI通信の速度(bps)</td>
+</tr>
+<tr>
+<td><strong>リモコンの設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>PAD_INTERVAL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td>ジョイパッドのデータを読むフレーム間隔<br>(KRC-5FHでは4推奨)</td>
+</tr>
+<tr>
+<td>PAD_BUTTON_MARGE</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">1</td>
+<td>JOYPADのボタンデータをMeridim受信値に 0:論理積, 1:論理和</td>
+</tr>
+<tr>
+<td>PAD_GENERALIZE</td>
+<td style="text-align: center;">0,1</td>
+<td style="text-align: center;">1</td>
+<td>ジョイパッドの入力値をPS系に一般化する</td>
+</tr>
+<tr>
+<td><strong>サーボ関連設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>MOUNT_SERVO_TYPE_L</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">43</td>
+<td>L系統のサーボプロトコル</td>
+</tr>
+<tr>
+<td>MOUNT_SERVO_TYPE_R</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">43</td>
+<td>R系統のサーボプロトコル</td>
+</tr>
+<tr>
+<td>MOUNT_SERVO_TYPE_C</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">43</td>
+<td>C系統のサーボプロトコル</td>
+</tr>
+<tr>
+<td>SERVO_BAUDRATE_L</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1250000</td>
+<td>L系統のサーボの通信速度(bps)</td>
+</tr>
+<tr>
+<td>SERVO_BAUDRATE_R</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1250000</td>
+<td>R系統のサーボの通信速度(bps)</td>
+</tr>
+<tr>
+<td>SERVO_BAUDRATE_C</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1250000</td>
+<td>C系統のサーボの通信速度(bps)</td>
+</tr>
+<tr>
+<td>SERVO_TIMEOUT_L</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td>L系統のサーボ返信タイムアウト時間(ms)</td>
+</tr>
+<tr>
+<td>SERVO_TIMEOUT_R</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td>L系統のサーボ返信タイムアウト時間(ms)</td>
+</tr>
+<tr>
+<td>SERVO_TIMEOUT_C</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td>C系統のサーボ返信タイムアウト時間(ms)</td>
+</tr>
+<tr>
+<td>SERVO_LOST_ERR_WAIT</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">6</td>
+<td>サーボ通信エラーと判定する連続エラー回数</td>
+</tr>
+<tr>
+<td><strong>PC接続関連設定</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>SERIAL_PC_BPS</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">115200</td>
+<td>PCとのシリアル通信の速度(bps)</td>
+</tr>
+<tr>
+<td>SERIAL_PC_TIMEOUT</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2000</td>
+<td>Cとのシリアル接続確立タイムアウト(ms)</td>
 </tr>
 <tr>
 <td><strong>Wifiアクセスポイントの設定</strong></td>
@@ -383,30 +455,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td style="text-align: center;"></td>
 <td style="text-align: center;">4</td>
 <td>UDPの待受タイムアウト時間(ms)</td>
-</tr>
-<tr>
-<td><strong>リモコンの設定</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td>PAD_INTERVAL</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">10</td>
-<td>ジョイパッドのデータを読むフレーム間隔<br>(KRC-5FHでは4推奨)</td>
-</tr>
-<tr>
-<td>PAD_BUTTON_MARGE</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">1</td>
-<td>受信ボタンデータをMeridim受信値に<br>(1:論理和でマージする, 0:上書きする)</td>
-</tr>
-<tr>
-<td>PAD_GENERALIZE</td>
-<td style="text-align: center;">0,1</td>
-<td style="text-align: center;">1</td>
-<td>ジョイパッドの入力値をPS系に一般化する</td>
 </tr>
 </tbody>
 </table>
@@ -486,12 +534,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 <tr>
 <td>ImuAhrsType</td>
-<td style="text-align: left;">0:NO_IMU<br>1:MPU6050_IMU<br>2:MPU9250_IMU<br>BNO055_AHRS</td>
+<td style="text-align: left;">0:NO_IMU<br>1:MPU6050_IMU<br>2:MPU9250_IMU<br>3:BNO055_AHRS</td>
 <td>6軸9軸センサ種の列挙型</td>
 </tr>
 <tr>
 <td>PadReceiverType</td>
-<td style="text-align: left;">0:PC<br>1:MERIMOTE<br>2:BLUERETRO<br>3:SBDBT<br>4:KRR5FH<br>5:Wiimote</td>
+<td style="text-align: left;">0:PC<br>1:MERIMOTE<br>2:BLUERETRO<br>3:SBDBT<br>4:KRR5FH<br>5:Wiimote<br>5:Wiimote_C</td>
 <td>リモコン種の列挙型</td>
 </tr>
 <tr>
@@ -515,23 +563,18 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <tbody>
 <tr>
 <td>PAD_LEN</td>
-<td style="text-align: center;">4</td>
-<td>ジョイパッド用配列の長さ</td>
-</tr>
-<tr>
-<td>PAD_I2C_LEN</td>
 <td style="text-align: center;">5</td>
-<td>ジョイパッドI2C用配列の長さ</td>
+<td>ジョイパッド用配列の長さ</td>
 </tr>
 <tr>
 <td>MRD_ERR_u</td>
 <td style="text-align: center;">MRD_ERR * 2 + 1</td>
-<td>エラーフラグの格納場所(上位8ビット)</td>
+<td>エラーフラグの格納場所(上位8ビット,エラーコード)</td>
 </tr>
 <tr>
 <td>MRD_ERR_l</td>
 <td style="text-align: center;">MRD_ERR * 2</td>
-<td>エラーフラグの格納場所(下位8ビット)</td>
+<td>エラーフラグの格納場所(下位8ビット,サーボエラー)</td>
 </tr>
 </tbody>
 </table>

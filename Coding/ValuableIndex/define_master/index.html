@@ -84,7 +84,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><br></p>
 <h3><b>Meridim マスターコマンド定義</b></h3>
 <p><br></p>
-<h4><b>xxx</b></h4>
+<h4><b>書式: meridim[MRD_MASTER] == コマンド値</b></h4>
 
 <table>
 <thead>
@@ -101,39 +101,84 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>すべてのサーボトルクをオフにする（脱力）</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align: center;">1-999</td>
-<td>Meridimの配列長</td>
+<td>MCMD_DUMMY_DATA</td>
+<td style="text-align: center;">-32768</td>
+<td>SPI送受信用のダミーデータ判定用</td>
 </tr>
 <tr>
-<td>MCMD_UPDATE_YAW_CENTER</td>
+<td>MCMD_SENSOR_YAW_CALIB</td>
 <td style="text-align: center;">10002</td>
-<td>センサの推定ヨー軸を現在値でゼロに</td>
+<td>センサの推定ヨー軸を現在値センターとしてリセット</td>
 </tr>
 <tr>
-<td>MCMD_ENTER_TRIM_MODE</td>
+<td>MCMD_SENSOR_ALL_CALIB</td>
 <td style="text-align: center;">10003</td>
-<td>トリムモードに入る<br>全サーボオンで起立姿勢</td>
+<td>センサの3軸について現在値を原点としてリセット</td>
 </tr>
 <tr>
-<td>MCMD_CLEAR_SERVO_ERROR_ID</td>
+<td>MCMD_ERR_CLEAR_SERVO_ID</td>
 <td style="text-align: center;">10004</td>
-<td>通信エラーのサーボのIDをクリア</td>
+<td>通信エラーのサーボのIDをクリア<br>(MRD_ERR_l = 0)</td>
 </tr>
 <tr>
 <td>MCMD_BOARD_TRANSMIT_ACTIVE</td>
 <td style="text-align: center;">10005</td>
-<td>ボードが定刻で送信を行うモード<br>（デフォルト設定.PC側が受信待ち）</td>
+<td>ボードが定刻で送信を行うモード<br>(PC側が受信待ち)</td>
 </tr>
 <tr>
 <td>MCMD_BOARD_TRANSMIT_PASSIVE</td>
 <td style="text-align: center;">10006</td>
-<td>ボードが受信を待ち返信するモード<br>（PC側が定刻送信）</td>
+<td>ボードが受信を待ち返信するモード<br>(PC側が定刻送信)</td>
 </tr>
 <tr>
-<td>MCMD_RESET_MRD_TIMER</td>
+<td>MCMD_FRAMETIMER_RESET</td>
 <td style="text-align: center;">10007</td>
-<td>フレーム管理時計mrd_t_milを現在時刻にリセット</td>
+<td>フレームタイマーを現在時刻にリセット</td>
+</tr>
+<tr>
+<td>MCMD_BOARD_STOP_DURING</td>
+<td style="text-align: center;">10008</td>
+<td>ボードの末端処理を<br>[MRD_STOP_FRAMES]ミリ秒止める</td>
+</tr>
+<tr>
+<td>MCMD_EEPROM_ENTER_WRITE</td>
+<td style="text-align: center;">10009</td>
+<td>EEPROM書き込みモードのスタート</td>
+</tr>
+<tr>
+<td>MCMD_EEPROM_EXIT_WRITE</td>
+<td style="text-align: center;">10010</td>
+<td>EEPROM書き込みモードの終了</td>
+</tr>
+<tr>
+<td>MCMD_EEPROM_ENTER_READ</td>
+<td style="text-align: center;">10011</td>
+<td>EEPROM読み出しモードのスタート</td>
+</tr>
+<tr>
+<td>MCMD_EEPROM_EXIT_READ</td>
+<td style="text-align: center;">10012</td>
+<td>EEPROM読み出しモードの終了</td>
+</tr>
+<tr>
+<td>MCMD_SDCARD_ENTER_WRITE</td>
+<td style="text-align: center;">10013</td>
+<td>SDCARD書き込みモードのスタート</td>
+</tr>
+<tr>
+<td>MCMD_SDCARD_EXIT_WRITE</td>
+<td style="text-align: center;">10014</td>
+<td>SDCARD書き込みモードの終了</td>
+</tr>
+<tr>
+<td>MCMD_SDCARD_ENTER_READ</td>
+<td style="text-align: center;">10015</td>
+<td>SDCARD読み出しモードのスタート</td>
+</tr>
+<tr>
+<td>MCMD_SDCARD_EXIT_READ</td>
+<td style="text-align: center;">10016</td>
+<td>SDCARD読み出しモードの終了</td>
 </tr>
 </tbody>
 </table>

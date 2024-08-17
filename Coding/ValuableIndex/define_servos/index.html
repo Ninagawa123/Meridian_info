@@ -115,7 +115,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 <tr>
 <td>FUTABA_RSxTTL</td>
-<td style="text-align: left;">FRSXTTL</td>
+<td style="text-align: left;">FTBRSX</td>
 <td>21</td>
 <td>(未)</td>
 </tr>
@@ -163,6 +163,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 </tbody>
 </table>
+<p><br>  </p>
+<h4><b>サーボインデックスとサーボID</b> </h4>
+<p>サーボの識別番号には, <br />
+コード上の処理に用いるサーボインデックス番号( IXL_, IXR_ と表記)と,  <br />
+実際にサーボハードウェアに登録されているサーボID番号( _ID と表記)<br />
+の２つを用意してある. 
+一連の計算処理にはサーボインデックス番号を用い, 最後にサーボに命令をする段階で, サーボインデックス番号に対応したサーボIDに指示を出すという使い方をする. <br />
+これはサーボの組み替えがあった際にソフトウェア上でも対応できるようにするための処置であり, 通常はインデックス番号とサーボIDは同じ値でよい.   </p>
 <p><br></p>
 <h4><b>サーボの初期パラメータ</b> </h4>
 <table>
@@ -176,193 +184,379 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </thead>
 <tbody>
 <tr>
-<td><strong>各サーボのマウント有無</strong></td>
+<td><strong>各サーボのインデックス(IX)に対する<br>ハードウェアID</strong></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td></td>
 </tr>
 <tr>
-<td>IDL_MT[0]</td>
+<td>IXL_ID[0]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[1]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[2]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[3]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">3</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[4]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">4</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[5]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">5</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[6]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">6</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[7]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">7</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[8]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[9]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">9</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[10]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[11]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">11</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[12]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[13]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">13</td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_ID[14]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[0]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[1]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[2]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[3]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">3</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[4]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">4</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[5]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">5</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[6]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">6</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[7]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">7</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[8]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[9]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">9</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[10]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">10</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[11]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">11</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[12]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">12</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[13]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">13</td>
+<td></td>
+</tr>
+<tr>
+<td>IXR_ID[14]</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>各サーボのマウント有無(プロトコルタイプ)</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td>IXL_MT[0]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>頭ヨー</td>
 </tr>
 <tr>
-<td>IDL_MT[1]</td>
+<td>IXL_MT[1]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左肩ピッチ</td>
 </tr>
 <tr>
-<td>IDL_MT[2]</td>
+<td>IXL_MT[2]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左肩ロール</td>
 </tr>
 <tr>
-<td>IDL_MT[3]</td>
+<td>IXL_MT[3]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左肘ヨー</td>
 </tr>
 <tr>
-<td>IDL_MT[4]</td>
+<td>IXL_MT[4]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左肘ピッチ</td>
 </tr>
 <tr>
-<td>IDL_MT[5]</td>
+<td>IXL_MT[5]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左股ヨー</td>
 </tr>
 <tr>
-<td>IDL_MT[6]</td>
+<td>IXL_MT[6]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左股ロール</td>
 </tr>
 <tr>
-<td>IDL_MT[7]</td>
+<td>IXL_MT[7]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左股ピッチ</td>
 </tr>
 <tr>
-<td>IDL_MT[8]</td>
+<td>IXL_MT[8]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左膝ピッチ</td>
 </tr>
 <tr>
-<td>IDL_MT[9]</td>
+<td>IXL_MT[9]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左足首ピッチ</td>
 </tr>
 <tr>
-<td>IDL_MT[10]</td>
+<td>IXL_MT[10]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>左足首ロール</td>
 </tr>
 <tr>
-<td>IDL_MT[11]</td>
+<td>IXL_MT[11]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDL_MT[12]</td>
+<td>IXL_MT[12]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDL_MT[13]</td>
+<td>IXL_MT[13]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDL_MT[14]</td>
+<td>IXL_MT[14]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_MT[0]</td>
+<td>IXR_MT[0]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>腰ヨー</td>
 </tr>
 <tr>
-<td>IDR_MT[1]</td>
+<td>IXR_MT[1]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右肩ピッチ</td>
 </tr>
 <tr>
-<td>IDR_MT[2]</td>
+<td>IXR_MT[2]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右肩ロール</td>
 </tr>
 <tr>
-<td>IDR_MT[3]</td>
+<td>IXR_MT[3]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右肘ヨー</td>
 </tr>
 <tr>
-<td>IDR_MT[4]</td>
+<td>IXR_MT[4]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右肘ピッチ</td>
 </tr>
 <tr>
-<td>IDR_MT[5]</td>
+<td>IXR_MT[5]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右股ヨー</td>
 </tr>
 <tr>
-<td>IDR_MT[5]</td>
+<td>IXR_MT[5]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右股ヨー</td>
 </tr>
 <tr>
-<td>IDR_MT[6]</td>
+<td>IXR_MT[6]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右股ロール</td>
 </tr>
 <tr>
-<td>IDR_MT[7]</td>
+<td>IXR_MT[7]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右股ピッチ</td>
 </tr>
 <tr>
-<td>IDR_MT[8]</td>
+<td>IXR_MT[8]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右膝ピッチ</td>
 </tr>
 <tr>
-<td>IDR_MT[9]</td>
+<td>IXR_MT[9]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右足首ピッチ</td>
 </tr>
 <tr>
-<td>IDR_MT[10]</td>
+<td>IXR_MT[10]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">43</td>
 <td>右足首ロール</td>
 </tr>
 <tr>
-<td>IDR_MT[11]</td>
+<td>IXR_MT[11]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_MT[12]</td>
+<td>IXR_MT[12]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_MT[13]</td>
+<td>IXR_MT[13]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_MT[14]</td>
+<td>IXR_MT[14]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
@@ -374,181 +568,181 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td></td>
 </tr>
 <tr>
-<td>IDL_CW[0]</td>
+<td>IXL_CW[0]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>頭ヨー</td>
 </tr>
 <tr>
-<td>IDL_CW[1]</td>
+<td>IXL_CW[1]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左肩ピッチ</td>
 </tr>
 <tr>
-<td>IDL_CW[2]</td>
+<td>IXL_CW[2]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左肩ロール</td>
 </tr>
 <tr>
-<td>IDL_CW[3]</td>
+<td>IXL_CW[3]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左肘ヨー</td>
 </tr>
 <tr>
-<td>IDL_CW[4]</td>
+<td>IXL_CW[4]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左肘ピッチ</td>
 </tr>
 <tr>
-<td>IDL_CW[5]</td>
+<td>IXL_CW[5]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左股ヨー</td>
 </tr>
 <tr>
-<td>IDL_CW[6]</td>
+<td>IXL_CW[6]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左股ロール</td>
 </tr>
 <tr>
-<td>IDL_CW[7]</td>
+<td>IXL_CW[7]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左股ピッチ</td>
 </tr>
 <tr>
-<td>IDL_CW[8]</td>
+<td>IXL_CW[8]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左膝ピッチ</td>
 </tr>
 <tr>
-<td>IDL_CW[9]</td>
+<td>IXL_CW[9]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左足首ピッチ</td>
 </tr>
 <tr>
-<td>IDL_CW[10]</td>
+<td>IXL_CW[10]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>左足首ロール</td>
 </tr>
 <tr>
-<td>IDL_CW[11]</td>
+<td>IXL_CW[11]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDL_CW[12]</td>
+<td>IXL_CW[12]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDL_CW[13]</td>
+<td>IXL_CW[13]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDL_CW[14]</td>
+<td>IXL_CW[14]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_CW[0]</td>
+<td>IXR_CW[0]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>腰ヨー</td>
 </tr>
 <tr>
-<td>IDR_CW[1]</td>
+<td>IXR_CW[1]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右肩ピッチ</td>
 </tr>
 <tr>
-<td>IDR_CW[2]</td>
+<td>IXR_CW[2]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右肩ロール</td>
 </tr>
 <tr>
-<td>IDR_CW[3]</td>
+<td>IXR_CW[3]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右肘ヨー</td>
 </tr>
 <tr>
-<td>IDR_CW[4]</td>
+<td>IXR_CW[4]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右肘ピッチ</td>
 </tr>
 <tr>
-<td>IDR_CW[5]</td>
+<td>IXR_CW[5]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右股ヨー</td>
 </tr>
 <tr>
-<td>IDR_CW[6]</td>
+<td>IXR_CW[6]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右股ロール</td>
 </tr>
 <tr>
-<td>IDR_CW[7]</td>
+<td>IXR_CW[7]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右股ピッチ</td>
 </tr>
 <tr>
-<td>IDR_CW[8]</td>
+<td>IXR_CW[8]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右膝ピッチ</td>
 </tr>
 <tr>
-<td>IDR_CW[9]</td>
+<td>IXR_CW[9]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右足首ピッチ</td>
 </tr>
 <tr>
-<td>IDR_CW[10]</td>
+<td>IXR_CW[10]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>右足首ロール</td>
 </tr>
 <tr>
-<td>IDR_CW[11]</td>
+<td>IXR_CW[11]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_CW[12]</td>
+<td>IXR_CW[12]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_CW[13]</td>
+<td>IXR_CW[13]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_CW[14]</td>
+<td>IXR_CW[14]</td>
 <td style="text-align: center;">-1,1</td>
 <td style="text-align: center;">1</td>
 <td>追加テスト用</td>
@@ -560,181 +754,181 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td>具体的な数値を入れて現物調整</td>
 </tr>
 <tr>
-<td>IDL_TRIM[0]</td>
+<td>IXL_TRIM[0]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>頭ヨー</td>
 </tr>
 <tr>
-<td>IDL_TRIM[1]</td>
+<td>IXL_TRIM[1]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-2.36</td>
 <td>左肩ピッチ</td>
 </tr>
 <tr>
-<td>IDL_TRIM[2]</td>
+<td>IXL_TRIM[2]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-91.13</td>
 <td>左肩ロール</td>
 </tr>
 <tr>
-<td>IDL_TRIM[3]</td>
+<td>IXL_TRIM[3]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>左肘ヨー</td>
 </tr>
 <tr>
-<td>IDL_TRIM[4]</td>
+<td>IXL_TRIM[4]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">89.98</td>
 <td>左肘ピッチ</td>
 </tr>
 <tr>
-<td>IDL_TRIM[5]</td>
+<td>IXL_TRIM[5]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>左股ヨー</td>
 </tr>
 <tr>
-<td>IDL_TRIM[6]</td>
+<td>IXL_TRIM[6]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>左股ロール</td>
 </tr>
 <tr>
-<td>IDL_TRIM[7]</td>
+<td>IXL_TRIM[7]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-1.35</td>
 <td>左股ピッチ</td>
 </tr>
 <tr>
-<td>IDL_TRIM[8]</td>
+<td>IXL_TRIM[8]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-58.05</td>
 <td>左膝ピッチ</td>
 </tr>
 <tr>
-<td>IDL_TRIM[9]</td>
+<td>IXL_TRIM[9]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-20.25</td>
 <td>左足首ピッチ</td>
 </tr>
 <tr>
-<td>IDL_TRIM[10]</td>
+<td>IXL_TRIM[10]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-0.68</td>
 <td>左足首ロール</td>
 </tr>
 <tr>
-<td>IDL_TRIM[11]</td>
+<td>IXL_TRIM[11]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDL_TRIM[12]</td>
+<td>IXL_TRIM[12]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDL_TRIM[13]</td>
+<td>IXL_TRIM[13]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDL_TRIM[14]</td>
+<td>IXL_TRIM[14]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_TRIM[0]</td>
+<td>IXR_TRIM[0]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>腰ヨー</td>
 </tr>
 <tr>
-<td>IDR_TRIM[1]</td>
+<td>IXR_TRIM[1]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>右肩ピッチ</td>
 </tr>
 <tr>
-<td>IDR_TRIM[2]</td>
+<td>IXR_TRIM[2]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-89.44</td>
 <td>右肩ロール</td>
 </tr>
 <tr>
-<td>IDR_TRIM[3]</td>
+<td>IXR_TRIM[3]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>右肘ヨー</td>
 </tr>
 <tr>
-<td>IDR_TRIM[4]</td>
+<td>IXR_TRIM[4]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">89.98</td>
 <td>右肘ピッチ</td>
 </tr>
 <tr>
-<td>IDR_TRIM[5]</td>
+<td>IXR_TRIM[5]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>右股ヨー</td>
 </tr>
 <tr>
-<td>IDR_TRIM[6]</td>
+<td>IXR_TRIM[6]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">1.69</td>
 <td>右股ロール</td>
 </tr>
 <tr>
-<td>IDR_TRIM[7]</td>
+<td>IXR_TRIM[7]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-3.38</td>
 <td>右股ピッチ</td>
 </tr>
 <tr>
-<td>IDR_TRIM[8]</td>
+<td>IXR_TRIM[8]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-57.38</td>
 <td>右膝ピッチ</td>
 </tr>
 <tr>
-<td>IDR_TRIM[9]</td>
+<td>IXR_TRIM[9]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-20.25</td>
 <td>右足首ピッチ</td>
 </tr>
 <tr>
-<td>IDR_TRIM[10]</td>
+<td>IXR_TRIM[10]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">-2.36</td>
 <td>右足首ロール</td>
 </tr>
 <tr>
-<td>IDR_TRIM[11]</td>
+<td>IXR_TRIM[11]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_TRIM[12]</td>
+<td>IXR_TRIM[12]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_TRIM[13]</td>
+<td>IXR_TRIM[13]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>
 </tr>
 <tr>
-<td>IDR_TRIM[14]</td>
+<td>IXR_TRIM[14]</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td>追加テスト用</td>

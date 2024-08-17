@@ -85,19 +85,19 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <h1 id="meridian_console"><a href="https://github.com/Ninagawa123/Meridian_console">Meridian_console</a><a class="headerlink" href="#meridian_console" title="Permanent link">&para;</a></h1>
-<p>Meridianの受信配列を表示したり、Meridianのコマンドを送信するPythonです.<br />
-Dearpyguiを使用しており、ROS1の入出力に対応しています.<br />
-また、ROS信号あり, ROS信号なしが選べるので, ROSを持たないWinやMacでも手軽にMeridianの通信をテストすることができます.<br />
+<p>Meridianの受信配列を表示したり, Meridianのコマンドを送信するPythonです.<br />
+Dearpyguiを使用しており, ROS1の入出力に対応しています.<br />
+また, ROS信号あり, ROS信号なしが選べるので, ROSを持たないWinやMacでも手軽にMeridianの通信をテストすることができます.<br />
 Win, Mac, Ubuntuで動作します.  </p>
 <h2 id="_1">準備<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>$ pip3 install dearpygui など, 必要なライブラリをインストールしてください.  </p>
 <h2 id="_2">実行<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>$ CD ~/(Meridian_console.pyのあるディレクトリ)<br />
 $ python Meridian_console.py [送信先のESP32のIPアドレス　例:192.168.1.12]<br />
-(送信先のIPアドレスを記入しない場合、pythonコード内のUDP_SEND_IP_DEFで設定された値で接続を試みます)  </p>
-<p>で実行し、画面が表示されれば成功です. Meridianボードを立ち上げると数秒で接続が確立し, 画面の数字がチラチラと動き始めます.<br />
-標準設定の通信速度はTeensy4.0もしくはESP32側で決定され、デフォルトでは100Hz, 1秒間に100回の往復通信を行います.  </p>
-<p>起動時はロボットのサーボは脱力しており、サーボの角度を手で動かすとスライダーに反映されます.  </p>
+(送信先のIPアドレスを記入しない場合, pythonコード内のUDP_SEND_IP_DEFで設定された値で接続を試みます)  </p>
+<p>で実行し, 画面が表示されれば成功です. Meridianボードを立ち上げると数秒で接続が確立し, 画面の数字がチラチラと動き始めます.<br />
+標準設定の通信速度はTeensy4.0もしくはESP32側で決定され, デフォルトでは100Hz, 1秒間に100回の往復通信を行います.  </p>
+<p>起動時はロボットのサーボは脱力しており, サーボの角度を手で動かすとスライダーに反映されます.  </p>
 <h2 id="_3">終了方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>ターミナルでctrl + c を押して終了します.  </p>
 <h2 id="_4">画面の解説<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
@@ -136,9 +136,9 @@ Next frame : ステップモード時に1フレームだけ次に進みます.  
 ResetCounter: カウンタの値をリセットするボタンです.<br />
 TsySKIP, PcSKIP: 連番データの取りこぼし数を表示します.<br />
 ※ ESP32にPS4リモコンを接続した際に受信スキップ回数が5%ほど検出されるのは,現在の仕様では正常な動作です.<br />
-※ I2C接続のMerimoteを使用した場合、PS4リモコン接続での受信スキップ回数はほぼ0になります。</p>
+※ I2C接続のMerimoteを使用した場合, PS4リモコン接続での受信スキップ回数はほぼ0になります. </p>
 <h4 id="v002">バージョンv0.0.2<a class="headerlink" href="#v002" title="Permanent link">&para;</a></h4>
-<p>リセットボタンやリモコンアナログ入力値表示など細かな修正をしました。</p>
+<p>リセットボタンやリモコンアナログ入力値表示など細かな修正をしました. </p>
 
   <br>
     

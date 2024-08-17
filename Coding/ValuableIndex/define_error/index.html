@@ -90,7 +90,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <thead>
 <tr>
 <th>ビット</th>
-<th style="text-align: left;">型</th>
+<th style="text-align: left;">値</th>
 <th>内容</th>
 </tr>
 </thead>
@@ -101,43 +101,43 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td></td>
 </tr>
 <tr>
-<td>15</td>
-<td style="text-align: left;">bool</td>
-<td>ESP32 → PC のUDP受信エラー (0:エラーなし、1:エラー検出)</td>
+<td>ERRBIT_15_ESP_PC</td>
+<td style="text-align: left;">bit15</td>
+<td>ESP32 → PC のUDP受信エラー (0:エラーなし, 1:エラー検出)</td>
 </tr>
 <tr>
-<td>14</td>
-<td style="text-align: left;">bool</td>
+<td>ERRBIT_14_PC_ESP</td>
+<td style="text-align: left;">bit14</td>
 <td>PC → ESP32 のUDP受信エラー</td>
 </tr>
 <tr>
-<td>13</td>
-<td style="text-align: left;">bool</td>
+<td>ERRBIT_13_ESP_TSY</td>
+<td style="text-align: left;">bit13</td>
 <td>ESP32 → TeensyのSPI受信エラー</td>
 </tr>
 <tr>
-<td>12</td>
-<td style="text-align: left;">bool</td>
+<td>ERRBIT_12_TSY_ESP</td>
+<td style="text-align: left;">bit12</td>
 <td>Teensy → ESP32 のSPI受信エラー</td>
 </tr>
 <tr>
-<td>11</td>
-<td style="text-align: left;">bool</td>
+<td>ERRBIT_11_BOARD_DELAY</td>
+<td style="text-align: left;">bit11</td>
 <td>Teensy or ESP32のシステムディレイ (末端で捕捉)</td>
 </tr>
 <tr>
-<td>10</td>
-<td style="text-align: left;">bool</td>
+<td>ERRBIT_10_UDP_ESP_SKIP</td>
+<td style="text-align: left;">bit10</td>
 <td>PC → ESP32 のUDPフレームスキップエラー</td>
 </tr>
 <tr>
-<td>9</td>
-<td style="text-align: left;">bool</td>
+<td>ERRBIT_9_BOARD_SKIP</td>
+<td style="text-align: left;">bit9</td>
 <td>PC → ESP32 → Teensy のフレームスキップエラー(末端で捕捉)</td>
 </tr>
 <tr>
-<td>8</td>
-<td style="text-align: left;">bool</td>
+<td>ERRBIT_8_PC_SKIP</td>
+<td style="text-align: left;">bit8</td>
 <td>Teensy → ESP32 → PC のフレームスキップエラー(末端で捕捉)</td>
 </tr>
 <tr>
@@ -146,9 +146,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <td></td>
 </tr>
 <tr>
-<td>0〜7</td>
-<td style="text-align: left;">uint_8</td>
-<td>0:エラーなし<br>1-99:メッセージ未定義<br>100〜149:エラーサーボID (L系[0~49])<br>150〜199:エラーサーボID (C系[0~49])<br>200~249:エラーサーボID  (R系[0~49])</td>
+<td></td>
+<td style="text-align: left;">0-249</td>
+<td>0:エラーなし<br>1-99:メッセージ未定義<br>100〜149:エラーサーボIndex (IXL[0~49])<br>150〜199:エラーサーボIndex (IXC[0~49])<br>200~249:エラーサーボIndex (IXR[0~49])</td>
 </tr>
 </tbody>
 </table>
